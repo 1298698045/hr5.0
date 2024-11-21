@@ -1,0 +1,1039 @@
+<template>
+    <div class="designWrap">
+        <div class="design">
+            <div class="designBody">
+                <div class="countTopWrap">
+                    <div class="Element_Departmentinformation">
+                        <ul class="countBox">
+                            <li class="countItem" v-for="item in 7">
+                                <a href="javascript:;">
+                                    <h3 style="
+                        color: rgb(47, 90, 165);
+                        font-weight: 500;
+                        font-size: 20px;
+                      ">
+                                        14
+                                    </h3>
+                                    <span>我的客户</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="itxst row">
+                    <div class="columnItem col-3" v-for="(self, selfIdx) in columns" :key="selfIdx">
+                        <!-- <transition name="fade" mode="out-in">
+                              <draggable class="list-group" :component-data="{name:'fade'}" :list="self.components" group="people" itemKey="name">
+                                  <template #item="{ element, index }"> -->
+                        <div class="itemBox panelItemWrap" v-for="(element, index) in self.components" :key="index"
+                            :style="
+                  'border-top:4px solid' + element?.config?.color
+                    ? element?.config?.color
+                    : '#165dff'
+                ">
+                            <div class="panel">
+                                <div class="panel-head">
+                                    <div class="panel-title" v-if="!element.isRename">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                                            <g fill="currentColor" fill-rule="evenodd">
+                                                <circle cx="10" cy="8" r="1"></circle>
+                                                <circle cx="14" cy="8" r="1"></circle>
+                                                <circle cx="10" cy="16" r="1"></circle>
+                                                <circle cx="14" cy="16" r="1"></circle>
+                                                <circle cx="10" cy="12" r="1"></circle>
+                                                <circle cx="14" cy="12" r="1"></circle>
+                                            </g>
+                                        </svg>
+                                        <span>{{ element.label }}</span>
+                                        <span v-if="
+                          element.componentType != 'calendar' &&
+                          element.componentType != 'abstract' &&
+                          element.componentType != 'chart'
+                        ">
+                                            <span class="descNum" v-if="element.componentType == 'tablist'">（{{
+                                                (element.tabs && element.tabs.length) || 0
+                                                }}项）</span>
+                                            <span class="descNum" v-else>（{{
+                                                (element.dataList && element.dataList.length) || 0
+                                                }}项）</span>
+                                        </span>
+                                    </div>
+                                    <div class="panel-title" v-else>
+                                        <a-input :ref="
+                          (e) => {
+                            setInputRef(e, element);
+                          }
+                        " @pressEnter="
+                          (e) => {
+                            changeTitle(e, element);
+                          }
+                        " @blur="
+                          (e) => {
+                            changeTitle(e, element);
+                          }
+                        " v-model:value="element.label"></a-input>
+                                    </div>
+                                    <div class="panel-btns">
+                                        <!-- <button class="btn buttonIcon" @click.stop="handleMore(element)">
+                                                          <i class="iconfont icon-gengduobiaoqian"></i>
+                                                          <div class="dropMenuWapper" v-if="element.isMore" @click.stop>
+                                                              <div class="dropMenu">
+                                                                  <div class="colorTemplate">
+                                                                      <p class="colorDesc">突出显示颜色</p>
+                                                                      <div class="colorsBox">
+                                                                          <span class="colorItem" :style="'background:'+colorItem" v-for="(colorItem,colorIdx) in colorList" :key="colorIdx">
+                                                                              <svg width="24" height="24" viewBox="0 0 24 24" role="presentation" v-if="element?.config?.color==colorItem">
+                                                                                  <path
+                                                                                      d="M7.356 10.942a.497.497 0 00-.713 0l-.7.701a.501.501 0 00-.003.71l3.706 3.707a.501.501 0 00.705.003l7.712-7.712a.493.493 0 00-.006-.708l-.7-.7a.504.504 0 00-.714 0l-6.286 6.286a.506.506 0 01-.713 0l-2.288-2.287z"
+                                                                                      fill="currentColor"></path>
+                                                                              </svg>
+                                                                          </span>
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="dropMenuItem" v-if="element.componentType!='calendar'" @click="handleRowConfig(element)">
+                                                                      <div class="item">配置</div>
+                                                                  </div>
+                                                                  <div class="dropMenuItem" v-if="element.componentType!='calendar'&&element.componentType!='abstract'&&element.componentType!='chart'">
+                                                                      <div class="item">查看更多</div>
+                                                                  </div>
+                                                                  <div class="dropMenuItem" @click="handleRename(element)">
+                                                                      <div class="item">重命名</div>
+                                                                  </div>
+                                                                  <div class="dropMenuItem">
+                                                                      <div class="item">删除</div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </button> -->
+                                    </div>
+                                </div>
+                                <!-- 日历 -->
+                                <div class="panel-bd" v-if="element.componentType == 'calendar'">
+                                    <div v-if="!element.isConfig">
+                                        <div :style="{
+                          width: '100%',
+                          border: '1px solid #d9d9d9',
+                          borderRadius: '4px',
+                        }">
+                                            <a-calendar :locale="locale" v-model:value="date" :fullscreen="false"
+                                                @panelChange="onPanelChange" />
+                                        </div>
+                                        <div class="scheduleBody canlendartablist">
+                                            <div class="tabContainer">
+                                                <div class="tabList">
+                                                    <div class="tab" :class="{ active: element.currentTab == 0 }"
+                                                        @click="handleItemTab(element, 0)">
+                                                        <div class="tabHover">
+                                                            <span class="tabText"> 日程 </span>
+                                                            <span class="tabnums">
+                                                                {{ element.Calendars.length }}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab" :class="{ active: element.currentTab == 1 }"
+                                                        @click="handleItemTab(element, 1)">
+                                                        <div class="tabHover">
+                                                            <span class="tabText"> 会议 </span>
+                                                            <span class="tabnums">{{
+                                                                element.Meetings.length
+                                                                }}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab" :class="{ active: element.currentTab == 2 }"
+                                                        @click="handleItemTab(element, 2)">
+                                                        <div class="tabHover">
+                                                            <span class="tabText"> 活动 </span>
+                                                            <span class="tabnums">{{
+                                                                element.Campaigns.length
+                                                                }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="scheduleList" v-if="element.currentTab == 0">
+                                                <div v-if="element.Calendars.length > 0">
+                                                    <div class="scheduleItem"
+                                                        style="background-color: rgb(41, 119, 246)"
+                                                        v-for="(listItem, listIdx) in element.Calendars">
+                                                        <div class="time">{{ listItem.time }}</div>
+                                                        <div class="title">{{ listItem.subject }}</div>
+                                                    </div>
+                                                </div>
+                                                <div class="empty" v-else>
+                                                    <img :src="require('@/assets/img/empty.png')" alt="" />
+                                                    <p class="emptyDesc">当前暂无数据</p>
+                                                </div>
+                                            </div>
+                                            <div class="scheduleList" v-if="element.currentTab == 1">
+                                                <div v-if="element.Meetings.length > 0">
+                                                    <div class="scheduleItem"
+                                                        style="background-color: rgb(41, 119, 246)"
+                                                        v-for="(listItem, listIdx) in element.Meetings">
+                                                        <div class="time">{{ listItem.time }}</div>
+                                                        <div class="title">{{ listItem.subject }}</div>
+                                                    </div>
+                                                </div>
+                                                <div class="empty" v-else>
+                                                    <img :src="require('@/assets/img/empty.png')" alt="" />
+                                                    <p class="emptyDesc">当前暂无数据</p>
+                                                </div>
+                                            </div>
+                                            <div class="scheduleList" v-if="element.currentTab == 2">
+                                                <div v-if="element.Campaigns.length > 0">
+                                                    <div class="scheduleItem"
+                                                        style="background-color: rgb(41, 119, 246)"
+                                                        v-for="(listItem, listIdx) in element.Campaigns">
+                                                        <div class="time">{{ listItem.time }}</div>
+                                                        <div class="title">{{ listItem.subject }}</div>
+                                                    </div>
+                                                </div>
+                                                <div class="empty" v-else>
+                                                    <img :src="require('@/assets/img/empty.png')" alt="" />
+                                                    <p class="emptyDesc">当前暂无数据</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div v-else>
+                                        <SwiperConfig :item="element" />
+                                    </div>
+                                </div>
+                                <!-- 轮播图 -->
+                                <div class="panel-bd" v-else-if="element.componentType == 'swiper'">
+                                    <a-carousel v-if="!element.isConfig" dots-class="slick-dots slick-thumb" autoplay>
+                                        <div v-for="(listItem, listitemIdx) in element.list" :key="listitemIdx">
+                                            <img :src="listItem.ImgUrl" alt="" />
+                                        </div>
+                                    </a-carousel>
+                                    <div v-else>
+                                        <swiper-config :item="element"></swiper-config>
+                                    </div>
+                                </div>
+                                <!-- 常用链接 -->
+                                <div class="panel-bd oftenLinkBody" v-else-if="element.componentType == 'text-grid'">
+                                    <div class="oftenLinkList">
+                                        <div class="oftenLinkItem" v-for="listItem in element.dataList"
+                                            @click="gotoMoreUrl(listItem.LinkUrl)">
+                                            <a href="#">{{ listItem.Name }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 快捷入口 -->
+                                <div class="panel-bd" v-else-if="element.componentType == 'icon-grid'">
+                                    <div class="oftenLinkList">
+                                        <div class="oftenLinkItem oftenLinkItem1" v-for="listItem in element.dataList"
+                                            @click="gotoMoreUrl(listItem.LinkUrl)">
+                                            <div class="oftenLinkIcon">
+                                                <img :src="listItem.ImageUrl" />
+                                            </div>
+                                            <div class="oftenLinkText">
+                                                <a :href="listItem.LinkUrl">{{ listItem.Name }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 列表-list  list-survey-->
+                                <div class="panel-bd" v-else-if="
+                      element.componentType == 'list' ||
+                      element.componentType == 'list-survey'
+                    ">
+                                    <ul class="listWrap" v-if="!element.isConfig"
+                                        :class="{ listWrapFixed: element.showHeader }">
+                                        <div v-if="element.dataList.length > 0">
+                                            <li class="listItem isFixed"
+                                                v-if="element.listColumns != '' && element.showHeader">
+                                                <span v-for="child in element.listColumns &&
+                            element.listColumns">{{ child.label }}</span>
+                                            </li>
+                                            <li class="listItem" v-for="child in element.dataList"
+                                                @click="handleRowDetail(element.detailUrl, child)">
+                                                <template v-if="
+                              element.listColumns != '' && element.listColumns
+                            ">
+                                                    <span v-for="cell in element.listColumns &&
+                              element.listColumns">
+                                                        <span v-if="cell.field == 'IsTop'">
+                                                            <button class="btnTag tagWarning"
+                                                                v-if="child[cell.field] == 1">
+                                                                置顶
+                                                            </button>
+                                                        </span>
+                                                        <span v-else>
+                                                            {{ child[cell.field] }}
+                                                        </span>
+                                                    </span>
+                                                </template>
+                                                <template v-else>
+                                                    <span v-for="(cell, key, cellIdx) in child"
+                                                        v-if="key != 'ID' && key != 'LIST_RECORD_ID'">{{ cell }}</span>
+                                                </template>
+                                            </li>
+                                        </div>
+                                        <div class="empty" v-else>
+                                            <img :src="require('@/assets/img/empty.png')" alt="" />
+                                            <p class="emptyDesc">当前暂无数据</p>
+                                        </div>
+                                    </ul>
+                                    <ListConfig :item="element" @save-success="getLayout" v-else></ListConfig>
+                                </div>
+                                <!-- tabllist -->
+                                <div class="panel-bd" v-else-if="element.componentType == 'tablist'">
+                                    <div>
+                                        <div class="tabContainer flex">
+                                            <div class="tabList">
+                                                <div class="tab" :class="{ active: element.currentTab == tabIdx }"
+                                                    v-for="(tab, tabIdx) in element.tabs"
+                                                    @click="handleItemTab(element, tabIdx)">
+                                                    <div class="tabHover">
+                                                        <span class="tabText">
+                                                            {{ tab.displayName }}
+                                                            <span class="tabnum">{{
+                                                                tab.listComponent.dataList.length
+                                                                }}</span>
+                                                            <span style="font-weight: normal" @click.stop="
+                                    deleteTabListTag(element, tab, tabIdx)
+                                  ">
+                                                                <i class="iconfont icon-yishanchu"></i>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rightAdd">
+                                                <a-popover trigger="click" placement="right">
+                                                    <template #content>
+                                                        <a-form>
+                                                            <a-form-item label="标签名称">
+                                                                <a-input v-model:value="element.addTagName"></a-input>
+                                                            </a-form-item>
+                                                            <a-form-item label="对象代码">
+                                                                <a-select v-model:value="element.addObjCode"
+                                                                    placeholder="请选择对象代码">
+                                                                    <a-select-option
+                                                                        v-for="(field, fieldIdx) in objCodeList"
+                                                                        :key="fieldIdx" :value="field.ID">{{ field.Name
+                                                                        }}</a-select-option>
+                                                                </a-select>
+                                                            </a-form-item>
+                                                            <div>
+                                                                <a-button type="primary"
+                                                                    @click="handleAddTags(element)">确认添加</a-button>
+                                                            </div>
+                                                        </a-form>
+                                                    </template>
+                                                    <a-button type="link">添加标签</a-button>
+                                                </a-popover>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabListWrap" v-for="(tab, tabIdx) in element.tabs" :key="tabIdx" :class="{
+                        isheadlist:
+                          tab.listComponent && tab.listComponent.showHeader,
+                      }">
+                                        <ul class="listWrap" v-if="element.currentTab == tabIdx">
+                                            <div v-if="tab.listComponent.dataList.length > 0">
+                                                <li class="listItem listItemHead" v-if="
+                              tab.listComponent.listColumns &&
+                              tab.listComponent.showHeader
+                            ">
+                                                    <p class="listItemTitle"
+                                                        v-for="child in tab.listComponent.listColumns">
+                                                        <span v-if="
+                                  child.field != 'Priority' &&
+                                  child.field != 'IsTop' &&
+                                  child.field != 'UrgentLevel' &&
+                                  child.field != 'IsImportant'
+                                ">{{ child.label }}</span>
+                                                    </p>
+                                                </li>
+                                                <li class="listItem tablistItem"
+                                                    v-for="child in tab.listComponent.dataList"
+                                                    @click="handleRowDetail(element.detailUrl, listItem)">
+                                                    <template v-if="tab.listComponent.displayColumns">
+                                                        <template v-for="(cell, index) in tab.listComponent
+                                  .displayColumns &&
+                                tab.listComponent.displayColumns.split(',')">
+                                                            <p v-if="
+                                    cell == 'Name' ||
+                                    cell == 'FullName' ||
+                                    cell == 'Title'
+                                  " class="listItemTitle listItemTitle1">
+                                                                {{ child[cell] }}
+                                                            </p>
+                                                            <p v-else-if="cell == 'BusinessUnitIdName'"
+                                                                class="listItemDept">
+                                                                {{ child[cell] }}
+                                                            </p>
+                                                            <p v-else-if="
+                                    cell == 'CreatedOn' || cell == 'PlanPayOn'
+                                  " class="listItemTime">
+                                                                {{
+                                                                child[cell] ? child[cell].split(" ")[0] : ""
+                                                                }}
+                                                            </p>
+                                                            <p v-else-if="
+                                    cell != 'Priority' &&
+                                    cell != 'IsTop' &&
+                                    cell != 'UrgentLevel' &&
+                                    cell != 'IsImportant'
+                                  " class="listItemTitle">
+                                                                {{ child[cell] }}
+                                                            </p>
+                                                        </template>
+                                                    </template>
+                                                </li>
+                                            </div>
+                                            <div class="empty" v-else>
+                                                <img :src="require('@/assets/img/empty.png')" alt="" />
+                                                <p class="emptyDesc">当前暂无数据</p>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- chart -->
+                                <div class="panel-bd" v-else-if="element.componentType == 'chart'">
+                                    <div class="chartWrap" v-if="!element.isConfig">
+                                        <div :id="'showChart_' + selfIdx + '_' + index"
+                                            style="width: 100%; height: 400px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </template>
+                              </draggable>
+                          </transition> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="context-panel" v-if="isTemplate">
+            <div class="context-head">
+                <p class="name">添加模板</p>
+                <div class="closeIcon" @click="showTemplate(false)">
+                    <i class="iconfont icon-guanbi"></i>
+                </div>
+            </div>
+            <div class="search">
+                <a-input-search v-model:value="searchVal" placeholder="搜索模板" style="width: 100%"
+                    @search="getTemplate" />
+            </div>
+            <div class="context-content">
+                <div class="templateList">
+                    <draggable class="list-group" :list="templateList" group="people" itemKey="template"
+                        @change="changeTemplate">
+                        <template #item="{ element, index }">
+                            <div class="templateItem">
+                                <div class="itemLeft">
+                                    <div class="thumbnail">
+                                        <img :src="
+                          element.pictureUrl
+                            ? item.pictureUrl
+                            : require('@/assets/img/twoDimensionalStats-thumb.png')
+                        " alt="" />
+                                    </div>
+                                    <a-button type="primary" @click="handleAddLeft(element)">添加</a-button>
+                                </div>
+                                <div class="itemRight">
+                                    <strong class="title">{{ element.displayName }}</strong>
+                                    <div class="sc-12e1e96-2 duqoAg">由 Atlassian 创建</div>
+                                    <p class="desc">{{ element.description }}</p>
+                                </div>
+                            </div>
+                        </template>
+                    </draggable>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="fixedSeeting" title="个性设置">
+        个性<br/>设置
+      </div> -->
+    </div>
+</template>
+<script setup>
+    import "@/style/common.less";
+    import "@/style/icon/iconfont.css";
+    import { EllipsisOutlined, SettingOutlined } from "@ant-design/icons-vue";
+    import { message } from "ant-design-vue";
+  import Toast from "@/utils/toast.js";
+    import {
+        ref,
+        watch,
+        reactive,
+        toRefs,
+        onMounted,
+        getCurrentInstance,
+        onUpdated,
+        h,
+        nextTick,
+    } from "vue";
+    import Delete from "@/components/listView/Delete.vue";
+    import dayjs from "dayjs";
+    import "dayjs/locale/zh-cn";
+    import locale from "ant-design-vue/es/date-picker/locale/zh_CN";
+    dayjs.locale("zh-cn");
+    import calendar from "dayjs/plugin/calendar";
+    import weekday from "dayjs/plugin/weekday";
+    import localeData from "dayjs/plugin/localeData";
+
+    dayjs.extend(calendar);
+    dayjs.extend(weekday);
+    dayjs.extend(localeData);
+    import * as echarts from "echarts";
+    import draggable from "vuedraggable";
+    import ListConfig from "@/components/design/ListConfig.vue";
+    import SwiperConfig from "@/components/design/SwiperConfig.vue";
+    import Interface from "@/utils/Interface.js";
+    const { proxy } = getCurrentInstance();
+    const itemRefs = [];
+    const data = reactive({
+        id: "",
+        dboardName: "workspace",
+        columns: [],
+        colorList: [
+            "#2684ff",
+            "#ff5630",
+            "#ffab00",
+            "#36b37e",
+            "#00b8d9",
+            "#6554c0",
+            "#97a0af",
+            "#ffffff",
+        ],
+        date: "",
+        searchVal: "",
+        list2: [
+            { name: "Juan", id: 5 },
+            { name: "Edgard", id: 6 },
+            { name: "Johnson", id: 7 },
+        ],
+        templateList: [],
+        layoutType: "",
+        isTemplate: false,
+        objCodeList: [],
+        isDelete: false,
+        deleteDesc: "",
+        deleteData: {
+            url: "",
+            method: "",
+            data: {},
+            success: "",
+            prevFn: "",
+        },
+    });
+    const {
+        id,
+        dboardName,
+        columns,
+        colorList,
+        group,
+        list1,
+        list2,
+        date,
+        searchVal,
+        templateList,
+        layoutType,
+        isTemplate,
+        objCodeList,
+        isDelete,
+        deleteDesc,
+        deleteData,
+    } = toRefs(data);
+    const getLayout = () => {
+        proxy
+            .$get(Interface.design.list, {
+                dboardName: data.dboardName,
+            })
+            .then((res) => {
+                data.columns = res.Board.columns;
+                data.columns[0].components.push({
+                    componentType: "chart",
+                    label: "图表",
+                    id: "chart",
+                });
+                data.columns.forEach((item, index) => {
+                    item.components.forEach((row, idx) => {
+                        if (
+                            row.componentType == "tablist" ||
+                            row.componentType == "calendar"
+                        ) {
+                            row.currentTab = 0;
+                        }
+                        if (row.componentType == "list") {
+                            var orderExpression2 = JSON.parse(row.config.orderExpression);
+                            if (
+                                !Array.isArray(orderExpression2) ||
+                                orderExpression2.length == 0
+                            ) {
+                                orderExpression2 = [
+                                    {
+                                        attributeName: "",
+                                        SortDir: "",
+                                        sort: "",
+                                    },
+                                ];
+                            }
+                            row.orderExpression2 = orderExpression2;
+                        }
+                        if (row.componentType == "chart") {
+                            nextTick(() => {
+                                getChartItemData(row, index, idx);
+                            });
+                        }
+                        row.isConfig = false;
+                        row.isRename = false;
+                        row.isMore = false;
+                    });
+                });
+            });
+    };
+    getLayout();
+    // 获取chart数据
+    const getChartItemData = (item, index, idx) => {
+        nextTick(() => {
+            loadChartData(item, index, idx);
+        });
+    };
+    const loadChartData = (item, index, idx) => {
+        var showChartDom = document.getElementById("showChart_" + index + "_" + idx);
+        var chartData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        var chartName = [
+            "一月",
+            "二月",
+            "三月",
+            "四月",
+            "五月",
+            "六月",
+            "七月",
+            "八月",
+            "九月",
+            "十月",
+            "十一月",
+            "十二月",
+        ];
+        var myChart;
+        if (myChart != null && myChart != "" && myChart != undefined) {
+            myChart.dispose(); //销毁
+        }
+        myChart = echarts.init(showChartDom);
+        var option;
+        option = {
+            title: {
+                text: "",
+            },
+            tooltip: {
+                trigger: "axis",
+                axisPointer: {
+                    type: "shadow",
+                },
+            },
+            color: ["#165dff"],
+            legend: {
+                show: false,
+                data: ["发布帖子数量"],
+            },
+            grid: {
+                show: false,
+                left: "5%",
+                top: "10%",
+                right: "5%",
+                bottom: "10%",
+            },
+            xAxis: {
+                data: chartName,
+                axisLabel: {
+                    interval: 0,
+                    //rotate: 15,
+                },
+                axisLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+            },
+            yAxis: {
+                type: "value",
+                name: "发布帖子数量",
+                nameLocation: "center",
+                nameGap: 50,
+                nameTextStyle: {
+                    fontSize: 14,
+                },
+                axisLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+            },
+            series: [
+                {
+                    name: "发布帖子数量",
+                    type: "line",
+                    symbol: "circle",
+                    symbolSize: 5,
+                    data: chartData,
+                    label: {
+                        normal: {
+                            show: true,
+                            position: "top",
+                        },
+                        formatter: "{@value}",
+                    },
+                },
+            ],
+        };
+        option && myChart.setOption(option);
+    };
+    // 获取对象代码列表
+    const getObjList = () => {
+        proxy
+            .$get(Interface.uilook, {
+                Lktp: 100000,
+            })
+            .then((res) => {
+                data.objCodeList = res.listData;
+            });
+    };
+    getObjList();
+    const showTemplate = (isBook) => {
+        data.isTemplate = isBook;
+    };
+    const handleMore = (item) => {
+        item.isMore = !item.isMore;
+    };
+    onMounted(() => {
+        window.addEventListener("click", function () {
+            data.columns.forEach(function (item) {
+                item.components.forEach(function (self) {
+                    self.isMore = false;
+                });
+            });
+        });
+    });
+    const log = (evt) => {
+        window.console.log(evt);
+    };
+    const onPanelChange = (value, mode) => {
+        console.log(value, mode);
+    };
+    const gotoMoreUrl = (link) => {
+        window.open(link);
+    };
+    // 搜索模板
+    const getTemplate = () => {
+        proxy.$get(Interface.design.templateList, {}).then((res) => {
+            data.templateList = res.rows;
+            data.templateList.forEach((item) => {
+                item.id = item.Id;
+                item.label = item.displayName;
+                item.componentType = item.name;
+                item.isNewAdd = true;
+            });
+        });
+    };
+    getTemplate();
+    const changeTemplate = (e) => {
+        console.log("e", e);
+        let columnNumber, displayOrder;
+        let id = e.removed.element.Id;
+        // console.log('data',data.columns);
+        for (let i = 0; i < data.columns.length; i++) {
+            for (let j = 0; j < data.columns[i].components.length; j++) {
+                let item = data.columns[i].components[j];
+                if (id == item.id) {
+                    columnNumber = i + 1;
+                    displayOrder = j + 1;
+                    break;
+                }
+            }
+        }
+        let item = e.removed.element;
+        item.ColumnNumber = columnNumber;
+        item.DisplayOrder = displayOrder;
+        console.log("columnNumber", columnNumber, displayOrder);
+        handleAddLeft(item);
+    };
+    // 更换布局
+    const choiceLayout = (layoutType) => {
+        data.layoutType = layoutType;
+        saveLayout();
+    };
+    const saveLayout = () => {
+        var obj = {
+            params: {
+                recordRep: {
+                    objTypeCode: 9170,
+                    id: data.id,
+                    fields: {
+                        LayoutType: data.layoutType,
+                    },
+                },
+            },
+        };
+        var d = {
+            message: JSON.stringify(obj),
+        };
+        proxy.$get(Interface.saveRecord, d).then((res) => { });
+    };
+    // 完成
+    const handleComplete = () => {
+        var result = [];
+        data.columns.forEach(function (item) {
+            item.components.forEach(function (v, idx) {
+                if (v.componentType != "tab-calendar-item") {
+                    v.columnNumber = item.columnNumber;
+                    v.displayOrder = idx + 1;
+                    result.push(v);
+                }
+            });
+        });
+        let len = result.length;
+        for (var i = 0; i < result.length; i++) {
+            var _result$i = result[i];
+            var id = _result$i.id;
+            var columnNumber = _result$i.columnNumber;
+            var displayOrder = _result$i.displayOrder;
+            setTemplateSort(id, columnNumber, displayOrder, result[i], i, len);
+        }
+    };
+    //排序
+    const setTemplateSort = (itemid, columnsIndex, displayOrder, item, i, len) => {
+        var obj = {
+            params: {
+                recordRep: {
+                    objTypeCode: 9171,
+                    id: itemid,
+                    fields: {
+                        DisplayOrder: displayOrder,
+                        ColumnNumber: columnsIndex,
+                    },
+                },
+            },
+        };
+        var d = {
+            message: JSON.stringify(obj),
+        };
+        proxy.$get(Interface.saveRecord, d).then((res) => {
+            if (res && i == len - 1) {
+                Toast("保存成功！");
+            }
+        });
+    };
+    // tablist 添加标签
+    const handleAddTags = (item) => {
+        let addObjCode = item.addObjCode;
+        var d = {
+            Id: addObjCode,
+            ObjTypeCode: 100000,
+        };
+        proxy.$get(Interface.detail, d).then((res) => {
+            let addObjectTypeCode = res.record.ObjectTypeCode;
+            let copyObj = {
+                id: "",
+                name: item.addTagName,
+                displayName: item.addTagName,
+                listComponent: {},
+            };
+            item.tabs.push(copyObj);
+            saveRowListTags(item);
+        });
+    };
+    // 删除tablist下的标签
+    const deleteTabListTag = (item, tab, tabIdx) => {
+        data.deleteDesc = "是否确认删除该标签?";
+        data.deleteData.url = Interface.saveRecord;
+        data.deleteData.prevFn = () => {
+            item.tabs.splice(tabIdx, 1);
+            let config = {
+                componentType: item.componentType,
+                tabs: item.tabs,
+            };
+            var obj = {
+                params: {
+                    recordRep: {
+                        id: item.id,
+                        objTypeCode: 9171,
+                        fields: {
+                            Config: JSON.stringify(config),
+                        },
+                    },
+                },
+            };
+            var d = {
+                message: JSON.stringify(obj),
+            };
+            data.deleteData.data = d;
+        };
+        data.isDelete = true;
+    };
+    // tablist 切换
+    const handleItemTab = (item, index) => {
+        item.currentTab = index;
+        if (item.componentType == "tablist") {
+            item.entityCode = item.tabs[0].listComponent.entityCode || "090";
+        }
+    };
+    const saveRowListTags = (item) => {
+        let config = {
+            componentType: item.componentType,
+            tabs: item.tabs,
+        };
+        var obj = {
+            params: {
+                recordRep: {
+                    id: item.id,
+                    objTypeCode: 9171,
+                    fields: {
+                        Config: JSON.stringify(config),
+                    },
+                },
+            },
+        };
+        var d = {
+            message: JSON.stringify(obj),
+        };
+        proxy.$get(Interface.saveRecord, d).then((res) => {
+            getLayout();
+        });
+    };
+    // 重命名
+    const handleRename = (item) => {
+        item.isRename = true;
+        nextTick(() => {
+            let refName = "ref_" + item.name;
+            let index = itemRefs.findIndex((row) => row.name == refName);
+            itemRefs[index].el.focus();
+            item.isMore = false;
+        });
+    };
+    const setInputRef = (el, item) => {
+        if (el && el != null) {
+            itemRefs.push({
+                name: "ref_" + item.name,
+                el,
+            });
+        }
+    };
+    // 修改标题
+    const changeTitle = (e, item) => {
+        saveTitle(item);
+    };
+    const saveTitle = (item) => {
+        var obj = {
+            params: {
+                recordRep: {
+                    id: item.id,
+                    objTypeCode: 9171,
+                    fields: {
+                        DisplayName: item.label,
+                    },
+                },
+            },
+        };
+        var d = {
+            message: JSON.stringify(obj),
+        };
+        proxy.$get(Interface.saveRecord, d).then((res) => {
+            Toast("保存成功！");
+            item.isRename = false;
+        });
+    };
+    // 添加模板
+    const handleAddLeft = (item) => {
+        var obj = {
+            params: {
+                recordRep: {
+                    objTypeCode: 9171,
+                    fields: {
+                        ComponentType: item.componentType,
+                        DisplayName: item.displayName,
+                        DashboardId: {
+                            Id: data.id,
+                        },
+                        config: JSON.stringify(item.config),
+                        DisplayOrder: item.DisplayOrder || 1,
+                        ColumnNumber: item.ColumnNumber || 1,
+                        filterExpression: item.config.filterExpression,
+                        DisplayColumns: item.config.displayColumns,
+                        orderExpression: item.config.OrderExpression,
+                        EntityCode: item.config.entityCode,
+                        TemplateObjectTypeCode: item.config.templateObjectTypeCode,
+                        DetailUrl: item.config.detailURL,
+                        MoreLinkURL: item.config.moreLinkURL,
+                        TemplateId: {
+                            Id: item.config.templateId,
+                        },
+                    },
+                },
+            },
+        };
+        if (item.componentType == "tablist") {
+            obj.params.recordRep.fields.config = JSON.stringify(item.configTab);
+        } else {
+            var addObj = {
+                filterExpression: item.config.filterExpression,
+                DisplayColumns: item.config.displayColumns,
+                orderExpression: item.config.orderExpression || "",
+                EntityCode: item.config.entityCode,
+                TemplateObjectTypeCode: item.config.templateObjectTypeCode,
+                DetailUrl: item.config.detailURL,
+                MoreLinkURL: item.config.moreLinkURL,
+            };
+            Object.assign(obj.params.recordRep.fields, addObj);
+        }
+        var d = {
+            message: JSON.stringify(obj),
+        };
+        proxy.$get(Interface.saveRecord, d).then((res) => {
+            Toast("添加成功！");
+            getLayout();
+        });
+    };
+    // 配置
+    const handleRowConfig = (item) => {
+        item.isConfig = !item.isConfig;
+        item.isMore = false;
+    };
+    // 删除
+    const deleteOk = (params) => {
+        console.log("data.deleteData", data.deleteData);
+        // data.deleteData.prevFn();
+        if (typeof data.deleteData.prevFn == "function") {
+            data.deleteData.prevFn();
+        }
+        proxy.$get(data.deleteData.url, data.deleteData.data).then((res) => {
+            data.isDelete = false;
+            data.deleteData = {};
+            Toast("删除成功！");
+            getLayout();
+        });
+    };
+    const cancelDelete = (params) => {
+        data.isDelete = params;
+    };
+</script>
+<style lang="less" scoped>
+    @import url("@/style/designHome.less");
+
+    .fixedSeeting {
+        position: fixed;
+        right: 0;
+        z-index: 100;
+        width: 48px;
+        height: 48px;
+        background: #4299e1;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        top: 50%;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* font-size: 24px; */
+        font-size: 12px;
+        color: #fff;
+    }
+</style>

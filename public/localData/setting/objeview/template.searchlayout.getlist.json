@@ -1,0 +1,37 @@
+{
+  "status": 1,
+  "rows": [
+    {
+      "Name": "搜索结果",
+      "DisplayButtonNames": "",
+      "DisplayButtonTitles": "",
+      "LayoutType": "SearchResult",
+      "TemplateId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "CreatedOn": "2015-05-28 16:48:39"
+    },
+    {
+      "Name": "查找对话框",
+      "DisplayButtonNames": "",
+      "DisplayButtonTitles": "",
+      "LayoutType": "Lookup",
+      "TemplateId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "CreatedOn": "2015-05-28 16:48:39"
+    },
+    {
+      "Name": "选项卡",
+      "DisplayButtonNames": "",
+      "DisplayButtonTitles": "",
+      "LayoutType": "KeyList",
+      "TemplateId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "CreatedOn": "2015-05-28 16:48:39"
+    },
+    {
+      "Name": "搜索筛选器字段",
+      "DisplayButtonNames": "",
+      "DisplayButtonTitles": "",
+      "LayoutType": "SearchFilter",
+      "TemplateId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "CreatedOn": "2015-05-28 16:48:39"
+    }
+  ]
+}

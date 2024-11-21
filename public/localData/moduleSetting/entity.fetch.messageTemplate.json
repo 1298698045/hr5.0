@@ -1,0 +1,213 @@
+{
+  "id": null,
+  "state": "SUCCESS",
+  "storable": true,
+  "returnValue": {
+    "totalCount": 5,
+    "pageInfo": {
+      "hasNextPage": false,
+      "endCursor": null,
+      "__typename": null
+    },
+    "nodes": [
+      {
+        "id": "63fa29e8-e040-416c-9a18-329695f88b0e",
+        "nameField": "Name",
+        "Name": {
+          "_value": "员工生日关怀",
+          "textValue": "员工生日关怀",
+          "value": "员工生日关怀",
+          "fieldKey": "Name",
+          "__typename": "TextField"
+        },
+        "CategoryName": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "CategoryName",
+          "__typename": "TextField"
+        },
+        "MessageCode": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "MessageCode",
+          "__typename": "TextField"
+        },
+        "StatusCode": {
+          "label": "",
+          "name": "",
+          "value": null,
+          "fieldKey": "StatusCode",
+          "__typename": "PicklistField"
+        },
+        "RegardingObjectTypeCode": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "RegardingObjectTypeCode",
+          "__typename": "TextField"
+        }
+      },
+      {
+        "id": "e6b33252-b5a2-458c-b2ea-1773dc848aaa",
+        "nameField": "Name",
+        "Name": {
+          "_value": "员工续订或终止聘用合同工作通知",
+          "textValue": "员工续订或终止聘用合同工作通知",
+          "value": "员工续订或终止聘用合同工作通知",
+          "fieldKey": "Name",
+          "__typename": "TextField"
+        },
+        "CategoryName": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "CategoryName",
+          "__typename": "TextField"
+        },
+        "MessageCode": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "MessageCode",
+          "__typename": "TextField"
+        },
+        "StatusCode": {
+          "label": "",
+          "name": "",
+          "value": null,
+          "fieldKey": "StatusCode",
+          "__typename": "PicklistField"
+        },
+        "RegardingObjectTypeCode": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "RegardingObjectTypeCode",
+          "__typename": "TextField"
+        }
+      },
+      {
+        "id": "246f5ab8-c8d3-47de-b984-6ea0f60d8ab6",
+        "nameField": "Name",
+        "Name": {
+          "_value": "员工通知",
+          "textValue": "员工通知",
+          "value": "员工通知",
+          "fieldKey": "Name",
+          "__typename": "TextField"
+        },
+        "CategoryName": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "CategoryName",
+          "__typename": "TextField"
+        },
+        "MessageCode": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "MessageCode",
+          "__typename": "TextField"
+        },
+        "StatusCode": {
+          "label": "",
+          "name": "",
+          "value": null,
+          "fieldKey": "StatusCode",
+          "__typename": "PicklistField"
+        },
+        "RegardingObjectTypeCode": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "RegardingObjectTypeCode",
+          "__typename": "TextField"
+        }
+      },
+      {
+        "id": "4048481f-7a3f-4b69-917e-d62b89c9eeeb",
+        "nameField": "Name",
+        "Name": {
+          "_value": "注册验证码",
+          "textValue": "注册验证码",
+          "value": "注册验证码",
+          "fieldKey": "Name",
+          "__typename": "TextField"
+        },
+        "CategoryName": {
+          "_value": "Recruit",
+          "textValue": "Recruit",
+          "value": "Recruit",
+          "fieldKey": "CategoryName",
+          "__typename": "TextField"
+        },
+        "MessageCode": {
+          "_value": "UpdatePwd",
+          "textValue": "UpdatePwd",
+          "value": "UpdatePwd",
+          "fieldKey": "MessageCode",
+          "__typename": "TextField"
+        },
+        "StatusCode": {
+          "label": "",
+          "name": "",
+          "value": null,
+          "fieldKey": "StatusCode",
+          "__typename": "PicklistField"
+        },
+        "RegardingObjectTypeCode": {
+          "_value": "40203",
+          "textValue": "40203",
+          "value": "40203",
+          "fieldKey": "RegardingObjectTypeCode",
+          "__typename": "TextField"
+        }
+      },
+      {
+        "id": "a336cd14-8bb2-4783-9e58-a343237d2b3c",
+        "nameField": "Name",
+        "Name": {
+          "_value": "简历初审合格",
+          "textValue": "简历初审合格",
+          "value": "简历初审合格",
+          "fieldKey": "Name",
+          "__typename": "TextField"
+        },
+        "CategoryName": {
+          "_value": "",
+          "textValue": "",
+          "value": "",
+          "fieldKey": "CategoryName",
+          "__typename": "TextField"
+        },
+        "MessageCode": {
+          "_value": "1000101",
+          "textValue": "1000101",
+          "value": "1000101",
+          "fieldKey": "MessageCode",
+          "__typename": "TextField"
+        },
+        "StatusCode": {
+          "label": "",
+          "name": "",
+          "value": null,
+          "fieldKey": "StatusCode",
+          "__typename": "PicklistField"
+        },
+        "RegardingObjectTypeCode": {
+          "_value": "40203",
+          "textValue": "40203",
+          "value": "40203",
+          "fieldKey": "RegardingObjectTypeCode",
+          "__typename": "TextField"
+        }
+      }
+    ],
+    "__typename": null
+  },
+  "error": null,
+  "total": 5
+}

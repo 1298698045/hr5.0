@@ -1,0 +1,386 @@
+.bWizardBlock{
+    background-color: transparent;
+    border: 0 none;
+    margin-right: 0;
+    color: #3c3d3e;
+    font-size: 90%;
+    .pbWizardTitle{
+        background-position: bottom;
+        background-repeat: repeat-x;
+        font-weight: bold;
+        color: white;
+        background-color: #8e9dbe;
+        border-color: #8e9dbe;
+        padding: 8px 12px;
+        font-size: 13px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        background-image: none;
+        .ptRightTitle{
+            float: right;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+        }
+    }
+    .pbBody{
+        padding: 0;
+        background: #f8f8f8 none;
+        border: 1px solid #eaeaea;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        a{
+            color: #000;
+            font-size: 12px;
+            text-decoration: underline;
+            &:hover{
+                color: #015ba7;
+            }
+        }
+        .pbWizardHeader{
+            overflow: hidden;
+            height: 1%;
+            border-bottom: 1px solid #dbdbdb;
+            margin-bottom: 0;
+            .pbTopButtons{
+                padding: 8px 12px;
+                margin: 0;
+                float: right;
+                color: #333;
+            }
+        }
+        .pbDescription {
+            color: #333;
+            // font-size: 109%;
+            clear: right;
+            margin: 0;
+            border-top: 1px solid #fff;
+            padding: 10px;
+            border-bottom: 0 none;
+            .linksDiv1{
+                .editFormulaQuickLinks {
+                    float: right;
+                }
+                fieldset{
+                    overflow: visible;
+                    position: relative;
+                    background-color: white;
+                    legend{
+                        font-weight: bold;
+                        color: black;
+                        display: block;
+                        padding-inline-start: 2px;
+                        padding-inline-end: 2px;
+                        unicode-bidi: isolate;
+                        border-width: initial;
+                        border-style: none;
+                        border-color: initial;
+                        border-image: initial;
+                    }
+                    ul{
+                        display: block;
+                        list-style-type: disc;
+                        margin-block-start: 1em;
+                        margin-block-end: 1em;
+                        margin-inline-start: 0px;
+                        margin-inline-end: 0px;
+                        padding-inline-start: 40px;
+                        unicode-bidi: isolate;
+                        padding: 0 10px;
+                        list-style: unset;
+                        li{
+                            margin-left: 15px;
+                            padding-left: 0;
+                            list-style: unset;
+                            a{
+                                color: #000;
+                                text-decoration: underline;
+                                &:hover{
+                                    text-decoration: underline;
+                                    color: #015ba7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .exampleBox {
+                background-color: #ffe;
+                border: 1px solid #aaa;
+                margin: 0 15px;
+                padding: 0 8px;
+            }
+        }
+        .pbWizardBody{
+            clear: both;
+            padding: 8px 12px;
+            margin: 0;  
+            padding-bottom: 16px;
+            border-bottom: 1px solid #dbdbdb;
+            border-top: 0 none;
+            position: relative;
+            top: -30px;
+            .miniTabOn{
+                margin-top: 5px;
+            }
+            #insertFieldCell,#insertOperatorCell{
+                padding: 7px 5px;
+                vertical-align: middle;
+            }
+        }
+        .pbWizardFooter{
+            padding: 8px 12px;
+            margin: 0;
+            border-top: 1px solid #fff;
+            margin-top: -30px;
+            overflow: hidden;
+            .pbBottomButtons{
+                margin-right: 0;
+                float: right;
+            }
+        }
+        td{
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .miniTab{
+            background-color: transparent !important;
+            padding: 5px 0 0;
+            margin-bottom: -3px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-color: #8e9dbe;
+            .miniTabList{
+                border-bottom: 1px solid #cecece;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                li{
+                    background: url("~@/assets/img/subtab_sprite.png");
+                    background-position: left -199px !important;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                    display: inline-block;
+                    padding: 0 8px;
+                    margin-top: 0;
+                    margin-right: 0;
+                    margin-bottom: -5px;
+                    margin-left: 6px;
+                    height: 27px;
+                    border: 0;
+                    white-space: nowrap;
+                    a{
+                        background: url("~@/assets/img/subtab_sprite.png");
+                        background-repeat: no-repeat;
+                        background-position: right -299px;
+                        display: inline-block;
+                        padding-top: 8px;
+                        padding-right: 8px;
+                        padding-bottom: 4px;
+                        padding-left: 0;
+                        // height: 15px;
+                        margin-right: -13px;
+                        font-weight: bold;
+                        color: #333;
+                        text-decoration: none;
+                        &:hover{
+                            color: #015ba7;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                li.currentTab{
+                    background-position: left 0 !important;
+                    border-bottom: 1px solid transparent;
+                    height: 27px;
+                    margin-top: 0;
+                    margin-right: 0;
+                    margin-bottom: -1px;
+                    margin-left: 2px;
+                    font-weight: bold;
+                    a{
+                        background: url("~@/assets/img/subtab_sprite.png");
+                        background-repeat: no-repeat;
+                        background-position: right -100px;
+                        margin-right: -17px;
+                        padding-top: 8px;
+                        padding-right: 12px;
+                        padding-bottom: 5px;
+                        padding-left: 3px;
+                    }
+                }
+            }
+        }
+        .formulaFieldTitle{
+            font-weight: bold;
+        }
+        .formulaFooter td{
+            white-space: nowrap;
+        }
+        
+    }
+    .bPageBlock {
+        border: 0 none;
+        background: none;
+        .pbBody{
+            padding: 0;
+            margin: 0;
+            background: #f8f8f8 none;
+            border: none;
+            .pbSubheader.first{
+                margin-left: -12px;
+                margin-right: -12px;
+                padding-left: 12px;
+                padding-right: 12px;
+                border-top: 1px solid #fff;
+            }
+            .pbSubheader{
+                background-image: url("~@/assets/img/opacity75.png");
+                border-width: 0;
+                color: #000;
+                padding: 4px 16px;
+                background-color: #8e9dbe;
+                border-color: #8e9dbe;
+                border-style: solid;
+                h3{
+                    font-size: 13px;
+                }
+            }
+        }
+        .detailList{
+            width: 100%;
+            td[colspan="4"]{
+                padding: 10px 0 0 16px;
+            }
+            td{
+                vertical-align: top;
+            }
+            tr{
+                td{
+                    border-bottom-width: 0;
+                    border-bottom: none;
+                    border-color: #ececec;
+                }
+            }
+            td.labelCol{
+                padding-top: 3px;
+                padding-bottom: 3px;
+                color: #4a4a56;
+                width: 18%;
+                white-space: nowrap;
+                padding-right: 10px;
+                padding-left: 2px;
+                text-align: right;
+                font-weight: bold;
+                font-size: 13px;
+            }
+            td.data2Col{
+                width: 82%;
+            }
+            td.data2Col,td.dataCol{
+                padding-top: 3px;
+                padding-bottom: 3px;
+                padding-right: 2px;
+                padding-left: 10px;
+                text-align: left;
+                // width: 82%;
+                .requiredInput{
+                    position: relative;
+                    height: 100%;
+                    .requiredBlock{
+                        background-color: #c00;
+                        position: absolute;
+                        left: -4px;
+                        width: 3px;
+                        top: 1px;
+                        bottom: 1px;
+                    }
+                    input[type='text']{
+                        vertical-align: middle;
+                        margin-right: .25em;
+                        height: 20px;
+                        width: 173px;
+                        padding: 2px;
+                        // border-radius: 2px;
+                    }
+                    .errorMsg{
+                        padding-left: 3px;
+                        color: #d74c3b;
+                    }
+                }
+                textarea{
+                    border-radius: 2px;
+                    resize: both;
+                    font-family: 'Arial', 'Helvetica', sans-serif;
+                    font-size: 100%;
+                    padding: 2px;
+                }
+                .showHideLink{
+                    a{
+                        color: #000;
+                        // color: #015ba7;
+                        &:hover{
+                            color: #015ba7;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                input[type="checkbox"]{
+                    vertical-align: middle;
+                    margin: 3px;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+            td.dataCol{
+                width: 32% !important;
+            }
+            td.dataCol.col02 {
+                width: 32%;
+                border-right: none;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+.textCounterMiddle{
+    display: none;
+}
+.mouseOverInfoOuter {
+    position: relative;
+    display: inline;
+    text-decoration: none;
+    .infoIcon{
+        vertical-align: top;
+        margin-top: 3px;
+        background-image: url("~@/assets/img/info_sprite.png");
+        background-position: left top;
+        width: 16px;
+        height: 15px;
+        &:hover{
+            background-position: left -19px;
+        }
+    }
+    &:hover{
+        .mouseOverInfo{
+            display: block;
+        }
+    }
+    .mouseOverInfo{
+        position: absolute;
+        display: none;
+        left: 22px;
+        bottom: 20px;
+        width: 260px;
+        background-color: #ffffd0;
+        border-color: #333;
+        padding: 8px 10px;
+        border-radius: 3px;
+        font-size: 12px;
+        border: 1px solid black;
+        z-index: 10px;
+        white-space: normal;
+        font-weight: normal;
+        color: #000;
+    }
+}

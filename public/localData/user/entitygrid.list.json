@@ -1,0 +1,89 @@
+{
+  "total": 21,
+  "rows": [
+    {
+      "LIST_RECORD_ID": "45dc0bfa-1d41-4fba-894a-658b5ff1f658",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=45dc0bfa-1d41-4fba-894a-658b5ff1f658&retURL=\">院领导意见测试</a>",
+      "Quantity": "3",
+      "OwningUser": "<a href='#' title='刘优'>刘优</a>",
+      "ModifiedOn": "2023-11-10 10: 30",
+      "ModifiedBy": "<a href='#' title='刘优'>刘优</a>"
+    },
+    {
+      "LIST_RECORD_ID": "1350c017-838a-4b73-909a-f820398be65e",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=1350c017-838a-4b73-909a-f820398be65e&retURL=\">护士长</a>",
+      "Quantity": "18",
+      "OwningUser": "&nbsp;",
+      "ModifiedOn": "2023-10-07 15: 30",
+      "ModifiedBy": "<a href='#' title='刘优'>刘优</a>"
+    },
+    {
+      "LIST_RECORD_ID": "398f4bcf-406d-47f9-8a13-f351f312bb1a",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=398f4bcf-406d-47f9-8a13-f351f312bb1a&retURL=\">职能科室负责人</a>",
+      "Quantity": "23",
+      "OwningUser": "<a href='#' title='刘优'>刘优</a>",
+      "ModifiedOn": "2022-05-12 11: 12",
+      "ModifiedBy": "<a href='#' title='刘优'>刘优</a>"
+    },
+    {
+      "LIST_RECORD_ID": "ecf20814-75e7-4a00-a11d-faabbfe63329",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=ecf20814-75e7-4a00-a11d-faabbfe63329&retURL=\">考勤员</a>",
+      "Quantity": "0",
+      "OwningUser": "<a href='#' title='刘优'>刘优</a>",
+      "ModifiedOn": "2022-05-12 11: 11",
+      "ModifiedBy": "<a href='#' title='刘优'>刘优</a>"
+    },
+    {
+      "LIST_RECORD_ID": "4e79774d-75c1-434d-94a8-c615802ebacd",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=4e79774d-75c1-434d-94a8-c615802ebacd&retURL=\">奖金上报员</a>",
+      "Quantity": "6",
+      "OwningUser": "<a href='#' title='刘优'>刘优</a>",
+      "ModifiedOn": "2020-03-27 15: 21",
+      "ModifiedBy": "<a href='#' title='刘优'>刘优</a>"
+    },
+    {
+      "LIST_RECORD_ID": "18dde19c-431a-4baa-8357-368c81d28266",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=18dde19c-431a-4baa-8357-368c81d28266&retURL=\">系统维护组</a>",
+      "Quantity": "6",
+      "OwningUser": "&nbsp;",
+      "ModifiedOn": "2020-03-27 15: 20",
+      "ModifiedBy": "<a href='#' title='刘优'>刘优</a>"
+    },
+    {
+      "LIST_RECORD_ID": "47d67cfe-10ee-454a-ac76-c7d94b8dc84b",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=47d67cfe-10ee-454a-ac76-c7d94b8dc84b&retURL=\">病区主任群</a>",
+      "Quantity": "16",
+      "OwningUser": "<a href='#' title='季静'>季静</a>",
+      "ModifiedOn": "2018-01-25 12: 34",
+      "ModifiedBy": "<a href='#' title='季静'>季静</a>"
+    },
+    {
+      "LIST_RECORD_ID": "d49a5bc2-73b6-426a-ab57-bf2a8657b81f",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=d49a5bc2-73b6-426a-ab57-bf2a8657b81f&retURL=\">病区主任</a>",
+      "Quantity": "18",
+      "OwningUser": "<a href='#' title='贾军朴'>贾军朴</a>",
+      "ModifiedOn": "2018-01-18 16: 40",
+      "ModifiedBy": "<a href='#' title='贾军朴'>贾军朴</a>"
+    },
+    {
+      "LIST_RECORD_ID": "9c676aa4-470b-4041-9cbf-9375a379b18f",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=9c676aa4-470b-4041-9cbf-9375a379b18f&retURL=\">统计日报组</a>",
+      "Quantity": "31",
+      "OwningUser": "<a href='#' title='刘优'>刘优</a>",
+      "ModifiedOn": "2018-01-07 14: 36",
+      "ModifiedBy": "<a href='#' title='刘优'>刘优</a>"
+    },
+    {
+      "LIST_RECORD_ID": "5f7c5763-23c8-4ed8-8b92-b4245561e4a6",
+      "Name": "<a style=\"color:blue;\" href=\"/00G/detail?objectTypeCode=9&id=5f7c5763-23c8-4ed8-8b92-b4245561e4a6&retURL=\">统计日报分析组</a>",
+      "Quantity": "9",
+      "OwningUser": "<a href='#' title='刘优'>刘优</a>",
+      "ModifiedOn": "2018-01-07 14: 29",
+      "ModifiedBy": "<a href='#' title='刘优'>刘优</a>"
+    }
+  ],
+  "context": {
+    "userid": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+    "name": "刘优"
+  }
+}

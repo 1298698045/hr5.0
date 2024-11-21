@@ -1,0 +1,58 @@
+{
+  "returnValue": {
+    "entityListViewPermissions": {
+      "canCreateListView": true,
+      "canEditVisibility": true
+    },
+    "isCUDAllowed": false,
+    "isInlineEditOff": false,
+    "isInlineEditable": false,
+    "disableRowNumbers": false,
+    "isChartSupportedEntity": true,
+    "hasMultipleListViews": false,
+    "listViewLabel": "全部",
+    "listViewId": "ee3b2acb-829b-4784-85fe-7dcab9bc960f",
+    "developerName": null,
+    "isEditable": false,
+    "isCloneable": false,
+    "searchable": false,
+    "visibility": "SHARED",
+    "recordThemeInfo": {
+      "entityApiName": "ScheduleTask",
+      "entityLabelPlural": "计划任务",
+      "iconImageURL": "/img/icon/t4v35/standard/task_120.png",
+      "primaryPalette": null,
+      "entityType": "04S"
+    },
+    "isErrorListView": false,
+    "breadCrumbList": [
+      {
+        "label": "计划任务",
+        "entityName": "ScheduleTask",
+        "isClickable": false,
+        "objectTypeCode": 20474
+      }
+    ],
+    "prefixes": [
+      "04S"
+    ],
+    "isTransientFilterable": false,
+    "pageLayoutInfo": {
+      "listPageUrl": null,
+      "editPageUrl": "",
+      "previewPageUrl": null,
+      "viewageUrl": ""
+    }
+  },
+  "context": {
+    "globalValueProviders": null,
+    "picklistValuesMap": {},
+    "appContextUser": {
+      "userId": null,
+      "name": null,
+      "isAdmin": false,
+      "token": null
+    },
+    "enableAccessChecks": false
+  }
+}

@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="" style="">
+
+<head>
+    <script src="/static/111213/js/perf/stub.js"></script>
+    <title>编辑字段依赖性 ~ Salesforce - Developer Edition</title>
+    <link href="/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/zen-componentsCompatible.css" rel="stylesheet"
+        type="text/css">
+    <link href="/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/elements.css" rel="stylesheet" type="text/css">
+    <link href="/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/common.css" rel="stylesheet" type="text/css">
+    <link href="/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/setup.css" rel="stylesheet" type="text/css">
+    <link href="/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/EditDependencyUICSS.css" rel="stylesheet" type="text/css">
+    <link href="/sCSS/60.0/sprites/1710411414000/Theme3/gc/dStandard.css" rel="stylesheet" type="text/css">
+    <link href="/sCSS/60.0/sprites/1710411414000/Theme3/00D90000000yvHG/0059000000390Wh/gc/dCustom0.css"
+        rel="stylesheet" type="text/css">
+    <link href="/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/extended.css" rel="stylesheet" type="text/css">
+    <link href="/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/DesktopFrameCommon.css" rel="stylesheet" type="text/css">
+    <link href="/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/AuraAlohaSetupContentFrame.css" rel="stylesheet"
+        type="text/css">
+    <script type="text/javascript">
+        //<![CDATA[
+        try { (function () { var w = self, l, d, i, o, n, h, f = ['d90000000yvhgeay-dev-ed.lightning.force.com'], a = document.createElement('a'); if (w && (l = w.location) && (o = l.ancestorOrigins) && (d = w.document)) { for (i = 0, n = o.length; i < n; i++) { h = o[i]; if (h) { a.href = h; if (l.protocol !== a.protocol || (l.host !== a.host && d.domain !== a.host && f.indexOf(a.host) < 0)) throw ""; } } } ({ f: function () { document.documentElement ? document.documentElement.style.display = "" : (!this.a && (this.a = 10), this.a < 1E5 && (window.sfdcRetryShowWindow = this) && setTimeout("sfdcRetryShowWindow.f()", this.a), this.a *= 2) } }.f()) })(); } catch (e) { if (top !== self) top.location = location; else throw e; }//]]></script>
+    <script type="text/javascript">
+        window.sfdcExternalNavigationWithWarning = function (url) {
+            var target = '/servlet/servlet.ExternalRedirect?url=' + encodeURIComponent(url);
+            blankshield.open(target);
+        };</script>
+    <script src="/jslibrary/1699262264248/sfdc/main.js"></script>
+    <script src="/jslibrary/jslabels/1716581824000/zh_CN.js"></script>
+    <script src="/sforce/one/60.0/api.js"></script>
+    <!-- <script src="/jslibrary/1698336664248/sfdc/AuraAlohaFrameNavigator.js"></script> -->
+    <script>window.sfdcPage = new GenericSfdcPage();
+        UserContext.initialize({ "ampm": ["上午", "下午"], "isAccessibleMode": false, "salesforceURL": "https://d90000000yvhgeay-dev-ed.my.salesforce.com", "dateFormat": "yyyy-M-d", "language": "zh_CN", "locale": "zh_CN", "dateTimeFormat": "yyyy-M-d ah:mm", "labelLastModified": "1716581824000", "today": "2024-5-30 下午3:20", "userPreferences": [{ "index": 112, "name": "HideInlineEditSplash", "value": false }, { "index": 114, "name": "OverrideTaskSendNotification", "value": false }, { "index": 115, "name": "DefaultTaskSendNotification", "value": false }, { "index": 119, "name": "HideUserLayoutStdFieldInfo", "value": false }, { "index": 116, "name": "HideRPPWarning", "value": false }, { "index": 87, "name": "HideInlineSchedulingSplash", "value": true }, { "index": 88, "name": "HideCRUCNotification", "value": false }, { "index": 89, "name": "HideNewPLESplash", "value": false }, { "index": 90, "name": "HideNewPLEWarnIE6", "value": false }, { "index": 122, "name": "HideOverrideSharingMessage", "value": false }, { "index": 91, "name": "HideProfileILEWarn", "value": false }, { "index": 93, "name": "HideProfileElvVideo", "value": false }, { "index": 97, "name": "ShowPicklistEditSplash", "value": false }, { "index": 92, "name": "HideDataCategorySplash", "value": false }, { "index": 128, "name": "ShowDealView", "value": false }, { "index": 129, "name": "HideDealViewGuidedTour", "value": false }, { "index": 132, "name": "HideKnowledgeFirstTimeSetupMsg", "value": false }, { "index": 104, "name": "DefaultOffEntityPermsMsg", "value": false }, { "index": 135, "name": "HideNewCsnSplash", "value": false }, { "index": 101, "name": "HideBrowserWarning", "value": false }, { "index": 139, "name": "HideDashboardBuilderGuidedTour", "value": true }, { "index": 140, "name": "HideSchedulingGuidedTour", "value": true }, { "index": 180, "name": "HideReportBuilderGuidedTour", "value": true }, { "index": 183, "name": "HideAssociationQueueCallout", "value": true }, { "index": 194, "name": "HideQTEBanner", "value": false }, { "index": 270, "name": "HideIDEGuidedTour", "value": true }, { "index": 282, "name": "HideQueryToolGuidedTour", "value": false }, { "index": 196, "name": "HideCSIGuidedTour", "value": false }, { "index": 271, "name": "HideFewmetGuidedTour", "value": false }, { "index": 272, "name": "HideEditorGuidedTour", "value": true }, { "index": 205, "name": "HideApexTestGuidedTour", "value": false }, { "index": 206, "name": "HideSetupProfileHeaderTour", "value": true }, { "index": 207, "name": "HideSetupProfileObjectsAndTabsTour", "value": true }, { "index": 213, "name": "DefaultOffArticleTypeEntityPermMsg", "value": false }, { "index": 214, "name": "HideSelfInfluenceGetStarted", "value": true }, { "index": 215, "name": "HideOtherInfluenceGetStarted", "value": true }, { "index": 216, "name": "HideFeedToggleGuidedTour", "value": false }, { "index": 268, "name": "ShowChatterTab178GuidedTour", "value": false }, { "index": 275, "name": "HidePeopleTabDeprecationMsg", "value": false }, { "index": 276, "name": "HideGroupTabDeprecationMsg", "value": false }, { "index": 224, "name": "HideUnifiedSearchGuidedTour", "value": true }, { "index": 226, "name": "ShowDevContextMenu", "value": true }, { "index": 227, "name": "HideWhatRecommenderForActivityQueues", "value": false }, { "index": 228, "name": "HideLiveAgentFirstTimeSetupMsg", "value": false }, { "index": 232, "name": "HideGroupAllowsGuestsMsgOnMemberWidget", "value": false }, { "index": 233, "name": "HideGroupAllowsGuestsMsg", "value": false }, { "index": 234, "name": "HideWhatAreGuestsMsg", "value": true }, { "index": 235, "name": "HideNowAllowGuestsMsg", "value": false }, { "index": 236, "name": "HideSocialAccountsAndContactsGuidedTour", "value": true }, { "index": 237, "name": "HideAnalyticsHomeGuidedTour", "value": true }, { "index": 238, "name": "ShowQuickCreateGuidedTour", "value": false }, { "index": 245, "name": "HideFilePageGuidedTour", "value": false }, { "index": 250, "name": "HideForecastingGuidedTour", "value": false }, { "index": 251, "name": "HideBucketFieldGuide", "value": false }, { "index": 263, "name": "HideSmartSearchCallOut", "value": true }, { "index": 273, "name": "ShowForecastingQuotaAttainment", "value": false }, { "index": 280, "name": "HideForecastingQuotaColumn", "value": false }, { "index": 301, "name": "HideManyWhoGuidedTour", "value": true }, { "index": 298, "name": "HideFileSyncBannerMsg", "value": false }, { "index": 299, "name": "HideTestConsoleGuidedTour", "value": false }, { "index": 302, "name": "HideManyWhoInlineEditTip", "value": false }, { "index": 303, "name": "HideSetupV2WelcomeMessage", "value": false }, { "index": 312, "name": "ForecastingShowQuantity", "value": false }, { "index": 313, "name": "HideDataImporterIntroMsg", "value": false }, { "index": 314, "name": "HideEnvironmentHubLightbox", "value": false }, { "index": 316, "name": "HideSetupV2GuidedTour", "value": true }, { "index": 317, "name": "HideFileSyncMobileDownloadDialog", "value": false }, { "index": 322, "name": "HideEnhancedProfileHelpBubble", "value": true }, { "index": 328, "name": "ForecastingHideZeroRows", "value": false }, { "index": 330, "name": "HideEmbeddedComponentsFeatureCallout", "value": true }, { "index": 341, "name": "HideDedupeMatchResultCallout", "value": false }, { "index": 340, "name": "HideS1BrowserUI", "value": false }, { "index": 346, "name": "HideS1Banner", "value": true }, { "index": 358, "name": "HideEmailVerificationAlert", "value": false }, { "index": 354, "name": "HideLearningPathModal", "value": false }, { "index": 359, "name": "HideAtMentionsHelpBubble", "value": true }, { "index": 368, "name": "LightningExperiencePreferred", "value": true }, { "index": 373, "name": "PreviewLightning", "value": false }, { "index": 281, "name": "HideMSPPopup", "value": false }], "networkId": "", "uiTheme": "Theme4u", "uiSkin": "Theme3", "userName": "jackliu185@sina.com", "userId": "0059000000390Wh", "isCurrentlySysAdminSU": false, "renderMode": "RETRO", "startOfWeek": "1", "vfDomainPattern": "d90000000yvhgeay-dev-ed--(?:[^.]+).vf.force.com", "auraDomain": "d90000000yvhgeay-dev-ed.lightning.force.com", "useNativeAlertConfirmPrompt": false, "orgPreferences": [{ "index": 257, "name": "TabOrganizer", "value": true }, { "index": 113, "name": "GroupTasks", "value": true }], "siteUrlPrefix": "", "isDefaultNetwork": true, "timeFormat": "ah:mm" });
+    </script>
+    <script type="text/javascript">
+        var MOTIF_KEY = 'Setup';</script>
+    <script>try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/zen-componentsCompatible.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/elements.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/common.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/setup.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/EditDependencyUICSS.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1710411414000/Theme3/gc/dStandard.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1710411414000/Theme3/00D90000000yvHG/0059000000390Wh/gc/dCustom0.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/extended.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/DesktopFrameCommon.css") } catch (e) { }
+        try { DynamicCss.addCssUrl("/sCSS/60.0/sprites/1705602480000/Theme3/zh/gc/AuraAlohaSetupContentFrame.css") } catch (e) { }
+        try { DynamicCss.doneLoading() } catch (e) { }</script>
+    <meta http-equiv="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache-control" content="must-revalidate">
+    <meta http-equiv="Cache-control" content="max-age=0">
+    <meta http-equiv="origin-trial"
+        content="AvOsdf+NWBUi3XIbzJdBGKFnJt4L1y3GeT6mVOItweCCncoGjBLMhY/HlEHCKms8Yyxdr9OYd/5dLnnPUDg1tAgAAAB/eyJvcmlnaW4iOiJodHRwczovL3NhbGVzZm9yY2UuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmciLCJleHBpcnkiOjE3MjU0MDc5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta http-equiv="origin-trial"
+        content="AqlAE64ET63tVSana3qdVkfkPAgyUhY8GwcehUlpqv067CevOpumeNUlx9YouLkBxJ0CT+EwIb8/SiNbF2NGvwYAAABfeyJvcmlnaW4iOiJodHRwczovL3NhbGVzZm9yY2UuY29tOjQ0MyIsImZlYXR1cmUiOiJUcGNkIiwiZXhwaXJ5IjoxNzM1MzQzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=">
+    <link rel="shortcut icon" href="https://d90000000yvhgeay-dev-ed.my.salesforce.com/favicon.ico">
+    <link rel="manifest" href="/one/manifest.json?f345a08ce6028f2543ce95a8bb38961a">
+    <script src="/jslibrary/1698336664248/sfdc/Security.js"></script>
+    <!-- <script>ClientHash.prototype.needsClientHash('sid_Client', '000000390Wh0000000yvHG', '1.203.100.206', '/servlet/servlet.ClientHashValidator?ResponseRequestedURL=%2Fp%2Fdependency%2FEditDependencyUI%2Fe%3FretURL%3D%252Fsetup%252FObjectManager%252FAccount%252FFieldsAndRelationships%252FviewDependencyList%26tableEnumOrId%3DAccount%26controller%3DAccountSource%26dependent%3D00N9000000CFoZv%26newDep%3D1%26appLayout%3Dsetup%26tour%3D%26isdtp%3Dp1%26sfdcIFrameOrigin%3Dhttps%253A%252F%252Fd90000000yvhgeay-dev-ed.lightning.force.com%26sfdcIFrameHost%3Dweb%26nonce%3Dbdd53772b032fc2dcb53369f7873fe0eefa727b5b44bdec69cd2bc9c9b3d8881%26ltn_app_id%3D%26clc%3D1');</script> -->
+    <script src="/js/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/js/CommonUtils.js"></script>
+</head>
+
+<body onunload="if(this.bodyOnUnload)bodyOnUnload();"
+    onbeforeunload="if(this.bodyOnBeforeUnload){var s=bodyOnBeforeUnload();if(s)return s;}"
+    onload="if(this.bodyOnLoad)bodyOnLoad();" class="hasMotif setupTab  EditDependencyUI sfdcBody brandQuaternaryBgr "
+    onfocus="if(this.bodyOnFocus)bodyOnFocus();">
+    <!-- Main Body Starts Here -->
+    <a name="skiplink"><img src="@/assets/img/s.gif" height="1" width="1" alt="内容在此开始"
+            class="skiplink skipLinkTargetInner zen-skipLinkTarget" title="内容在此开始"></a>
+    <div class="bPageTitle">
+        <div class="ptBody">
+            <div class="content"><img src="@/assets/img/s.gif" alt="" class="pageTitleIcon" title="">
+                <h1 class="noSecondHeader pageType">编辑字段依赖性</h1>
+                <div class="blank">&nbsp;</div>
+            </div>
+            <div class="links"><a
+                    href="javascript:openPopupFocusEscapePounds(%27/HelpAndTrainingDoor?loc=help&amp;target=fields_defining_field_dependencies.htm&amp;section=Customizing%27, %27Help%27, 1024, 768, %27width=1024,height=768,resizable=yes,toolbar=yes,status=yes,scrollbars=yes,menubar=yes,directories=no,location=yes,dependant=no%27, false, false);"
+                    title="此页面的帮助 （新窗口）"><span class="helpLink">此页面的帮助</span><img src="@/assets/img/s.gif" alt=""
+                        class="helpIcon"></a></div>
+        </div>
+        <div class="ptBreadcrumb"></div>
+    </div>
+    <form accept-charset="UTF-8" action="/p/dependency/EditDependencyUI/e?isdtp=p1"
+        enctype="application/x-www-form-urlencoded" id="editPage" method="post" name="editPage"
+        onsubmit="if (window.ffInAlert) { return false; }">
+            <input type="hidden" name="_CONFIRMATIONTOKEN"
+                id="_CONFIRMATIONTOKEN"
+                value="VmpFPSxNakF5TkMwd05pMHdNbFF3TnpveU1Eb3hOeTQ0TURGYSxxa2d5R25DaUh1RllWdGxUNUFxNFlpVGY4YmNJaWtsSHE0V3FwRlpuVmdJPSxabUUyT0dRMg==">
+                <input
+                type="hidden" name="cancelURL" id="cancelURL"
+                value="/setup/ObjectManager/Account/FieldsAndRelationships/viewDependencyList"><input type="hidden"
+                name="controller" id="controller" value="AccountSource">
+            <input type="hidden" name="dependent" id="dependent"  value="00N9000000CFoZv">
+            <input type="hidden" name="isdtp" id="isdtp" value="p1">
+            <input type="hidden" name="newDep" id="newDep" value="1">
+            <input type="hidden" name="retURL" id="retURL" value="/setup/ObjectManager/Account/FieldsAndRelationships/viewDependencyList">
+            <input type="hidden" name="save_new_url" id="save_new_url" value="/p/dependency/EditDependencyUI/e?appLayout=setup&amp;controller=AccountSource&amp;retURL=%2Fsetup%2FObjectManager%2FAccount%2FFieldsAndRelationships%2FviewDependencyList&amp;ltn_app_id=&amp;isdtp=p1&amp;tableEnumOrId=Account&amp;sfdcIFrameOrigin=https%3A%2F%2Fd90000000yvhgeay-dev-ed.lightning.force.com&amp;nonce=bdd53772b032fc2dcb53369f7873fe0eefa727b5b44bdec69cd2bc9c9b3d8881&amp;tour=&amp;newDep=1&amp;sfdcIFrameHost=web&amp;clc=1&amp;dependent=00N9000000CFoZv">
+            <input type="hidden" name="tableEnumOrId" id="tableEnumOrId" value="Account">
+        <script src="/static/111213/js/functions.js"></script>
+        <script src="/static/111213/js/picklist4.js"></script>
+        <script src="/static/111213/js/picklistSetup.js"></script>
+        <script>
+            let id = getQueryString("id");
+            let Controller = getQueryString("Controller");
+            let Dependent = getQueryString("Dependent");
+            let ControllerName = getQueryString("ControllerName");
+            let DependentName = getQueryString("DependentName");
+            let ObjectTypeCode = getQueryString("ObjectTypeCode");
+            console.log("iframe-id:", id, Controller, Dependent);
+            let length;
+            window.controlLabel = Controller;
+            window.depLabel = Dependent;
+            let isSelectData = false;
+            $(function(){
+                $("#Controller").html(Controller);
+                $("#Dependent").html(Dependent);
+                getDetail();
+            })
+            
+            function getDetail() {
+                ajaxData("/api/objectmanager/FieldsAndRelationships/DependencyMaps/query",{
+                    id: id
+                },function(res){
+                    console.log("res", res);
+                    if(res.rows.length){
+                        isSelectData = true;
+                    }
+                    var str = '';
+                    for(let i = 0 ; i < res.rows.length; i++){
+                        let item = res.rows[i];
+                        str += `<input type="hidden" id="inp_${i}" name="${i+1}" value="${item.DependentValue}">`;
+                    }
+                    length = res.rows.length;
+                    $(".anchorStd").after(str);
+                    getControllerQuery();
+                    getDependentQuery();
+                    loadPick();
+                })
+            };
+            
+            
+
+            function getControllerQuery(){
+                ajaxData("/api/objectmanager/field/picklist/list",{
+                    ObjectTypeCode: ObjectTypeCode,
+                    Name: ControllerName
+                },function(res){
+                    console.log('controllerName:', res);
+                    window.controlList = res.rows.map(item=>{
+                        return item.Value;
+                    });
+                    console.log("window.controlList", window.controlList);
+                })
+            };
+            function getDependentQuery(){
+                ajaxData("/api/objectmanager/field/picklist/list",{
+                    ObjectTypeCode: ObjectTypeCode,
+                    Name: DependentName
+                },function(res){
+                    console.log('DependentName:', res);
+                    if(!isSelectData){
+                        let str = '';
+                        for(let i = 0 ; i < res.rows.length; i++){
+                            let item = res.rows[i];
+                            str += `<input type="hidden" id="inp_${i}" name="${i+1}" value="">`;
+                        }
+                        length = res.rows.length;
+                        $(".anchorStd").after(str);
+                    }
+                    window.dependentList = res.rows.map(item=>{
+                        return item.Value;
+                    });
+                })
+            }
+
+            function loadPick(){
+                picklistSetup.selectedLabel = '包括的';
+                picklistSetup.unselectedLabel = '排除的';
+                picklistSetup.controlLabel = window.controlLabel;
+                picklistSetup.depLabel = window.depLabel;
+                picklistSetup.controllerName = 'AccountSource';
+                picklistSetup.dependentName = '00N9000000CFoZv';
+                picklistSetup.nextLabel = '下一步&nbsp;&gt;';
+                picklistSetup.previousLabel = '&lt;&nbsp;上一步';
+                picklistSetup.allLabel = '查看全部';
+                picklistSetup.findLabel = '转至';
+                picklistSetup.normalLabel = '{0}的视图集';
+                picklistSetup.showLabel = '显示列：{0} - {1}（共 {2} 列）';
+                picklistSetup.tooManyLabel = '表中条目超过 5,000 条。\&quot;查看全部\&quot;处于禁用状态。';
+                picklistSetup.pickOneLabel = '从下表中至少选择一个单元格。';
+                picklistSetup.findColumnLabel = '转至列： ';
+                picklistSetup.saveMsg = '{0}控制字段值不包括有依赖性的值。是否仍要保存？';
+                picklistSetup.rows = window.dependentList.length;
+                picklistSetup.cols = window.controlList.length;
+                picklistSetup.maxCells = 5000;
+                picklistSetup.previewUrl = '/p/dependency/PreviewUI/e?tableEnumOrId=Account&controller=AccountSource&dependent=00N9000000CFoZv';
+                // picklistSetup.controls = ['Web', 'Phone Inquiry', 'Partner Referral', 'Purchased List', 'Other'];
+                picklistSetup.controls = window.controlList;
+                // picklistSetup.deps = ['High', 'Low', 'Medium'];
+                picklistSetup.deps = window.dependentList;
+                picklistSetup.tableEnumOrId = 'Account';
+                picklistSetup.showTwisty = '/iframe/fieldDepend/img/twistySubhRight.gif';
+                picklistSetup.hideTwisty = '/iframe/fieldDepend/img/twistySubhDown.gif';
+                picklistSetup.isEditMode = true;
+            }
+        </script>
+        <script>function twistSection(elem, sectionId) {
+                var parentDiv = elem;
+                var twisty = elem;
+                while (parentDiv.tagName != 'DIV') { parentDiv = parentDiv.parentNode; }
+                if (elem.tagName === 'DIV' && elem.attributes['data-twistyimgid'] !== undefined) {
+                    twisty = document.getElementById(elem.attributes['data-twistyimgid'].value);
+                }
+                var headerId = sectionId || (parentDiv.id.split('_'))[1];
+                var div = parentDiv.nextSibling;
+                var elemWasOn = false;
+                if (div.style.display != 'none') {
+                    div.style.display = 'none';
+                    twisty.className = 'showListButton';
+                    twisty.alt = '显示部分 - ' + twisty.name;
+                    elem.title = twisty.alt;
+                    elemWasOn = true;
+                } else {
+                    div.style.display = 'block';
+                    twisty.className = 'hideListButton';
+                    twisty.alt = '隐藏部分 - ' + twisty.name;
+                    elem.title = twisty.alt;
+                }
+                addTwistCookie('Twister', headerId, elemWasOn);
+                return !elemWasOn;
+            }
+            var registeredSections = new Array();
+            function registerTwistableSection(headerId, mainTableId) {
+                var obj = new Object();
+                obj.headerId = headerId;
+                obj.mainTableId = mainTableId;
+                registeredSections[registeredSections.length] = obj;
+            }
+            function twistAllSections(on) {
+                for (var i = 0; i < registeredSections.length; i++) {
+                    var obj = registeredSections[i];
+                    var img;
+                    img = document.getElementById('img_' + obj.headerId);
+                    if (on && 'showListButton' == img.className) {
+                        twistSection(img, obj.headerId, obj.mainTableId);
+                    } else if (!on && 'hideListButton' == img.className) {
+                        twistSection(img, obj.headerId, obj.mainTableId);
+                    }
+                }
+            }
+            function toggleSection(headerId, on) {
+                var sectionHead = document.getElementById('head_' + headerId + '_ep');
+                var body = sectionHead.nextSibling;
+                var disp = on ? 'block' : 'none';
+                sectionHead.style.display = disp;
+                body.style.display = disp;
+            }
+            function registerTwistableSections_ep() {
+                registerTwistableSection('instructionHeader', 'ep');
+            }
+            registerTwistableSections_ep();
+        </script>
+        <div class="bPageBlock brandSecondaryBrd bLayoutBlock secondaryPalette" id="ep">
+            <div class="pbHeader">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="pbTitle"><img src="@/assets/img/s.gif" alt="" width="1" height="1" class="minWidth"
+                                    title="">
+                                <h2 class="mainTitle"></h2>
+                            </td>
+                            <td class="pbButton" id="topButtonRow"><input value=" 保存 " class="btn" name="save"
+                                    title="保存" type="button" onclick="handleSave();"> <input
+                                    value=" 取消 " class="btn" name="cancel" title="取消" type="button" onclick="cancelFn();"> <input value=" 预览 "
+                                    class="btn" title="预览" type="button"
+                                    onclick="setLastMousePosition(event);picklistSetup.preview()"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pbBody">
+                <div class="pbError" id="errorDiv_ep" style="display: none">错误：无效数据。<br>请查看下列所有错误消息以纠正数据。</div>
+                <div class="pbSubsection">
+                    <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td class="labelCol">控制字段</td>
+                                <td class="dataCol col02" id="Controller">客户来源</td>
+                                <td class="labelCol last empty">&nbsp;</td>
+                                <td class="dataCol last empty">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="last labelCol">依赖字段</td>
+                                <td class="dataCol last col02" id="Dependent">Customer Priority</td>
+                                <td class="labelCol last empty">&nbsp;</td>
+                                <td class="dataCol last empty">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brandTertiaryBrd pbSubheader tertiaryPalette" id="head_instructionHeader_ep"><img
+                        src="/iframe/fieldDepend/img/s.gif" alt="隐藏部分 - 说明" class="hideListButton" id="img_instructionHeader" name="说明"
+                        onclick="twistSection(this);" onkeypress="if (event.keyCode=='13')twistSection(this);"
+                        role="button" style="cursor:pointer;" tabindex="0" title="隐藏部分 - 说明">
+                    <h3>说明<span class="titleSeparatingColon">:</span></h3>
+                </div>
+                <div class="pbSubsection">
+                    <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr class="last detailRow">
+                                <td colspan="4">
+                                    <div class="instructions">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border:none">
+                                                        <ul>
+                                                            <li>双击某个单元格，以切换显示在列标题中的控制字段值的可见性。</li>
+                                                            <li>要同时更改多个单元格，请选择多个单元格，然后单击“包括值”或“排除值”按钮，以同时更改选定的全部单元格的可见性。
+                                                            </li>
+                                                            <li>按住 Shift 键单击选择一系列相邻的单元格。按住 Ctrl 键单击选择多个不相邻的单元格。</li>
+                                                            <li>使用“预览”按钮可对结果进行测试。</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td style="border:0">
+                                                        <fieldset>
+                                                            <legend>图例</legend>
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="legendCell hiddenPickValue">排除的值</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="shownPickValue legendCell">包括的值</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </fieldset>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="brandTertiaryBrd pbSubheader tertiaryPalette" id="head_1_ep">&nbsp;</div>
+                <div class="pbSubsection">
+                    <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr class="detailRow">
+                                <td colspan="4">
+                                    <div class="pbButtons">单击该按钮可在依赖选项列表中包括所选值或从中排除这些值：<br><input value=" 包括值 "
+                                            class="btn btnSpacerRight" onclick="picklistSetup.enableAll()" title="包括值"
+                                            type="button"><input value=" 排除的值 " class="btn"
+                                            onclick="picklistSetup.disableAll()" title="排除的值" type="button"></div>
+                                </td>
+                            </tr>
+                            <tr class="detailRow">
+                                <td colspan="4"><input type="hidden" name="pLastModTime" value="1412752376000">
+                                    
+                                    <!-- <script>picklistSetup.selectedLabel = '包括的';
+                                        picklistSetup.unselectedLabel = '排除的';
+                                        picklistSetup.controlLabel = '客户来源';
+                                        picklistSetup.depLabel = 'Customer Priority';
+                                        picklistSetup.controllerName = 'AccountSource';
+                                        picklistSetup.dependentName = '00N9000000CFoZv';
+                                        picklistSetup.nextLabel = '下一步&nbsp;&gt;';
+                                        picklistSetup.previousLabel = '&lt;&nbsp;上一步';
+                                        picklistSetup.allLabel = '查看全部';
+                                        picklistSetup.findLabel = '转至';
+                                        picklistSetup.normalLabel = '{0}的视图集';
+                                        picklistSetup.showLabel = '显示列：{0} - {1}（共 {2} 列）';
+                                        picklistSetup.tooManyLabel = '表中条目超过 5,000 条。\&quot;查看全部\&quot;处于禁用状态。';
+                                        picklistSetup.pickOneLabel = '从下表中至少选择一个单元格。';
+                                        picklistSetup.findColumnLabel = '转至列： ';
+                                        picklistSetup.saveMsg = '{0}控制字段值不包括有依赖性的值。是否仍要保存？';
+                                        picklistSetup.rows = 3;
+                                        picklistSetup.cols = 5;
+                                        picklistSetup.maxCells = 5000;
+                                        picklistSetup.previewUrl = '/p/dependency/PreviewUI/e?tableEnumOrId=Account&controller=AccountSource&dependent=00N9000000CFoZv';
+                                        // picklistSetup.controls = ['Web', 'Phone Inquiry', 'Partner Referral', 'Purchased List', 'Other'];
+                                        picklistSetup.controls = window.controlList;
+                                        // picklistSetup.deps = ['High', 'Low', 'Medium'];
+                                        picklistSetup.deps = window.dependentList;
+                                        picklistSetup.tableEnumOrId = 'Account';
+                                        picklistSetup.showTwisty = '/img/twistySubhRight.gif';
+                                        picklistSetup.hideTwisty = '/img/twistySubhDown.gif';
+                                        picklistSetup.isEditMode = true;
+                                        console.log("window.dependentList;", window.dependentList)
+                                    </script> -->
+                                    <div class="anchorStd" id="matrixAnchor">
+                                        <table cellpadding="0" cellspacing="0" style="width:99.8%">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="navigationHeaderNormal">显示列：1 - 5（共 5
+                                                        列）&nbsp;&lt;&nbsp;上一步&nbsp;|&nbsp;下一步&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a
+                                                            href="javascript:picklistSetup.showColumns(-1)">&nbsp;查看全部&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                                            alt="转至列： " id="findSwitch"
+                                                            href="javascript:picklistSetup.toggleFind()"><img border="0"
+                                                                alt="转至列： " src="/iframe/fieldDepend/img/twistySubhRight.gif">转至</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="display:none" id="findDialog" nowrap="" align="right"
+                                                        colspan="all">转至列： <select
+                                                            onchange="picklistSetup.find(this.value);" value="-1">
+                                                            <option value=""></option>
+                                                            <option value="0">Web</option>
+                                                            <option value="1">Phone Inquiry</option>
+                                                            <option value="2">Partner Referral</option>
+                                                            <option value="3">Purchased List</option>
+                                                            <option value="4">Other</option>
+                                                        </select></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div>
+                                            <table id="matrix" cellpadding="0" cellspacing="0"
+                                                onmouseup="picklistSetup.handleMouseUp(event)"
+                                                onmousedown="picklistSetup.handleMouseDown(event)" style="width:99.8%">
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="topSelectHeader" width="8%">&nbsp;客户来源:&nbsp;</th>
+                                                        <th id="th_r0c0" class="selectHeader"
+                                                            onclick="picklistSetup.selectColumn(0)" width="16%">
+                                                            &nbsp;Web&nbsp;</th>
+                                                        <th id="th_r0c1" class="selectHeader"
+                                                            onclick="picklistSetup.selectColumn(1)" width="16%">
+                                                            &nbsp;Phone Inquiry&nbsp;</th>
+                                                        <th id="th_r0c2" class="selectHeader"
+                                                            onclick="picklistSetup.selectColumn(2)" width="16%">
+                                                            &nbsp;Partner Referral&nbsp;</th>
+                                                        <th id="th_r0c3" class="selectHeader"
+                                                            onclick="picklistSetup.selectColumn(3)" width="16%">
+                                                            &nbsp;Purchased List&nbsp;</th>
+                                                        <th id="th_r0c4" class="selectHeader"
+                                                            onclick="picklistSetup.selectColumn(4)" width="16%">
+                                                            &nbsp;Other&nbsp;</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="topSelectHeader" rowspan="3">&nbsp;Customer
+                                                            Priority:&nbsp;</th>
+                                                        <td id="te_r0c0" class="hiddenPickValue" title="排除的: 客户来源: Web"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;High&nbsp;</td>
+                                                        <td id="te_r0c1" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Phone Inquiry"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;High&nbsp;</td>
+                                                        <td id="te_r0c2" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Partner Referral"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;High&nbsp;</td>
+                                                        <td id="te_r0c3" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Purchased List"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;High&nbsp;</td>
+                                                        <td id="te_r0c4" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Other"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;High&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="te_r1c0" class="hiddenPickValue" title="排除的: 客户来源: Web"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Low&nbsp;</td>
+                                                        <td id="te_r1c1" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Phone Inquiry"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Low&nbsp;</td>
+                                                        <td id="te_r1c2" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Partner Referral"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Low&nbsp;</td>
+                                                        <td id="te_r1c3" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Purchased List"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Low&nbsp;</td>
+                                                        <td id="te_r1c4" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Other"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Low&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="te_r2c0" class="hiddenPickValue" title="排除的: 客户来源: Web"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Medium&nbsp;</td>
+                                                        <td id="te_r2c1" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Phone Inquiry"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Medium&nbsp;</td>
+                                                        <td id="te_r2c2" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Partner Referral"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Medium&nbsp;</td>
+                                                        <td id="te_r2c3" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Purchased List"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Medium&nbsp;</td>
+                                                        <td id="te_r2c4" class="hiddenPickValue"
+                                                            title="排除的: 客户来源: Other"
+                                                            onmousedown="picklistSetup.handleClick(event,this)"
+                                                            ondblclick="picklistSetup.handleDblClick(event,this)"
+                                                            onmousemove="picklistSetup.handleMouseMove(event,this)">
+                                                            &nbsp;Medium&nbsp;</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <table cellpadding="0" cellspacing="0" style="width:99.8%">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="navigationHeaderNormal">显示列：1 - 5（共 5
+                                                        列）&nbsp;&lt;&nbsp;上一步&nbsp;|&nbsp;下一步&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a
+                                                            href="javascript:picklistSetup.showColumns(-1)">&nbsp;查看全部&nbsp;</a>&nbsp;
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- <input type="hidden" id="inp_0" name="5" value=""><input type="hidden"
+                                        id="inp_1" name="3" value=""><input type="hidden" id="inp_2" name="2"
+                                        value=""><input type="hidden" id="inp_3" name="4" value=""><input type="hidden"
+                                        id="inp_4" name="1" value=""> -->
+                                </td>
+                            </tr>
+                            <tr class="last detailRow">
+                                <td colspan="4">
+                                    <div class="pbButtons">单击该按钮可在依赖选项列表中包括所选值或从中排除这些值：<br><input value=" 包括值 "
+                                            class="btn btnSpacerRight" onclick="picklistSetup.enableAll()" title="包括值"
+                                            type="button"><input value=" 排除的值 " class="btn"
+                                            onclick="picklistSetup.disableAll()" title="排除的值" type="button"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pbBottomButtons">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="pbTitle"><img src="@/assets/img/s.gif" alt="" width="1" height="1" class="minWidth"
+                                    title="">&nbsp;</td>
+                            <td class="pbButtonb" id="bottomButtonRow"><input value=" 保存 " class="btn" name="save"
+                                    title="保存" type="button" onclick="handleSave();"> <input
+                                    value=" 取消 " class="btn" name="cancel" title="取消" type="button" onclick="cancelFn();"> <input value=" 预览 "
+                                    class="btn" title="预览" type="button"
+                                    onclick="setLastMousePosition(event);picklistSetup.preview()"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pbFooter secondaryPalette">
+                <div class="bg"></div>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- Body events -->
+    <script
+        type="text/javascript">function bodyOnLoad() { picklistSetup.init(); setFocusOnLoad(); if (typeof (startSessionTimer) != 'undefined') { startSessionTimer(); }; if ((window.sfdcPage) && (sfdcPage.executeOnloadQueue)) { sfdcPage.executeOnloadQueue(); }; Sfdc.Cookie.deleteCookie('setupopen'); if (window.PreferenceBits) { window.PreferenceBits.prototype.csrfToken = "VmpFPSxNakF5TkMwd05pMHdNbFF3TnpveU1Eb3hOeTQ0TnpSYSxlSHhMMjZPeXJScFBzWHN6Mkc1cnBGcHBnMDVMa3VVMTZuSEwyUjNuaGRNPSxNR1V3WmpRdw=="; }; } function bodyOnBeforeUnload() { if ((window.sfdcPage) && (sfdcPage.executeOnBeforeUnloadQueue)) { sfdcPage.executeOnBeforeUnloadQueue(); }; } function bodyOnFocus() { closePopupOnBodyFocus(); } function bodyOnUnload() { }</script>
+    <script>var SFDCSessionVars = { "uid": "0059000000390Wh", "server": "https:\/\/login.salesforce.com\/login\/sessionserver212.html", "act": "u", "host": "login.salesforce.com", "oid": "00D90000000yvHG", "exp": 1717060817000 };</script>
+    <script defer="true" src="/jslibrary/1698336664248/sfdc/Setup.js"></script>
+    <script>(function () { var s = document.createElement('SCRIPT'); s.async = true; s.defer = true; s.src = '/jslibrary/1698336664248/sfdc/SfdcSessionBase208.js'; (document.body || document.getElementsByTagName('script')[0]).appendChild(s); })();</script>
+    <script async="" defer="" src="/jslibrary/1698336664248/sfdc/SfdcSessionBase208.js"></script>
+
+    <!-- <iframe title="sessionserver" aria-hidden="true" src="https://login.salesforce.com/login/sessionserver212.html"
+        style="position: absolute; top: -999px; left: -999px;"></iframe> -->
+    <div id="fatkun-drop-panel">
+        <a id="fatkun-drop-panel-close-btn">×</a>
+        <div id="fatkun-drop-panel-inner">
+            <div class="fatkun-content">
+                <svg class="fatkun-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    p-id="5892">
+                    <path
+                        d="M494.933333 782.933333c2.133333 2.133333 4.266667 4.266667 8.533334 6.4h8.533333c6.4 0 10.666667-2.133333 14.933333-6.4l2.133334-2.133333 275.2-275.2c8.533333-8.533333 8.533333-21.333333 0-29.866667-8.533333-8.533333-21.333333-8.533333-29.866667 0L533.333333 716.8V128c0-12.8-8.533333-21.333333-21.333333-21.333333s-21.333333 8.533333-21.333333 21.333333v588.8L249.6 475.733333c-8.533333-8.533333-21.333333-8.533333-29.866667 0-8.533333 8.533333-8.533333 21.333333 0 29.866667l275.2 277.333333zM853.333333 874.666667H172.8c-12.8 0-21.333333 8.533333-21.333333 21.333333s8.533333 21.333333 21.333333 21.333333H853.333333c12.8 0 21.333333-8.533333 21.333334-21.333333s-10.666667-21.333333-21.333334-21.333333z"
+                        p-id="5893"></path>
+                </svg>
+                <div class="fatkun-title">拖拽到此处</div>
+                <div class="fatkun-desc">图片将完成下载</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function cancelFn(){
+        window.parent.postMessage('cancel', '*');
+    }
+    function handleSave(){
+        if(picklistSetup.saveOk()){
+            console.log('saveOk', picklistSetup.cols);
+            var el;
+            // var d  ={
+            //     id: id,
+            // }
+            let obj = {
+                actions: [{
+                    id: "7366;a",
+                    params: {
+                        id: id,
+                        controlValues: []
+                    }
+                }]
+            }
+            for(let i = 0; i< picklistSetup.cols; i++){
+                el = document.getElementById("inp_"+i);
+                console.log("el", el.value, el.id);
+                // d[el.id] = el.value;
+                obj.actions[0].params.controlValues.push({
+                    ControlValue: i,
+                    DependentValue: el.value
+                })
+            }
+            console.log("obj", obj);
+            let d = {
+                message: JSON.stringify(obj)
+            }
+            ajaxMethodPostData("/api/objectmanager/FieldsAndRelationships/DependencyMap/add", d,function(res){
+                window.parent.postMessage('success', '*');
+            })
+        }
+    }
+</script>
+</html>

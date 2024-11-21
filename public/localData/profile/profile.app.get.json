@@ -1,0 +1,34 @@
+{
+  "status": 1,
+  "msg": "",
+  "listData": [
+    {
+      "AppId": "00000000-0000-0000-0000-000000000101",
+      "AppCode": "02u90000002",
+      "Label": "人员管理",
+      "Name": "人员管理",
+      "IsVisible": 0,
+      "IsDefault": 0,
+      "ValueId": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "rows": [
+    {
+      "AppId": "00000000-0000-0000-0000-000000000101",
+      "AppCode": "02u90000002",
+      "Label": "人员管理",
+      "Name": "人员管理",
+      "IsVisible": 0,
+      "IsDefault": 0,
+      "ValueId": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "total": 0,
+  "result": 0,
+  "context": {
+    "userId": null,
+    "name": null,
+    "fullName": null,
+    "businessUnitName": null
+  }
+}

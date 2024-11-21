@@ -1,0 +1,108 @@
+{
+  "total": 9,
+  "rows": [
+    {
+      "LIST_RECORD_ID": "271a8cff-5e41-40db-9e9f-045ca0644353",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=271a8cff-5e41-40db-9e9f-045ca0644353&retURL=\">导出人员信息数据</a>",
+      "TaskType": "export.employees",
+      "StatusCode": "已完成",
+      "TaskLog": "",
+      "FileName": "",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    },
+    {
+      "LIST_RECORD_ID": "8911300d-ab0b-4736-830e-394bf1862e76",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=8911300d-ab0b-4736-830e-394bf1862e76&retURL=\">30258.json</a>",
+      "TaskType": "EntityDataImport",
+      "StatusCode": "未开始",
+      "TaskLog": "",
+      "FileName": "D:\\OAFiles\\北京市凤凰世纪健康医院\\HRFiles\\2023\\4\\30258\\import_30258_20230407163111.xlsx",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    },
+    {
+      "LIST_RECORD_ID": "a80c5357-748b-4598-aa79-5615ee262ffc",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=a80c5357-748b-4598-aa79-5615ee262ffc&retURL=\">人员档案</a>",
+      "TaskType": "EntityDataImport",
+      "StatusCode": "未开始",
+      "TaskLog": "",
+      "FileName": "D:\\OAFiles\\北京市凤凰世纪健康医院\\HRFiles\\2023\\11\\30020\\import_30020_20231114120032.xlsx",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    },
+    {
+      "LIST_RECORD_ID": "606f28be-eaa3-4d48-bdda-60f93214b7e4",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=606f28be-eaa3-4d48-bdda-60f93214b7e4&retURL=\">导出考勤打卡数据</a>",
+      "TaskType": "export.attenddetail",
+      "StatusCode": "未开始",
+      "TaskLog": "D:\\oafiles\\20170904\\Log\\export.attenddetail_20231007114431.txt",
+      "FileName": "",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    },
+    {
+      "LIST_RECORD_ID": "b70cc565-9f45-4855-bc5f-76ba970f768f",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=b70cc565-9f45-4855-bc5f-76ba970f768f&retURL=\">导出考勤打卡数据</a>",
+      "TaskType": "export.attenddetail",
+      "StatusCode": "未开始",
+      "TaskLog": "D:\\OAFiles\\北京市定安医院\\Log\\export.attenddetail_20200405224014.txt",
+      "FileName": "",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    },
+    {
+      "LIST_RECORD_ID": "6edc38b2-6623-4e84-90cd-876ff2b9f9db",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=6edc38b2-6623-4e84-90cd-876ff2b9f9db&retURL=\">导出考勤汇总数据</a>",
+      "TaskType": "export.attend.yearsummary",
+      "StatusCode": "已完成",
+      "TaskLog": "D:\\oafiles\\北京市安定医院\\Log\\export.attend.yearsummary_20180629125051.txt",
+      "FileName": "",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    },
+    {
+      "LIST_RECORD_ID": "d22c2ee3-919c-4ae4-98b6-89fb99b8adf2",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=d22c2ee3-919c-4ae4-98b6-89fb99b8adf2&retURL=\">导出考勤打卡数据</a>",
+      "TaskType": "export.attenddetail",
+      "StatusCode": "未开始",
+      "TaskLog": "D:\\oafiles\\北京市定安医院\\Log\\export.attenddetail_20190215085900.txt",
+      "FileName": "",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    },
+    {
+      "LIST_RECORD_ID": "ccf6bc7b-80aa-43fd-81c5-b0f11f81b972",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=ccf6bc7b-80aa-43fd-81c5-b0f11f81b972&retURL=\">导出人员工资数据</a>",
+      "TaskType": "export.salarydata",
+      "StatusCode": "未开始",
+      "TaskLog": "",
+      "FileName": "",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    },
+    {
+      "LIST_RECORD_ID": "233761fc-7dbf-4b1f-aacd-b3a8a20e9e6f",
+      "Name": "<a style=\"color:blue;\" href=\"/04j/detail?objectTypeCode=30510&id=233761fc-7dbf-4b1f-aacd-b3a8a20e9e6f&retURL=\">导出人员工资数据</a>",
+      "TaskType": "export.salarydata",
+      "StatusCode": "未开始",
+      "TaskLog": "",
+      "FileName": "",
+      "ObjectId": "",
+      "ModifiedBy": "&nbsp;",
+      "ModifiedOn": ""
+    }
+  ],
+  "context": {
+    "userid": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+    "name": "刘优"
+  }
+}

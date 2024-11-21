@@ -1,0 +1,28 @@
+{
+  "status": 1,
+  "msg": "",
+  "listData": {
+    "Name": "123",
+    "CustomProfile": true,
+    "LicenseId": "00000000-0000-0000-0000-000000000000",
+    "Description": null,
+    "OrganizationId": "00000000-0000-0000-0000-000000000000",
+    "ProfileID": "72287e47-d60e-42ec-aa24-15237da538f9"
+  },
+  "rows": {
+    "Name": "123",
+    "CustomProfile": true,
+    "LicenseId": "00000000-0000-0000-0000-000000000000",
+    "Description": null,
+    "OrganizationId": "00000000-0000-0000-0000-000000000000",
+    "ProfileID": "72287e47-d60e-42ec-aa24-15237da538f9"
+  },
+  "total": 0,
+  "result": 0,
+  "context": {
+    "userId": null,
+    "name": null,
+    "fullName": null,
+    "businessUnitName": null
+  }
+}

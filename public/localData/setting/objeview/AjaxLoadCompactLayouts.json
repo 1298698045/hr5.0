@@ -1,0 +1,17 @@
+{
+  "status": 1,
+  "msg": "",
+  "total": 0,
+  "rows": [
+    {
+      "id": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "name": "SYSTEM",
+      "label": "系统默认",
+      "primary": "True",
+      "developerName": "SYSTEM",
+      "createdOn": "2020-09-09 13:49:01",
+      "templateId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "CreatedByName": ""
+    }
+  ]
+}

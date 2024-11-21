@@ -1,0 +1,14 @@
+{
+  "status": 0,
+  "msg": "参数错误",
+  "listData": null,
+  "rows": null,
+  "total": 0,
+  "result": 0,
+  "context": {
+    "userId": null,
+    "name": null,
+    "fullName": null,
+    "businessUnitName": null
+  }
+}

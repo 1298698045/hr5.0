@@ -1,0 +1,24 @@
+{
+  "status": 1,
+  "data": {
+    "ValueId": "7e9d3947-ae0b-4494-ba85-145673c75050",
+    "Name": "退休规则1",
+    "EntityId": "",
+    "ObjectTypeCode": "",
+    "ConditionExpression": "[{\"sort\":0,\"attribute\":\"EmployeeNo\",\"label\":\"工号\",\"operator\":\"eq\",\"logical\":\"等于\",\"picklistValues\":[\"123\"],\"isEditable\":true,\"column\":\"EmployeeNo\",\"operands\":[\"123\"],\"id\":0}]",
+    "RetireAge": "123",
+    "DisplayOrder": "",
+    "StatusCode": "",
+    "CreatedBy": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+    "CreatedOn": "2024-01-02 16:25:38",
+    "ModifiedBy": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+    "ModifiedOn": "2024-01-02 16:25:38"
+  },
+  "recordRep": {
+    "id": "7e9d3947-ae0b-4494-ba85-145673c75050",
+    "objTypeCode": 34000,
+    "fields": {}
+  },
+  "recordSaveParams": {},
+  "refreshFields": []
+}

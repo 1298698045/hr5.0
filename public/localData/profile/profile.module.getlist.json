@@ -1,0 +1,1312 @@
+{
+  "actions": [
+    {
+      "id": "",
+      "state": "SUCCESS",
+      "returnValue": [
+        {
+          "AppId": "00000000-0000-0000-0000-000000000101",
+          "AppName": "人员管理",
+          "tabList": [
+            {
+              "TabId": "00000000-0000-0000-0000-000000000101",
+              "TabName": "主页",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "039b2efd-50e3-453d-9664-f64a2cd14d71",
+              "TabName": "人员管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "fbbdff33-3da4-4ed4-b989-caa2e78be10c",
+              "TabName": "人员子集",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "8b169da4-d9c2-42e1-bf4f-80474e187329",
+              "TabName": "信息审核",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "f71e277a-0c72-4146-a397-526ec617c282",
+              "TabName": "入职管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "3cb1a2eb-72f1-404d-ad9a-06daade63fd4",
+              "TabName": "高级查询",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "e6e3a740-83a5-4dbf-b05a-ccf432447b78",
+              "TabName": "月度人员",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "493dda5a-c6f3-482b-8de2-9265e3664d38",
+              "TabName": "人员组",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "1ace5756-bce3-4eda-b76c-5b7121c8a42b",
+              "TabName": "人才管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6945575f-1fd8-45a1-9a32-7ca9be3c16c4",
+              "TabName": "部门变动",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000121",
+          "AppName": "人员异动",
+          "tabList": [
+            {
+              "TabId": "00000000-0000-0000-0000-000000000121",
+              "TabName": "主页",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6945575f-1fd8-45a1-9a32-7ca9be3c16c4",
+              "TabName": "部门变动",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "075cdc7f-9b3c-4c6e-9953-a95c47fa580e",
+              "TabName": "异动记录",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "5b6f92c9-2e88-44bf-9f70-907bd7407404",
+              "TabName": "部门轮转",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "0b0af14c-6751-4ca5-ac68-59f1facaff82",
+              "TabName": "试用转正",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "98e6b0ad-f294-483b-a9fb-1976690a6c30",
+              "TabName": "职务变动",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "0dff912f-ba13-4a87-98fa-984100a96bdd",
+              "TabName": "离职",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "c0581205-5c01-417d-9700-9189281b979c",
+              "TabName": "退休管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "2dca4c19-d5ab-4c72-a1d4-e48cc191b356",
+              "TabName": "去世抚恤",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "3742db5d-7555-410d-933e-22d07c0970cc",
+              "TabName": "奖励",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "b8951b44-dfe0-498c-98d5-25986be2370a",
+              "TabName": "惩罚",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "00ee884a-70c4-4608-836d-d4faf8a96fa9",
+              "TabName": "外派",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000911",
+          "AppName": "职称管理",
+          "tabList": [
+            {
+              "TabId": "6f24bd68-5924-4c84-a5fc-08811cfcfc1e",
+              "TabName": "职称申报",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "a0a0e6e3-c089-4fdb-89cb-e7da90510168",
+              "TabName": "职称晋升",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "2485f915-d0d7-4379-80eb-dffb9a2c68f3",
+              "TabName": "工勤职务",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000117",
+          "AppName": "人事合同管理",
+          "tabList": [
+            {
+              "TabId": "00000000-0000-0000-0000-000000000117",
+              "TabName": "主页",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "99b6180e-c6cc-4240-a629-66f2c6b08683",
+              "TabName": "合同管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "109c4647-5ebe-49e0-9224-d56e6bf66b36",
+              "TabName": "附属协议",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "109c4647-5ebe-49e0-9224-d56e6bf66b39",
+              "TabName": "续签记录",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "e012a7ab-b6d4-4bfa-bc52-bb63bf20b62f",
+              "TabName": "合同提醒",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "94f42284-e082-4895-b3a1-7d7a7f36de97",
+              "TabName": "合同通知",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "748e12d5-75b6-4cef-9679-3d028d63145c",
+              "TabName": "合同变更",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "ba449978-ab3c-4b2c-932e-8b22ff3a3241",
+              "TabName": "合同终止",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "5e4319d4-5ce8-477a-9c2f-c2c4df0733f7",
+              "TabName": "历史合同",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "1af3ef6d-5b76-4b28-b2c8-954a14af86ce",
+              "TabName": "续签考评",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "3297bc4c-e8d3-43da-84d7-0b37566308f1",
+              "TabName": "合同模板",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000107",
+          "AppName": "排班管理",
+          "tabList": [
+            {
+              "TabId": "c9e4a5c0-3435-42a3-bda6-69a6c5bc59b3",
+              "TabName": "部门月排班",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "8ff012cd-44fd-44e5-849a-926682fe5909",
+              "TabName": "部门组排班",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "96e8859d-93de-482b-a625-b13c5414226d",
+              "TabName": "部门组周排班",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "38261020-b779-4362-a562-9edc57b5a304",
+              "TabName": "部门周排班",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "d48cf764-cd2f-45c1-9dc9-c48e7f085e74",
+              "TabName": "按组排班",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "9c0f2b8e-a274-4f2b-a0e7-3927996f1c85",
+              "TabName": "排班查询",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "28b00327-50dc-4d45-b11c-ddb11da8f696",
+              "TabName": "护理排班",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "c805a146-640f-4acb-bc2e-34c2ad6ba6c9",
+              "TabName": "排班报表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "d5866a34-66d2-4715-8f97-d7712811aa80",
+              "TabName": "排班模板",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "31f039bf-c0f7-46a0-bc04-d1deb3248519",
+              "TabName": "班次",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "a8c59c1d-f99f-457e-887b-eea5a08c49e4",
+              "TabName": "科室排班统计",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000111",
+          "AppName": "考勤管理",
+          "tabList": [
+            {
+              "TabId": "79a84fbb-99ee-4321-a0b4-7f374bca7be5",
+              "TabName": "考勤期间",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "e10d9605-c1a1-4e23-8e82-b862d16aa922",
+              "TabName": "部门报考勤",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "e2030aaa-70b5-4e8f-b76d-af9ea9991653",
+              "TabName": "按组报考勤",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "010f4ae5-1ca3-4451-9ee6-718fb40b7f30",
+              "TabName": "考勤报表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "cef954e6-a234-47ad-891b-50fd89f9d246",
+              "TabName": "考勤年汇总",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "f03dbc1e-fc74-4e3e-af9d-c5745ee87aec",
+              "TabName": "打卡明细",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "c0c6aa9c-dcac-4ce1-8794-e846a52df131",
+              "TabName": "请假单",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "f36af7ba-51ac-4368-89d7-3e3cc4b65a34",
+              "TabName": "公出",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "7c22c32b-4993-4d3a-89ee-17426bf6d122",
+              "TabName": "加班",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "eef69bd4-041a-46dd-a801-1905462b3b3a",
+              "TabName": "考勤员",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "4dc4ee1f-e74a-4f21-b27a-439a1ffa3ebd",
+              "TabName": "假勤账户",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6c05bafa-4234-42d4-a82f-430b5f35724e",
+              "TabName": "设置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "571f6ad6-b097-441f-ab9f-54704447be0f",
+              "TabName": "考勤审批",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000109",
+          "AppName": "保险福利",
+          "tabList": [
+            {
+              "TabId": "00000000-0000-0000-0000-000000000109",
+              "TabName": "主页",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "0fbae243-be22-4c72-9ab9-619b3c3af998",
+              "TabName": "月社保福利",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "dcadd889-7fd4-4542-8587-7de3854bd204",
+              "TabName": "保险基数",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "d14730cf-c6f5-4d8f-a68b-105d5df02d54",
+              "TabName": "保险福利类别",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "9cfc5d47-652d-4d61-826b-34bd9b86b4e0",
+              "TabName": "待减人员",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "0114eabb-81b9-488a-9c5d-9e2f1e2bdecc",
+              "TabName": "待增人员",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6f58ecd8-b5ef-4300-b768-d0b48bd06861",
+              "TabName": "住房公积金",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "b1f0031f-8084-4de9-9b95-6d4f2470e5b7",
+              "TabName": "平均工资",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6a78b9a8-c473-4265-a4f1-79400da58530",
+              "TabName": "缴费退费单",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "85dc22f3-cdd4-4b35-887b-9b5886c2a882",
+              "TabName": "保险报表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "9f7f7b6c-780a-420d-aa41-4bd703e80755",
+              "TabName": "员工缴费明细",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000131",
+          "AppName": "年度考核",
+          "tabList": [
+            {
+              "TabId": "5998fdc1-1392-4b46-8728-4d5587179230",
+              "TabName": "年度考核",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "1c4d193d-cf82-4a73-be8a-caf4f2cef429",
+              "TabName": "年度考核结果",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "2666e861-cc7c-4556-8128-fbf5dc1a1791",
+              "TabName": "我的年度考核",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "a6259776-8bec-4386-b8ee-eb98346367d8",
+              "TabName": "科室年度考核",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6c5a7175-97d2-4a78-9f6a-c44335bbf6be",
+              "TabName": "专业技术考核表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "93469b49-f1d2-49ff-b420-b9b67613cd4c",
+              "TabName": "年度考核单元",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000112",
+          "AppName": "测评系统",
+          "tabList": [
+            {
+              "TabId": "10fd70b7-fe18-4755-ac37-56f4c0da3cc1",
+              "TabName": "考评表模板",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "cc0b67e2-60ba-4ce4-bd1e-19292e2e02f7",
+              "TabName": "考评管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "67587148-2975-4d1d-a573-00a00921180e",
+              "TabName": "考评结果",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "62f8a6b0-7cc9-4bc5-8e6e-2738e617ca0a",
+              "TabName": "科室考评",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "967017b7-0a6b-4800-bd27-d9138483a9fe",
+              "TabName": "我的评估",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "49e2910d-3036-4953-9d65-512570aa66b0",
+              "TabName": "加分",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "5ce89115-aa49-4370-97b4-4af69263d0e6",
+              "TabName": "减分",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "a765b588-8e4d-4d70-83ef-0dcc4ea2abef",
+              "TabName": "考评表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "32b57803-1cb7-4458-af3e-4816b162f69a",
+              "TabName": "考评指标",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "cbc37239-df89-4225-8c44-cfa3997da703",
+              "TabName": "评估人设置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "c14c35b3-5219-4fa4-8123-dcb7adf268c4",
+              "TabName": "设置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000921",
+          "AppName": "培训管理",
+          "tabList": [
+            {
+              "TabId": "21777932-fee5-4a7e-94fa-58202acf7b40",
+              "TabName": "培训信息",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "52744e8e-3eed-4763-851c-14eefb583a91",
+              "TabName": "培训人员",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000922",
+          "AppName": "出国管理",
+          "tabList": [
+            {
+              "TabId": "ea787817-65fd-4d22-9e99-ac057bd81992",
+              "TabName": "护照",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "23017e65-72f4-49b6-8942-1fee0f8a4775",
+              "TabName": "出国申请",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000912",
+          "AppName": "科研管理",
+          "tabList": [
+            {
+              "TabId": "0c9f8444-19c6-4f2b-b682-743e505aca86",
+              "TabName": "论文",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "2978b8ff-87d1-4b07-a031-9fbe1e85bf39",
+              "TabName": "课题",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "78eb408d-c170-45e7-aa61-7010c9f42f13",
+              "TabName": "专利",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "ed57333d-11d4-463c-9b48-114adb0d83ed",
+              "TabName": "出版专著",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "1799916f-bebb-416a-95e5-27b3ce8c7b7f",
+              "TabName": "科技成果奖\t",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "00f454fe-1025-4c16-8b23-d210f8802b8c",
+              "TabName": "科研会议",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "f697c3c2-f91a-44d3-b32a-2a31f8dab066",
+              "TabName": "社会兼职",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000320",
+          "AppName": "报表",
+          "tabList": [
+            {
+              "TabId": "b880e433-8696-4295-b6aa-05269249d63a",
+              "TabName": "常用报表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "36ccb30c-74bf-4841-891d-eb0034311301",
+              "TabName": "报表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "f0c1c1a0-988a-45a7-8996-02730cdac6a0",
+              "TabName": "仪表板",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "61799eb4-4b7f-42eb-916a-b25a0fd6d227",
+              "TabName": "统计指标查询",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "51a8bc80-c6c0-45c9-a164-baa382389a70",
+              "TabName": "报表指标",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000135",
+          "AppName": "招聘管理",
+          "tabList": [
+            {
+              "TabId": "f08faa6a-9f33-4dc8-85bd-dc7b3aed1bcc",
+              "TabName": "候选人",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "e00945c9-b597-4044-9b24-672e631be86e",
+              "TabName": "职位管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "8abbb9e8-1e25-4863-abbb-ecb6288733a3",
+              "TabName": "考试场次",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "90ef0f84-3b1d-45b7-9f92-455bf92b3d37",
+              "TabName": "候选人通知",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "8441d656-a348-4ed9-9ede-9c9e076ac09b",
+              "TabName": "人才库",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "bedaa6e3-0906-4348-aa1b-3856d6a8e15b",
+              "TabName": "统计分析",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "3f91dcd5-2993-4869-8c5b-fffd928c585c",
+              "TabName": "面试日程",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "4e50de66-ea9f-468b-a19c-88a80e7e70eb",
+              "TabName": "笔试成绩",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "eb25a341-7631-4af5-a808-d20abdc0e436",
+              "TabName": "招聘设置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "a1fa79c1-376e-4c57-b202-7a39db5053ad",
+              "TabName": "招聘计划",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "70efdf2e-c9b0-8607-9795-c442636b55fb",
+              "TabName": "考试科目",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000108",
+          "AppName": "薪酬管理",
+          "tabList": [
+            {
+              "TabId": "00000000-0000-0000-0000-000000000108",
+              "TabName": "主页",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "1a9ce3bf-6250-487b-bf30-336b0ba0de1e",
+              "TabName": "工资核算",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "118edf4d-be45-4e6d-a07a-cd2cdeadf1e6",
+              "TabName": "工资查询",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "b6c8d541-0dad-4b29-9697-ad1ab9fdc141",
+              "TabName": "所得税",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "2d4ba160-3eea-4ecc-852f-e822c6b06307",
+              "TabName": "调薪提醒",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "3b633d24-1940-4f2d-9c8a-0ff9d5735881",
+              "TabName": "薪资报表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "c2d3826c-0a7f-4fef-a9b8-213a997ce777",
+              "TabName": "薪酬变更记录",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "fb4b0353-0776-475d-8369-7cd48d7dde93",
+              "TabName": "薪资档案",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "ae5b668d-2e98-4ee6-890a-db2178180fd9",
+              "TabName": "薪资方案",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "c1235a1e-7054-4a0c-b8ea-090e36b8ca32",
+              "TabName": "薪资标准",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "7b11eebf-831e-417d-b2f9-79b9e26c83a2",
+              "TabName": "薪资字段",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "392015d7-a049-4105-b291-30694da7d0e9",
+              "TabName": "税率表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "231aa19c-a24e-41c9-ba67-91186e161b4a",
+              "TabName": "岗位设置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "573ee8a4-45da-40f0-b6f4-05006fdd4d1f",
+              "TabName": "基金奖金账户",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000118",
+          "AppName": "问卷投票",
+          "tabList": [
+            {
+              "TabId": "4bd0cfeb-dca7-4c0a-9d11-786fe8e00ed3",
+              "TabName": "我的问卷",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "90475795-e5ca-4a8f-be92-8e3588ad6c98",
+              "TabName": "问卷调查",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "65a45cfb-530c-492a-8504-faa3c7594101",
+              "TabName": "问题模板",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "3059a627-cea8-4144-80aa-183f56b8cab0",
+              "TabName": "投票管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "d51e2bb1-2f11-4f09-8fa4-a104e5b695b5",
+              "TabName": "我的投票",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000106",
+          "AppName": "部门中心",
+          "tabList": [
+            {
+              "TabId": "7c6c68b0-a6b6-4095-8780-1bd28e4a43bf",
+              "TabName": "部门花名册",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "766cb5f7-a326-4bd3-a33d-bffdf50c137a",
+              "TabName": "科室月汇总",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "2e3e0980-a421-45ba-a7dc-ee1b3728e879",
+              "TabName": "部门打卡",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "5ebe6eab-dadb-45aa-919d-2e0eca52ff11",
+              "TabName": "科室假期账户",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "a1a5ccd1-6f64-4be0-9042-6d2cfb5e3717",
+              "TabName": "科室考勤",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "f316723b-f61f-47c6-8f06-9677bed7264e",
+          "AppName": "日常办公",
+          "tabList": [
+            {
+              "TabId": "00000000-0000-0000-0000-000000000000",
+              "TabName": "工作台",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6786c381-c2ff-44de-b56b-b15d49b8775f",
+              "TabName": "我的事务",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "8118034f-8720-4d5a-82a7-c007adcd073a",
+              "TabName": "日历",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "f2ac0f5e-9f44-4138-8fe8-840379a3c7d8",
+              "TabName": "会议室使用状况",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "c742137d-e0e8-4c98-aac0-a61442ff529c",
+              "TabName": "会议日历",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "e314b32e-4531-4043-92e6-f63dfbdd3e16",
+              "TabName": "通讯录",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "7d8927ed-4210-42f4-a1aa-0e5441760930",
+              "TabName": "信息管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "bb478e5f-8d22-4373-829c-da350b8a0085",
+              "TabName": "通知管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "0ade6b3a-3762-4bec-9313-a3015c646716",
+              "TabName": "文档管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "329bbe5e-f33d-4894-b1e2-2e8f7ff8db18",
+              "TabName": "外出公告牌",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "d338e6b5-e95f-49ad-9340-f31c3dbfe6af",
+          "AppName": "流程管理",
+          "tabList": [
+            {
+              "TabId": "d338e6b5-e95f-49ad-9340-f31c3dbfe6af",
+              "TabName": "流程首页",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6786c381-c2ff-44de-b56b-b15d49b8775f",
+              "TabName": "我的事务",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "8eb07d29-f6a0-4174-90b2-af8a66d6c5a2",
+              "TabName": "流程附件",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "fd520438-9917-46b9-b9f2-436525f19965",
+              "TabName": "事务查询",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "aa568d0c-bc61-4543-9284-02117e80dfda",
+              "TabName": "事务管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "097a6903-54b6-42a6-8df9-e9306617d7d2",
+              "TabName": "表单查询",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "cd35fc95-85df-4477-8569-2345a1eeeb55",
+              "TabName": "流程设置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "f8f53482-44c5-4a46-92df-95e77b369d0c",
+              "TabName": "流程报表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "cf07615c-10f2-4d46-8b35-5167c183ac01",
+              "TabName": "归档设置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "e09b91d1-05ec-4fd5-afee-56fe0d243f84",
+              "TabName": "签名管理",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6d140a34-bd60-45ac-9bb6-5e2578699182",
+              "TabName": "审批意见",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "84ed89fd-2ee9-449d-842b-b6f033c79355",
+              "TabName": "曝光图表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "f7a5d8e4-1cdb-4b68-895e-7ad491ac4999",
+              "TabName": "待办查询",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000923",
+          "AppName": "表格",
+          "tabList": [
+            {
+              "TabId": "7bc76dda-728b-40c9-8a6a-7e1082f10ba0",
+              "TabName": "干部任免",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "3caf5417-22ae-491f-be7f-b29630af897d",
+              "TabName": "在职收入证明",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "498e57c8-cb0a-4091-9848-9f647b462293",
+              "TabName": "岗位变动",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6c5a7175-97d2-4a78-9f6a-c44335bbf6be",
+              "TabName": "专业技术考核表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "8f2e7e09-8429-4d2e-891b-b135ea275e63",
+              "TabName": "登记表",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "bc14590b-1fef-47a7-aeab-1c56264f87ea",
+              "TabName": "表格",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000119",
+          "AppName": "系统配置",
+          "tabList": [
+            {
+              "TabId": "29d5e2bc-e84d-47d6-a346-11e9f000ceb9",
+              "TabName": "消息模板",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "5d759b71-faa5-4cbc-8244-3a7c04f3a535",
+              "TabName": "门户仪表盘设计",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "b6bc09bf-f7ca-43d8-b83e-2e958fd7de8a",
+              "TabName": "提醒设置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "496abe75-fa37-4dd8-a08a-15ebcc746ca0",
+              "TabName": "数据字典",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "d92d10b5-1140-4f60-a0ab-a0a691e8131c",
+              "TabName": "工作台应用配置",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "ecfb14e0-3088-4f14-9d95-63a76b95561a",
+              "TabName": "角色",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "5a53f80a-5d63-4694-8aa6-3480441ac32a",
+              "TabName": "快速链接",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-000000000120",
+          "AppName": "组织规划",
+          "tabList": [
+            {
+              "TabId": "00000000-0000-0000-0000-000000000120",
+              "TabName": "首页",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "21adb1e1-dd64-4310-bb35-9d8b220aaa13",
+              "TabName": "组织结构",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "d2ea1a44-9f0e-4cbe-aab6-80d846a5c0f6",
+              "TabName": "科室管理者",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "8fdbd0d1-beb0-4c7a-b14d-c0af0162687c",
+              "TabName": "组织编制",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "bb627be6-8a2a-4d4f-8621-99548643f8cc",
+              "TabName": "岗位",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "9796147b-c22e-4928-b2e3-1dc2ba0c7042",
+              "TabName": "岗位分类",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "eff432f7-2508-44cf-971a-cbe44562dc68",
+              "TabName": "诊疗组",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "40b79dcd-be61-4426-839b-a93f44d61201",
+              "TabName": "HIS科室",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "6d63d282-4cd6-4d51-948a-7268ac38b842",
+              "TabName": "门诊提酬科室",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-130000000103",
+          "AppName": "住院规培",
+          "tabList": [
+            {
+              "TabId": "29d7ddad-8f7f-4438-b086-0a14b6c011d7",
+              "TabName": "轮转计划",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "00000000-0000-0000-0000-100000000200",
+          "AppName": "个人中心",
+          "tabList": [
+            {
+              "TabId": "00000000-0000-0000-0000-000000010001",
+              "TabName": "主页",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            },
+            {
+              "TabId": "3a7f7d9c-4d61-4205-9c6a-c3c610351d39",
+              "TabName": "我的应用",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "d25f27e8-ca51-401b-8a46-f88f54e1ae22",
+          "AppName": "测试新建",
+          "tabList": [
+            {
+              "TabId": "b6f96921-02ac-4e51-86d3-05c9123e8a0b",
+              "TabName": "科室奖金",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        },
+        {
+          "AppId": "1f3edcee-87dd-4008-8cd3-2f6f52ca1038",
+          "AppName": "测试新建",
+          "tabList": [
+            {
+              "TabId": "b6f96921-02ac-4e51-86d3-05c9123e8a0b",
+              "TabName": "科室奖金",
+              "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+              "Depth": 2
+            }
+          ]
+        }
+      ],
+      "error": []
+    }
+  ],
+  "context": {
+    "globalValueProviders": null,
+    "picklistValuesMap": {},
+    "appContextUser": {
+      "userId": null,
+      "name": null,
+      "isAdmin": false,
+      "token": null
+    },
+    "enableAccessChecks": false
+  }
+}

@@ -1,0 +1,569 @@
+{
+  "actions": [
+    {
+      "id": "",
+      "state": "SUCCESS",
+      "returnValue": {
+        "layoutItems": [
+          {
+            "label": "姓名",
+            "type": "U",
+            "id": "UserId",
+            "category": "CustomField",
+            "name": "UserId",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入姓名",
+            "sObjectType": 8,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 16
+          },
+          {
+            "label": "部门",
+            "type": "O",
+            "id": "DeptId",
+            "category": "CustomField",
+            "name": "DeptId",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入部门",
+            "sObjectType": 10,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 16
+          },
+          {
+            "label": "请假类型",
+            "type": "L",
+            "id": "LeaveType",
+            "category": "CustomField",
+            "name": "LeaveType",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入请假类型",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "开始时间",
+            "type": "F",
+            "id": "StartTime",
+            "category": "CustomField",
+            "name": "StartTime",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入开始时间",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "结束时间",
+            "type": "F",
+            "id": "EndTime",
+            "category": "CustomField",
+            "name": "EndTime",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入结束时间",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "请假天数",
+            "type": "N",
+            "id": "LeaveDuration",
+            "category": "CustomField",
+            "name": "LeaveDuration",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入请假天数",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "事由",
+            "type": "S",
+            "id": "Description",
+            "category": "CustomField",
+            "name": "Description",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入事由",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "备注",
+            "type": "S",
+            "id": "BZ",
+            "category": "CustomField",
+            "name": "BZ",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入备注",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 4
+          },
+          {
+            "label": "部门意见",
+            "type": "UCS",
+            "id": "ApproveOfSuperiorDept",
+            "category": "CustomField",
+            "name": "ApproveOfSuperiorDept",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入部门意见",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 4
+          },
+          {
+            "label": "分管审批",
+            "type": "UCS",
+            "id": "ApproveOfInchargeTop",
+            "category": "CustomField",
+            "name": "ApproveOfInchargeTop",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入分管审批",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 4
+          },
+          {
+            "label": "总经理意见",
+            "type": "UCS",
+            "id": "ApproveOfTop",
+            "category": "CustomField",
+            "name": "ApproveOfTop",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入总经理意见",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 4
+          },
+          {
+            "label": "销假开始时间",
+            "type": "F",
+            "id": "ActualStartTime",
+            "category": "CustomField",
+            "name": "ActualStartTime",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入销假开始时间",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 4
+          },
+          {
+            "label": "销假结束时间",
+            "type": "F",
+            "id": "ActualEndTime",
+            "category": "CustomField",
+            "name": "ActualEndTime",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入销假结束时间",
+            "sObjectType": 0,
+            "entityApiName": "HRRequestLeave",
+            "privilegeDepth": 4
+          }
+        ],
+        "masterRecord": {
+          "entityLabel": "请假单",
+          "keyPrefix": "a0T",
+          "entityApiName": "HRRequestLeave",
+          "recordNameField": null,
+          "objectTypeCode": 30022,
+          "record": {
+            "ValueId": "cf1443cc-dd4f-4b67-a9bb-2d5c584fa7ae",
+            "CreatedBy": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "测试",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": "测试"
+            },
+            "CreatedOn": "2024-03-07 14:39:44",
+            "ModifiedBy": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "测试",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": "测试"
+            },
+            "ModifiedOn": "2024-03-07 14:39:44",
+            "Name": "01 请销假审批单",
+            "UserId": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "测试",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": "测试"
+            },
+            "DeptId": {
+              "Icon": null,
+              "Id": "c5a8565d-92fb-4137-8a37-ea95162ad6e1",
+              "Name": "小程序测试",
+              "objectTypeCode": 10,
+              "sobjectType": "10",
+              "value": "c5a8565d-92fb-4137-8a37-ea95162ad6e1",
+              "displayValue": "小程序测试"
+            },
+            "EmpNo": "",
+            "GenderCode": {
+              "label": "",
+              "value": ""
+            },
+            "JobTitle": "",
+            "LeaveType": {
+              "label": null,
+              "value": ""
+            },
+            "StartTime": null,
+            "LeaveDuration": "",
+            "LeaveDays": "",
+            "EndTime": null,
+            "BalanceAmount": "",
+            "DurationUnit": "",
+            "Description": "",
+            "Departure": "",
+            "Location": "",
+            "Vehicle": "",
+            "WorkAgentId": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "测试",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": "测试"
+            },
+            "MobileNumber": "",
+            "StatusCode": {
+              "label": null,
+              "value": ""
+            },
+            "StateCode": {
+              "label": null,
+              "value": ""
+            },
+            "FeeSource": {
+              "label": "",
+              "value": ""
+            },
+            "CheckReturnUserId": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "测试",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": "测试"
+            },
+            "IsCheckReturn": "",
+            "ActualStartTime": null,
+            "ActualEndTime": null,
+            "ApprpveOfMgrDept": {
+              "comments": []
+            },
+            "ApproveOfSuperiorDept": {
+              "comments": []
+            },
+            "ApproveOfInchargeTop": {
+              "comments": []
+            },
+            "ApproveOfTop": {
+              "comments": []
+            },
+            "ApproveOfHR": {
+              "comments": []
+            },
+            "sqrq": null,
+            "RestReason": "",
+            "TurnDate": "",
+            "JTFY": "",
+            "CCKH": "",
+            "XCMX": "",
+            "EmplogeeID": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "测试",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": "测试"
+            },
+            "EeptID": {
+              "Icon": null,
+              "Id": "c5a8565d-92fb-4137-8a37-ea95162ad6e1",
+              "Name": "小程序测试",
+              "objectTypeCode": 10,
+              "sobjectType": "10",
+              "value": "c5a8565d-92fb-4137-8a37-ea95162ad6e1",
+              "displayValue": "小程序测试"
+            },
+            "BZ": ""
+          },
+          "picklistValuesMap": null,
+          "defaultFieldValues": {}
+        },
+        "relatedListRecords": {},
+        "layoutPicklists": {
+          "HRRequestLeave": {
+            "objectTypeCode": 30022,
+            "picklistFieldValues": {
+              "GenderCode": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "女",
+                    "validFor": null,
+                    "value": "女"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "男",
+                    "validFor": null,
+                    "value": "男"
+                  }
+                ]
+              },
+              "FeeSource": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "院部支出（科教线条）",
+                    "validFor": null,
+                    "value": "院部支出（科教线条）"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "自费",
+                    "validFor": null,
+                    "value": "自费"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "科研经费",
+                    "validFor": null,
+                    "value": "科研经费"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "其他",
+                    "validFor": null,
+                    "value": "其他"
+                  }
+                ]
+              },
+              "LeaveType": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "事假",
+                    "validFor": null,
+                    "value": "1"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "病假",
+                    "validFor": null,
+                    "value": "2"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "产假",
+                    "validFor": null,
+                    "value": "3"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "婚假",
+                    "validFor": null,
+                    "value": "4"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "探亲假",
+                    "validFor": null,
+                    "value": "5"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "年假",
+                    "validFor": null,
+                    "value": "6"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "工伤假",
+                    "validFor": null,
+                    "value": "7"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "丧假",
+                    "validFor": null,
+                    "value": "8"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "补休",
+                    "validFor": null,
+                    "value": "17"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "计生假",
+                    "validFor": null,
+                    "value": "18"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "本地外出",
+                    "validFor": null,
+                    "value": "27"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "外地出差",
+                    "validFor": null,
+                    "value": "28"
+                  }
+                ]
+              },
+              "StatusCode": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "草稿",
+                    "validFor": null,
+                    "value": "0"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "审批中",
+                    "validFor": null,
+                    "value": "1"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "搁置",
+                    "validFor": null,
+                    "value": "2"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "审批完成",
+                    "validFor": null,
+                    "value": "3"
+                  }
+                ]
+              },
+              "StateCode": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "草稿",
+                    "validFor": null,
+                    "value": "0"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "审批中",
+                    "validFor": null,
+                    "value": "1"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "审批不通过",
+                    "validFor": null,
+                    "value": "2"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "审批通过",
+                    "validFor": null,
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            "picklistFieldMap": []
+          }
+        }
+      },
+      "error": []
+    }
+  ],
+  "context": {
+    "globalValueProviders": null,
+    "picklistValuesMap": {},
+    "appContextUser": {
+      "userId": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+      "name": "110",
+      "isAdmin": false,
+      "token": null
+    },
+    "enableAccessChecks": false
+  }
+}

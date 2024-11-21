@@ -1,0 +1,51 @@
+{
+  "id": null,
+  "state": "SUCCESS",
+  "storable": true,
+  "returnValue": {
+    "totalCount": 3,
+    "pageInfo": {
+      "hasNextPage": false,
+      "endCursor": null,
+      "__typename": null
+    },
+    "nodes": [
+      {
+        "id": "09d58307-af32-4d55-9e05-a643f7f2d73d",
+        "nameField": "Name",
+        "Name": {
+          "_value": "GlobalAttendanceSetting",
+          "textValue": "GlobalAttendanceSetting",
+          "value": "GlobalAttendanceSetting",
+          "fieldKey": "Name",
+          "__typename": "TextField"
+        }
+      },
+      {
+        "id": "30a97a19-bcde-402a-91c3-91f0a803bbed",
+        "nameField": "Name",
+        "Name": {
+          "_value": "ApplicationSetting",
+          "textValue": "ApplicationSetting",
+          "value": "ApplicationSetting",
+          "fieldKey": "Name",
+          "__typename": "TextField"
+        }
+      },
+      {
+        "id": "593b50b5-bd3b-42be-a86a-f68adfd162e1",
+        "nameField": "Name",
+        "Name": {
+          "_value": "EmployeeBirthdayCare",
+          "textValue": "EmployeeBirthdayCare",
+          "value": "EmployeeBirthdayCare",
+          "fieldKey": "Name",
+          "__typename": "TextField"
+        }
+      }
+    ],
+    "__typename": null
+  },
+  "error": null,
+  "total": 3
+}

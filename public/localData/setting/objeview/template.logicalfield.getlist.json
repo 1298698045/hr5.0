@@ -1,0 +1,37 @@
+[
+  {
+    "AttributeId": "d9c053f5-7ffb-412d-a746-0cdd0517ecc7",
+    "Name": "ContractTypeCodeName",
+    "DisplayName": "编制名称",
+    "CreatedOn": "2019-09-06 20:32:41",
+    "ModifiedOn": "2019-09-06 20:32:41"
+  },
+  {
+    "AttributeId": "9c4156a8-d963-4a33-a837-2219e65e2c3f",
+    "Name": "EmpCategoryCodeName",
+    "DisplayName": "人员类别名称",
+    "CreatedOn": "2019-09-06 20:40:12",
+    "ModifiedOn": "2019-09-06 20:40:12"
+  },
+  {
+    "AttributeId": "7f044274-7190-4f28-b895-777606f93bb8",
+    "Name": "StateCodeName",
+    "DisplayName": "状态名称",
+    "CreatedOn": "2019-09-06 20:30:44",
+    "ModifiedOn": "2019-09-06 20:30:44"
+  },
+  {
+    "AttributeId": "b04c49b0-49d7-450a-92fa-e9329020d66e",
+    "Name": "DeptNo",
+    "DisplayName": "部门编号",
+    "CreatedOn": "2021-01-12 17:58:46",
+    "ModifiedOn": "2021-01-12 17:58:46"
+  },
+  {
+    "AttributeId": "ce1082bc-9e59-43f5-b4c7-edc73d724788",
+    "Name": "DeptIdName",
+    "DisplayName": "部门名称",
+    "CreatedOn": "2019-01-03 10:27:06",
+    "ModifiedOn": "2019-01-03 10:27:06"
+  }
+]

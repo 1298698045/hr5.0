@@ -1,0 +1,1261 @@
+{
+  "actions": [
+    {
+      "id": "",
+      "state": "SUCCESS",
+      "returnValue": {
+        "componentDef": {
+          "entityLabel": "用户",
+          "entityApiName": "SystemUser",
+          "layoutId": null,
+          "name": null,
+          "objectTypeCode": 8,
+          "recordNameField": null,
+          "keyPrefix": "005",
+          "isInlineEditable": true,
+          "isUserLayout": false,
+          "headerActions": [
+            {
+              "executionComponent": {
+                "descriptor": null,
+                "isEvent": true,
+                "isClientSideCreatable": true,
+                "componentName": null
+              },
+              "devNameOrId": "SaveEdit",
+              "requiresSelectionForUsage": false,
+              "isSelected": true,
+              "label": "保存",
+              "title": "保存",
+              "isRenderEntityIcon": false,
+              "isVisible": false,
+              "assertive": false,
+              "section": "Page",
+              "icon": "/img/icon/t4v35/action/new_custom19_120.png",
+              "url": null,
+              "isMassAction": false,
+              "actionTypeEnum": "StandardButton"
+            },
+            {
+              "executionComponent": {
+                "descriptor": null,
+                "isEvent": true,
+                "isClientSideCreatable": true,
+                "componentName": null
+              },
+              "devNameOrId": "SaveAndNew",
+              "requiresSelectionForUsage": false,
+              "isSelected": false,
+              "label": "保存并新建",
+              "title": "保存并新建",
+              "isRenderEntityIcon": false,
+              "isVisible": false,
+              "assertive": false,
+              "section": "Page",
+              "icon": "/img/icon/t4v35/action/new_custom19_120.png",
+              "url": null,
+              "isMassAction": false,
+              "actionTypeEnum": "StandardButton"
+            },
+            {
+              "executionComponent": {
+                "descriptor": null,
+                "isEvent": true,
+                "isClientSideCreatable": true,
+                "componentName": null
+              },
+              "devNameOrId": "CancelEdit",
+              "requiresSelectionForUsage": false,
+              "isSelected": false,
+              "label": "取消",
+              "title": "取消",
+              "isRenderEntityIcon": false,
+              "isVisible": false,
+              "assertive": false,
+              "section": "Page",
+              "icon": "/img/icon/t4v35/action/new_custom19_120.png",
+              "url": null,
+              "isMassAction": false,
+              "actionTypeEnum": "StandardButton"
+            }
+          ],
+          "inlineEditActions": [],
+          "sections": [
+            {
+              "sectionId": "613734b8-b557-4721-ba68-ded32cf68c42",
+              "labelKey": "Basic",
+              "title": "基本信息",
+              "showHeader": true,
+              "isCollapsed": false,
+              "isCollapsible": true,
+              "rows": [
+                {
+                  "attributes": [
+                    {
+                      "label": "用户名",
+                      "localId": "UserName",
+                      "targetValue": "UserName",
+                      "attributes": {
+                        "maxlength": 100,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": true,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "姓名",
+                      "localId": "FullName",
+                      "targetValue": "FullName",
+                      "attributes": {
+                        "maxlength": 320,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": true,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 1
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "员工编号",
+                      "localId": "EmployeeId",
+                      "targetValue": "EmployeeId",
+                      "attributes": {
+                        "maxlength": 200,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": true,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "分支部门",
+                      "localId": "BusinessUnitId",
+                      "targetValue": "BusinessUnitId",
+                      "attributes": {
+                        "maxlength": 16,
+                        "type": "O",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": true,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 10,
+                        "sObjectType": 10,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 2
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "岗位分类",
+                      "localId": "PostId",
+                      "targetValue": "PostId",
+                      "attributes": {
+                        "maxlength": 8,
+                        "type": "L",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": true,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "行政职务",
+                      "localId": "JobTitle",
+                      "targetValue": "JobTitle",
+                      "attributes": {
+                        "maxlength": 200,
+                        "type": "DT",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 3
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "职级",
+                      "localId": "TitleLevel",
+                      "targetValue": "TitleLevel",
+                      "attributes": {
+                        "maxlength": 10,
+                        "type": "DT",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "职称",
+                      "localId": "ProfessionTitle",
+                      "targetValue": "ProfessionTitle",
+                      "attributes": {
+                        "maxlength": 225,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 4
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "拼音",
+                      "localId": "Pinyin",
+                      "targetValue": "Pinyin",
+                      "attributes": {
+                        "maxlength": 50,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "头衔",
+                      "localId": "Title",
+                      "targetValue": "Title",
+                      "attributes": {
+                        "maxlength": 200,
+                        "type": "DT",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 5
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "昵称",
+                      "localId": "NickName",
+                      "targetValue": "NickName",
+                      "attributes": {
+                        "maxlength": 100,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "性别",
+                      "localId": "Gender",
+                      "targetValue": "Gender",
+                      "attributes": {
+                        "maxlength": 10,
+                        "type": "DT",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 6
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "工作状态",
+                      "localId": "WorkStatus",
+                      "targetValue": "WorkStatus",
+                      "attributes": {
+                        "maxlength": 10,
+                        "type": "L",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 7
+                }
+              ]
+            },
+            {
+              "sectionId": "f4555499-e767-4af9-90a8-cf63097162f4",
+              "labelKey": "contact",
+              "title": "联系信息",
+              "showHeader": true,
+              "isCollapsed": false,
+              "isCollapsible": true,
+              "rows": [
+                {
+                  "attributes": [
+                    {
+                      "label": "手机",
+                      "localId": "MobilePhone",
+                      "targetValue": "MobilePhone",
+                      "attributes": {
+                        "maxlength": 100,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": true,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "内部电子邮件",
+                      "localId": "InternalEMailAddress",
+                      "targetValue": "InternalEMailAddress",
+                      "attributes": {
+                        "maxlength": 200,
+                        "type": "E",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 1
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "家庭电话",
+                      "localId": "HomePhone",
+                      "targetValue": "HomePhone",
+                      "attributes": {
+                        "maxlength": 100,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "个人电子邮件",
+                      "localId": "PersonalEMailAddress",
+                      "targetValue": "PersonalEMailAddress",
+                      "attributes": {
+                        "maxlength": 200,
+                        "type": "E",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 2
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "联系电话",
+                      "localId": "Telephone1",
+                      "targetValue": "Telephone1",
+                      "attributes": {
+                        "maxlength": 10,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 3
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "微信token",
+                      "localId": "WechatAuthToken",
+                      "targetValue": "WechatAuthToken",
+                      "attributes": {
+                        "maxlength": 225,
+                        "type": "J",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 4
+                }
+              ]
+            },
+            {
+              "sectionId": "ff8cd642-7dc8-4e1f-9d51-82a1f797773c",
+              "labelKey": "admin",
+              "title": "管理员",
+              "showHeader": true,
+              "isCollapsed": false,
+              "isCollapsible": true,
+              "rows": [
+                {
+                  "attributes": [
+                    {
+                      "label": "超级管理员",
+                      "localId": "IsAdministrator",
+                      "targetValue": "IsAdministrator",
+                      "attributes": {
+                        "maxlength": 1,
+                        "type": "B",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "显示顺序",
+                      "localId": "ImportSequenceNumber",
+                      "targetValue": "ImportSequenceNumber",
+                      "attributes": {
+                        "maxlength": 4,
+                        "type": "N",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 1
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "停用",
+                      "localId": "IsDisabled",
+                      "targetValue": "IsDisabled",
+                      "attributes": {
+                        "maxlength": 1,
+                        "type": "B",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "停用原因",
+                      "localId": "DisabledReason",
+                      "targetValue": "DisabledReason",
+                      "attributes": {
+                        "maxlength": 1000,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 2
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "隐藏手机号码",
+                      "localId": "HiddenPhone",
+                      "targetValue": "HiddenPhone",
+                      "attributes": {
+                        "maxlength": 1,
+                        "type": "B",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "上级用户",
+                      "localId": "ParentSystemUserId",
+                      "targetValue": "ParentSystemUserId",
+                      "attributes": {
+                        "maxlength": 16,
+                        "type": "U",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 8,
+                        "sObjectType": 8,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 3
+                },
+                {
+                  "attributes": [
+                    {
+                      "label": "登录次数",
+                      "localId": "LoginTimes",
+                      "targetValue": "LoginTimes",
+                      "attributes": {
+                        "maxlength": 10,
+                        "type": "N",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    },
+                    {
+                      "label": "直属上级",
+                      "localId": "ManagerId",
+                      "targetValue": "ManagerId",
+                      "attributes": {
+                        "maxlength": 32,
+                        "type": "Y",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 4
+                }
+              ]
+            },
+            {
+              "sectionId": "60696d5d-4d78-4712-b4e0-6cbef3df4906",
+              "labelKey": "Basic",
+              "title": "备注",
+              "showHeader": true,
+              "isCollapsed": false,
+              "isCollapsible": true,
+              "rows": [
+                {
+                  "attributes": [
+                    {
+                      "label": "描述",
+                      "localId": "Description",
+                      "targetValue": "Description",
+                      "attributes": {
+                        "maxlength": 255,
+                        "type": "S",
+                        "dataType": null,
+                        "labelClass": null,
+                        "required": false,
+                        "readonly": false,
+                        "alwaysDisplayed": true,
+                        "alwaysReadonly": false,
+                        "referencedEntityObjectTypeCode": 0,
+                        "sObjectType": 0,
+                        "onError": {}
+                      }
+                    }
+                  ],
+                  "rowNumber": 1
+                }
+              ]
+            }
+          ],
+          "localizedTitle": "用户",
+          "lookupAttributes": [
+            {
+              "objectTypeCode": 10,
+              "name": "BusinessUnitId"
+            },
+            {
+              "objectTypeCode": 8,
+              "name": "ParentSystemUserId"
+            }
+          ]
+        },
+        "record": {
+          "SystemUserId": null,
+          "Name": null,
+          "DeletionStateCode": null,
+          "TerritoryId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 2013,
+            "sobjectType": "2013",
+            "value": null,
+            "displayValue": null
+          },
+          "OrganizationId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 0,
+            "sobjectType": "0",
+            "value": null,
+            "displayValue": null
+          },
+          "FirstName": null,
+          "Salutation": null,
+          "UserName": null,
+          "EmployeeId": null,
+          "MiddleName": null,
+          "LastName": null,
+          "BusinessUnitId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 10,
+            "sobjectType": "10",
+            "value": null,
+            "displayValue": null
+          },
+          "FullName": null,
+          "Password": null,
+          "NickName": null,
+          "Pinyin": null,
+          "Gender": null,
+          "PostId": null,
+          "Title": null,
+          "JobTitle": null,
+          "MobileAlertEMail": null,
+          "TitleLevel": null,
+          "PreferredEmailCode": null,
+          "ProfessionTitle": null,
+          "MobilePhone": null,
+          "PreferredPhoneCode": null,
+          "Telephone1": null,
+          "PreferredAddressCode": null,
+          "HomePhone": null,
+          "ParentSystemUserId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 8,
+            "sobjectType": "8",
+            "value": null,
+            "displayValue": null
+          },
+          "HiddenPhone": "false",
+          "DomainName": null,
+          "PassportLo": null,
+          "IsAdministrator": "false",
+          "PersonalEMailAddress": null,
+          "CreatedOn": null,
+          "InternalEMailAddress": null,
+          "LicenseId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 0,
+            "sobjectType": "0",
+            "value": null,
+            "displayValue": null
+          },
+          "PassportHi": null,
+          "ImportSequenceNumber": null,
+          "ManagerId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 0,
+            "sobjectType": "0",
+            "value": null,
+            "displayValue": null
+          },
+          "ModifiedOn": null,
+          "IsDisabled": "false",
+          "DisabledReason": null,
+          "CreatedBy": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 8,
+            "sobjectType": "8",
+            "value": null,
+            "displayValue": null
+          },
+          "IsCustom": "false",
+          "WorkStatus": null,
+          "ModifiedBy": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 8,
+            "sobjectType": "8",
+            "value": null,
+            "displayValue": null
+          },
+          "PhotoUrl": null,
+          "GovernmentId": null,
+          "DefaultRoleId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 1036,
+            "sobjectType": "1036",
+            "value": null,
+            "displayValue": null
+          },
+          "JobGradeCode": null,
+          "SalaryPassword": null,
+          "EnhancedProfileId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 20017,
+            "sobjectType": "20017",
+            "value": null,
+            "displayValue": null
+          },
+          "PasswordQ": null,
+          "PasswordA": null,
+          "LastLogin": null,
+          "LoginTimes": null,
+          "WechatAuthId": null,
+          "WechatAuthToken": null,
+          "ImpPostId": null,
+          "Impbusinessunitid": null,
+          "Description": null,
+          "BusinessUnitIdName": null,
+          "DelegatedApproverId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 0,
+            "sobjectType": "0",
+            "value": null,
+            "displayValue": null
+          },
+          "ReceiveApproverEmails": null,
+          "LastChangePassword": null,
+          "DisplayInServiceViews": "false",
+          "CalendarId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 4003,
+            "sobjectType": "4003",
+            "value": null,
+            "displayValue": null
+          },
+          "ActiveDirectoryGuid": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 0,
+            "sobjectType": "0",
+            "value": null,
+            "displayValue": null
+          },
+          "SiteId": {
+            "Icon": null,
+            "Id": null,
+            "Name": null,
+            "objectTypeCode": 4009,
+            "sobjectType": "4009",
+            "value": null,
+            "displayValue": null
+          },
+          "WindowsLiveID": null,
+          "IncomingEmailDeliveryMethod": null,
+          "OutgoingEmailDeliveryMethod": null,
+          "AccessMode": null,
+          "UTCConversionTimeZoneCode": null,
+          "InviteStatusCode": null,
+          "IsActiveDirectoryUser": "false",
+          "TimeZoneRuleVersionNumber": null,
+          "YomiFullName": null,
+          "YomiLastName": null,
+          "OuterUserId": null,
+          "YomiFirstName": null,
+          "StatusCode": null,
+          "IsOnline": "false"
+        },
+        "defaultFieldValues": {}
+      },
+      "error": []
+    }
+  ],
+  "context": {
+    "globalValueProviders": null,
+    "picklistValuesMap": {
+      "accessmode": [
+        {
+          "label": "Full",
+          "value": "0"
+        },
+        {
+          "label": "Administrative",
+          "value": "1"
+        },
+        {
+          "label": "Read-Only",
+          "value": "2"
+        },
+        {
+          "label": "Support User",
+          "value": "3"
+        }
+      ],
+      "Address1_AddressTypeCode": [
+        {
+          "label": "Default Value",
+          "value": "1"
+        }
+      ],
+      "Address1_ShippingMethodCode": [
+        {
+          "label": "Default Value",
+          "value": "1"
+        }
+      ],
+      "Address2_AddressTypeCode": [
+        {
+          "label": "Default Value",
+          "value": "1"
+        }
+      ],
+      "Address2_ShippingMethodCode": [
+        {
+          "label": "Default Value",
+          "value": "1"
+        }
+      ],
+      "incomingemaildeliverymethod": [
+        {
+          "label": "None",
+          "value": "0"
+        },
+        {
+          "label": "Microsoft Dynamics CRM Client for Outlook",
+          "value": "1"
+        },
+        {
+          "label": "E-mail Router",
+          "value": "2"
+        },
+        {
+          "label": "Forward Mailbox",
+          "value": "3"
+        }
+      ],
+      "invitestatuscode": [
+        {
+          "label": "Invitation Not Sent",
+          "value": "0"
+        },
+        {
+          "label": "Invited",
+          "value": "1"
+        },
+        {
+          "label": "Invitation Near Expired",
+          "value": "2"
+        },
+        {
+          "label": "Invitation Expired",
+          "value": "3"
+        },
+        {
+          "label": "Invitation Accepted",
+          "value": "4"
+        },
+        {
+          "label": "Invitation Rejected",
+          "value": "5"
+        },
+        {
+          "label": "Invitation Revoked",
+          "value": "6"
+        }
+      ],
+      "JobGradeCode": [
+        {
+          "label": "主任医师",
+          "value": "0"
+        },
+        {
+          "label": "主治医师",
+          "value": "2"
+        },
+        {
+          "label": "医师",
+          "value": "3"
+        },
+        {
+          "label": "医士",
+          "value": "4"
+        },
+        {
+          "label": "副主任医院",
+          "value": "1"
+        }
+      ],
+      "outgoingemaildeliverymethod": [
+        {
+          "label": "None",
+          "value": "0"
+        },
+        {
+          "label": "Microsoft Dynamics CRM Client for Outlook",
+          "value": "1"
+        },
+        {
+          "label": "E-mail Router",
+          "value": "2"
+        }
+      ],
+      "PostId": [
+        {
+          "label": "职能",
+          "value": "1"
+        },
+        {
+          "label": "医师",
+          "value": "2"
+        },
+        {
+          "label": "医技",
+          "value": "3"
+        },
+        {
+          "label": "护理",
+          "value": "4"
+        },
+        {
+          "label": "医药",
+          "value": "5"
+        },
+        {
+          "label": "医辅",
+          "value": "6"
+        },
+        {
+          "label": "工勤",
+          "value": "9"
+        },
+        {
+          "label": "其它",
+          "value": "10"
+        }
+      ],
+      "preferredaddresscode": [
+        {
+          "label": "Mailing Address",
+          "value": "1"
+        },
+        {
+          "label": "Other Address",
+          "value": "2"
+        }
+      ],
+      "preferredemailcode": [
+        {
+          "label": "Default Value",
+          "value": "1"
+        }
+      ],
+      "preferredphonecode": [
+        {
+          "label": "Main Phone",
+          "value": "1"
+        },
+        {
+          "label": "Other Phone",
+          "value": "2"
+        },
+        {
+          "label": "Home Phone",
+          "value": "3"
+        },
+        {
+          "label": "Mobile Phone",
+          "value": "4"
+        }
+      ],
+      "WorkStatus": [
+        {
+          "label": "工作中",
+          "value": "1"
+        },
+        {
+          "label": "离岗",
+          "value": "2"
+        }
+      ],
+      "Gender": [
+        {
+          "label": "男",
+          "value": "男"
+        },
+        {
+          "label": "女",
+          "value": "女"
+        }
+      ],
+      "JobTitle": [
+        {
+          "label": "主任医师",
+          "value": "主任医师"
+        },
+        {
+          "label": "副主任医师",
+          "value": "副主任医师"
+        },
+        {
+          "label": "医师",
+          "value": "医师"
+        },
+        {
+          "label": "主管护师",
+          "value": "主管护师"
+        },
+        {
+          "label": "副主管护师",
+          "value": "副主管护师"
+        },
+        {
+          "label": "护师",
+          "value": "护师"
+        }
+      ],
+      "Title": [
+        {
+          "label": "院长",
+          "value": "院长"
+        },
+        {
+          "label": "副院长",
+          "value": "副院长"
+        },
+        {
+          "label": "党委书记",
+          "value": "党委书记"
+        },
+        {
+          "label": "党委副书记",
+          "value": "党委副书记"
+        },
+        {
+          "label": "科主任（临床医疗）",
+          "value": "科主任（临床医疗）"
+        },
+        {
+          "label": "副主任（临床医疗）",
+          "value": "副主任（临床医疗）"
+        },
+        {
+          "label": "科长（行政后勤）",
+          "value": "科长（行政后勤）"
+        },
+        {
+          "label": "副科长（行政后勤）",
+          "value": "副科长（行政后勤）"
+        },
+        {
+          "label": "护士长",
+          "value": "护士长"
+        },
+        {
+          "label": "副护士长",
+          "value": "副护士长"
+        }
+      ],
+      "TitleLevel": [
+        {
+          "label": "普通科员",
+          "value": "普通科员"
+        },
+        {
+          "label": "院领导",
+          "value": "院领导"
+        },
+        {
+          "label": "行政正职",
+          "value": "行政正职"
+        },
+        {
+          "label": "行政副职",
+          "value": "行政副职"
+        },
+        {
+          "label": "临床正职",
+          "value": "临床正职"
+        },
+        {
+          "label": "临床副职",
+          "value": "临床副职"
+        },
+        {
+          "label": "医技正职",
+          "value": "医技正职"
+        },
+        {
+          "label": "医技副职",
+          "value": "医技副职"
+        },
+        {
+          "label": "护师长",
+          "value": "护师长"
+        },
+        {
+          "label": "副护师长",
+          "value": "副护师长"
+        }
+      ]
+    },
+    "appContextUser": {
+      "userId": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+      "name": "刘优",
+      "isAdmin": false,
+      "token": null
+    },
+    "enableAccessChecks": false
+  }
+}

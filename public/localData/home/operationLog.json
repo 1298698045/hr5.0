@@ -1,0 +1,119 @@
+{
+  "total": 169,
+  "rows": [
+    {
+      "LIST_RECORD_ID": "de31c8cc-6c79-485f-85a6-c36104749347",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=de31c8cc-6c79-485f-85a6-c36104749347&retURL=\">-</a>",
+      "SourceIP": ": : 1",
+      "ObjectId": "29ab9c33-763c-4b33-ab3c-fd958de7572b",
+      "ObjectName": "测试信息发布",
+      "ObjectTypeCode": "",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-07-12 12: 35"
+    },
+    {
+      "LIST_RECORD_ID": "2c166129-efcb-4a14-a645-63201e96917b",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=2c166129-efcb-4a14-a645-63201e96917b&retURL=\">-</a>",
+      "SourceIP": ": : 1",
+      "ObjectId": "75f1eff7-8de0-4369-a1ac-b15dafb7310a",
+      "ObjectName": "党委会办公室承办",
+      "ObjectTypeCode": "100001",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-07-12 14: 53"
+    },
+    {
+      "LIST_RECORD_ID": "ea34c5b8-657f-4314-92d4-22933067bba5",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=ea34c5b8-657f-4314-92d4-22933067bba5&retURL=\">-</a>",
+      "SourceIP": ": : 1",
+      "ObjectId": "b21316ff-d1d8-467e-a784-a46deb638e42",
+      "ObjectName": "党委办公室阅转",
+      "ObjectTypeCode": "100001",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-07-12 14: 54"
+    },
+    {
+      "LIST_RECORD_ID": "d0afa572-c872-4425-a24a-6b21f5f25436",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=d0afa572-c872-4425-a24a-6b21f5f25436&retURL=\">-</a>",
+      "SourceIP": "",
+      "ObjectId": "10a60bac-89bf-4267-a506-bb262c584620",
+      "ObjectName": "流程实例: 02 差旅费报销流程 院领导 刘优 2023-07-18",
+      "ObjectTypeCode": "0",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-09-01 00: 16"
+    },
+    {
+      "LIST_RECORD_ID": "5454b972-c6c7-409f-a269-9940a3c2d898",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=5454b972-c6c7-409f-a269-9940a3c2d898&retURL=\">-</a>",
+      "SourceIP": "",
+      "ObjectId": "11c7f2f7-b4bd-4151-8bcc-c067247089f0",
+      "ObjectName": "流程实例: 01 请假单 刘优 信息中心",
+      "ObjectTypeCode": "0",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-09-01 00: 16"
+    },
+    {
+      "LIST_RECORD_ID": "3b3d03d4-e298-4f75-a4d7-806f5be8a032",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=3b3d03d4-e298-4f75-a4d7-806f5be8a032&retURL=\">-</a>",
+      "SourceIP": "",
+      "ObjectId": "15b71297-098c-43ca-8a19-8bb2baa5c2b7",
+      "ObjectName": "流程实例: 合同付款单 党委办公室 刘优 2022-07-0502",
+      "ObjectTypeCode": "0",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-09-01 00: 16"
+    },
+    {
+      "LIST_RECORD_ID": "2590973d-f264-4658-8978-5410ad8ae9db",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=2590973d-f264-4658-8978-5410ad8ae9db&retURL=\">-</a>",
+      "SourceIP": ": : 1",
+      "ObjectId": "044cd8b3-3189-474b-82e8-9fca7909f149",
+      "ObjectName": "转阅意见",
+      "ObjectTypeCode": "100001",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-07-12 14: 55"
+    },
+    {
+      "LIST_RECORD_ID": "e5402399-009c-44a5-bec0-ab62e7cdcd03",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=e5402399-009c-44a5-bec0-ab62e7cdcd03&retURL=\">-</a>",
+      "SourceIP": ": : 1",
+      "ObjectId": "5e1fb514-e298-42bf-bc69-ff71e468728e",
+      "ObjectName": "护士",
+      "ObjectTypeCode": "20017",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-07-17 14: 48"
+    },
+    {
+      "LIST_RECORD_ID": "64a45be5-edad-47b1-a912-dff6e097f0a6",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=64a45be5-edad-47b1-a912-dff6e097f0a6&retURL=\">-</a>",
+      "SourceIP": "",
+      "ObjectId": "9872a36b-2804-4e12-8dc7-e05a00df52dd",
+      "ObjectName": "流程实例: 人事合同签订 院领导 刘优 2022-07-0511",
+      "ObjectTypeCode": "0",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-09-01 00: 16"
+    },
+    {
+      "LIST_RECORD_ID": "96136378-7d72-4e67-8887-26c7eedf6083",
+      "Action": "Delete",
+      "Name": "<a style=\"color:blue;\" href=\"/lg0/detail?objectTypeCode=200&id=96136378-7d72-4e67-8887-26c7eedf6083&retURL=\">-</a>",
+      "SourceIP": "",
+      "ObjectId": "aab2cb14-768b-4baf-8c9e-fd280dadfb71",
+      "ObjectName": "流程实例: 人事合同签订 信息中心 刘优 2022-06-10",
+      "ObjectTypeCode": "0",
+      "UserId": "<a href='#' title='刘优'>刘优</a>",
+      "CreatedOn": "2023-09-01 00: 16"
+    }
+  ],
+  "context": {
+    "userid": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+    "name": "刘优"
+  }
+}

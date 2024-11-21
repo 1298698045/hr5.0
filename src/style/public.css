@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+button {
+    outline: 0;
+    border: none;
+}
+body {
+    font-size: 14px;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+.required {
+    color: red;
+}
+/* ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+    background-color: #ccc;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: transparent;
+    background-color: transparent;
+} */
+a {
+    text-decoration: none;
+}
+[v-cloak] {
+    display: none;
+}
+.cursorPointer {
+    cursor: pointer;
+}
+.a-split {
+    display: inline-block;
+    width: 10px;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearFix {
+    content: "";
+    clear: both;
+    display: block;
+}
+.hidden {
+    overflow: hidden;
+}
+.ml5 {
+    margin-left: 5px;
+}
+.mr5 {
+    margin-right: 5px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.ml16 {
+    margin-left: 16px;
+}
+.mr16 {
+    margin-right: 16px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.ml8 {
+    margin-left: 8px;
+}
+.pr-16{
+    padding-right: 16px;
+}
+.flex {
+    display: flex;
+}
+.flex-col{
+    flex: 1 1 auto;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.content-center {
+    align-content: center;
+}
+
+.content-start {
+    align-content: flex-start;
+}
+
+.content-end {
+    align-content: flex-end;
+}
+
+.content-between {
+    align-content: space-between;
+}
+
+.content-around {
+    align-content: space-around;
+}
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.items-center {
+    align-items: center;
+}
+.no-flex{
+    flex: none;
+}
+.radiusNone{
+    border-radius: 0;
+}
+/* antd css */
+/* a-tree */
+.ant-btn{
+    border-radius: 4px !important;
+}
+/* .ant-input{
+    border-radius: 0 !important;
+} */
+.ant-tree-treenode {
+    line-height: 30px;
+    padding: 0 !important;
+}
+.ant-tree-treenode:hover {
+    background: #def0ff;
+}
+.ant-tree-treenode.ant-tree-treenode-selected {
+    background: #def0ff;
+}
+.ant-tree-treenode {
+    line-height: 30px;
+}
+.ant-tree-treenode .ant-tree-node-content-wrapper {
+    line-height: 30px;
+    height: 30px;
+}
+.ant-tree-treenode .ant-tree-node-content-wrapper:hover {
+    background: transparent !important;
+    color: #018efb;
+}
+.ant-tree-treenode.ant-tree-treenode-selected .ant-tree-node-content-wrapper {
+    background: transparent !important;
+}
+.ant-tree-switcher {
+    line-height: 30px !important;
+}
+.ant-tabs-nav {
+    margin: 0 !important;
+}
+
+/* a-tab */
+.ant-tabs-tab {
+    padding: 12px 20px !important;
+    margin: 0 !important;
+    color: #484848 !important;
+    font-size: 12px !important;
+}
+
+/* easyui datagrid */
+.panel-header,
+.panel-body {
+    border-color: #e6e6e6 !important;
+}
+/*设置点击行后背景色变化，默认黄色*/
+.datagrid-row-selected {
+    background: #ffffff;
+}
+
+/* 单行超出文本 */
+.rowEllipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.inlie-block{
+    display: inline-block;
+}
+/* icon头像颜色 */
+.icon-morentouxiang {
+    color: #c9cdd4 !important;
+}
+
+
+/* fw 按钮 */
+.f-btn{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.6;
+    padding: 5px 15px;
+    user-select: none;
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    /* border-color: #d9d9d9; */
+}
+.f-btn.primary{
+    color: #fff;
+    background-color: #2db7f5;
+    border-color: #2db7f5;
+}
+.f-btn.primary:hover{
+    background-color: #57c5f7;
+    border-color: #57c5f7;
+}
+.f-btn[disabled], .f-btn.primary[disabled]{
+    background-color: #d9d9d9;
+    color: #fff;
+    border-color: #d9d9d9;
+    cursor: no-drop;
+}
+.f-btn.rdownIcon{
+    padding: 5px 4px;
+    border-radius: 0px 3px 3px 0px;
+    margin-left: 1px;
+}
+
+
+.pc_separator {
+    width: 1px;
+    background-color: #000;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+    height: 15px;
+}
+
+a.textUnderline{
+    border-bottom: 1px dotted;
+}

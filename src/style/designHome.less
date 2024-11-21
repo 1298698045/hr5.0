@@ -1,0 +1,570 @@
+.designWrap {
+    display: flex;
+    height: 100%;
+    overflow-y: auto;
+    /* background: #fff; */
+    border-radius: 4px;
+    background: #e8edf4;
+
+    .design {
+        flex: 1;
+        min-width: calc(~"100% - 320px");
+    }
+
+    .context-panel {
+        width: 320px;
+        height: 100vh;
+        background: #fff;
+        z-index: 99;
+        box-shadow: rgb(235, 236, 240) 2px 0px 0px 0px inset;
+        padding: 16px;
+        box-sizing: border-box;
+
+        .context-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .name {
+                color: #4e5969;
+                font-weight: bold;
+            }
+
+            .closeIcon {
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                border-radius: 2px;
+                cursor: pointer;
+
+                &:hover {
+                    background: rgba(9, 30, 66, 0.08);
+                }
+
+                .iconfont {
+                    color: #4e5969;
+                }
+            }
+        }
+
+        .templateList {
+            .templateItem {
+                display: flex;
+                margin: 16px 0;
+
+                .itemLeft {
+                    width: 75px;
+
+                    .thumbnail {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .itemRight {
+                flex: 1;
+                margin-left: 12px;
+
+                .title {
+                    font-weight: 600;
+                }
+
+                .desc {
+                    color: #6b778c;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.designHead {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 20px 0 20px;
+    align-items: center;
+}
+
+.buttonIcon {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #f2f3f5;
+    border-radius: 2px;
+}
+
+.buttonIcon:hover {
+    background: #e5e6eb;
+    cursor: pointer;
+}
+
+.btn.buttonIcon {
+    padding: 0;
+    position: relative;
+
+    .iconfont {
+        font-size: 12px;
+        color: #4e5959;
+    }
+}
+
+.dropMenuWapper {
+    display: block;
+    top: 100%;
+    right: 0;
+    width: 286px;
+}
+
+.designBody {
+    .itxst {
+        padding: 10px 10px 0 10px;
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+
+        .columnItem {
+            width: 30%;
+            flex: 1;
+            /* padding: 10px; */
+            /* border: solid 1px #eee; */
+            border-radius: 5px;
+            margin-left: 16px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            .panelItemWrap {
+                width: 100%;
+                margin-right: 0;
+
+                &:hover {
+                    cursor: move;
+                }
+            }
+
+            .itemBox {
+                border: solid 1px #eee;
+                background-color: #fff;
+                border-top: 4px solid #165dff;
+                border-radius: 3px;
+                margin-bottom: 16px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+            }
+        }
+
+        .columnItem+.columnItem {
+            /* margin-left: 10px; */
+        }
+    }
+
+    .countTopWrap {
+        background: #fff;
+        margin: 10px 10px 0 10px;
+        border-radius: 4px;
+        display: flex;
+        flex-wrap: nowrap;
+
+        .Element_Departmentinformation {
+            width: 100%;
+            position: relative;
+            padding: 20px 0;
+
+            .countBox {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                overflow: hidden;
+                vertical-align: middle;
+
+                .countItem {
+                    width: 14.2%;
+                    text-align: center;
+                    float: left;
+                    border-right: 1px solid #edf2f7;
+
+                    a {
+                        color: #4d7ad8;
+                        cursor: pointer;
+
+                        span {
+                            color: #888;
+                            font-size: 12px;
+                            margin-top: 6px;
+                            display: block;
+                        }
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.colorTemplate {
+    color: rgb(107, 119, 140);
+    border-bottom: 1px solid #e2e3e5;
+}
+
+.colorDesc,
+.colorsBox {
+    padding: 0 12px;
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: space-between;
+
+    .colorItem {
+        width: 24px;
+        height: 24px;
+        border-radius: 3px;
+        display: inline-block;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+
+        svg {
+            color: #fff;
+        }
+    }
+}
+
+.panel-title {
+    display: flex;
+    align-items: center;
+
+    svg {
+        color: #97a0af;
+    }
+
+    .descNum {
+        color: #aaaaaa;
+        font-weight: normal;
+    }
+}
+
+.list-group {
+    height: 100%;
+}
+
+/* For demo */
+:deep(.slick-slide) {
+    text-align: center;
+    height: 100%;
+    background: #364d79;
+    overflow: hidden;
+}
+
+:deep(.slick-slide h3) {
+    color: #fff;
+}
+
+.ant-carousel {
+    width: 100%;
+    height: 220px;
+    cursor: pointer;
+}
+
+:deep :where(.css-dev-only-do-not-override-kqecok).ant-carousel .slick-slider {
+    height: 100%;
+}
+
+:where(.css-dev-only-do-not-override-kqecok).ant-carousel .slick-slider .slick-track,
+:where(.css-dev-only-do-not-override-kqecok).ant-carousel .slick-slider .slick-list {
+    height: 100% !important;
+}
+
+:deep :where(.css-dev-only-do-not-override-kqecok).ant-carousel .slick-list {
+    height: 100% !important;
+
+    .slick-track {
+        height: 100%;
+    }
+}
+
+.slick-slider {
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.oftenLinkList {
+    display: flex;
+    flex-wrap: wrap;
+
+    .oftenLinkItem {
+        width: 48%;
+        height: auto;
+        padding: 8px 10px;
+        box-sizing: border-box;
+        color: #4e5969;
+        background: #f2f3f5;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--textColor);
+            background: rgb(229, 230, 235);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .oftenLinkItem:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .oftenLinkItem1 {
+        width: 33%;
+        background: #fff;
+        text-align: center;
+        height: auto;
+        margin-right: 0;
+
+        &:hover {
+            background: #fff;
+        }
+
+        .oftenLinkIcon {
+            background: #f2f3f5;
+            width: 32px;
+            height: 32px;
+            padding: 8px 0;
+            margin: 0 auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .oftenLinkText {
+            font-size: 14px;
+        }
+    }
+}
+
+.panelItemWrap {
+    .listWrap {
+        height: 300px;
+        overflow-y: auto;
+
+        .listItem {
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #e5e6eb;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                background: #f2f3f5;
+            }
+
+            span {
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-right: 10px;
+                box-sizing: border-box;
+            }
+
+            .listItemTitle {
+                flex: 1;
+                color: #4e5969;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: left;
+            }
+
+            .listItemTime {
+                width: 100px;
+                margin-right: 10px;
+                text-align: right;
+                color: #b8bbcc;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.tabContainer.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabContainer {
+    border-bottom: 1px solid #e5e6eb;
+
+    .tabList {
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+
+        .tab {
+            font-size: 14px;
+            color: #4e5969;
+            padding: 0 8px;
+            float: left;
+            width: auto !important;
+
+            &:hover {
+                .tabHover {
+                    background: #f2f3f5;
+                }
+            }
+
+            .tabHover {
+                border-radius: 2px;
+                padding: 0 8px !important;
+                box-sizing: border-box;
+                background: transparent;
+                display: inline-block;
+                height: 29px;
+                line-height: 29px;
+
+                .bottom {
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--textColor);
+                    top: 33px;
+                    left: 1px;
+                }
+
+                .tabText {
+                    position: relative;
+
+                    .num.active {
+                        color: #f53f3f;
+                    }
+                }
+            }
+        }
+
+        .tab.active {
+            .tabHover {
+                .tabText {
+                    color: var(--textColor);
+                    font-weight: 700;
+                }
+
+                .tabText::before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--textColor);
+                    top: 29px;
+                    left: 0;
+                    transition: all 0.5s;
+                }
+            }
+
+            &:hover {
+                .tabHover {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+.tabContainer.notBorder {
+    border: none;
+}
+
+.tabnum {
+    color: red;
+    margin-left: 5px;
+}
+
+.isheadlist {
+    position: relative;
+    text-align: center;
+
+    .listItem.listItemHead {
+        position: absolute !important;
+        top: 0px !important;
+        width: calc(~"100% - 10px");
+        background: #f2f3f5;
+
+        .listItemTitle {
+            flex: 1;
+            margin: 0;
+        }
+    }
+
+    .listItemTitle {
+        flex: 1;
+        text-align: center !important;
+    }
+}
+
+.layoutBtn {
+    position: relative;
+
+    &:hover {
+        .dropMenuWapper {
+            display: block;
+        }
+    }
+
+    .dropMenuWapper {
+        width: auto;
+        left: inherit;
+        right: 0;
+        top: 100%;
+        padding: 4px;
+        display: none;
+
+        .layoutIconList {
+            display: flex;
+            color: #4e5969;
+
+            .img {
+                width: 32px;
+                height: 32px;
+                text-align: center;
+                font-weight: 500;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 3px;
+
+                &:hover,
+                &.active {
+                    background: rgba(9, 30, 66, 0.08);
+                }
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.chartWrap {
+    width: 100%;
+    height: 500px;
+}

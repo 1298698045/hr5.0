@@ -1,0 +1,941 @@
+{
+  "actions": [
+    {
+      "id": "",
+      "state": "SUCCESS",
+      "returnValue": {
+        "layoutItems": [
+          {
+            "label": "科室部门",
+            "type": "O",
+            "id": "Department",
+            "category": "CustomField",
+            "name": "Department",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": true,
+            "readonly": false,
+            "helpText": "请输入科室部门",
+            "sObjectType": 10,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 16
+          },
+          {
+            "label": "出差人",
+            "type": "U",
+            "id": "EmployeeId",
+            "category": "CustomField",
+            "name": "EmployeeId",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": true,
+            "readonly": false,
+            "helpText": "请输入出差人",
+            "sObjectType": 8,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 16
+          },
+          {
+            "label": "日期",
+            "type": "D",
+            "id": "Date",
+            "category": "CustomField",
+            "name": "Date",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入日期",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 32
+          },
+          {
+            "label": "出差时间",
+            "type": "D",
+            "id": "Evectiontime",
+            "category": "CustomField",
+            "name": "Evectiontime",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": true,
+            "readonly": false,
+            "helpText": "请输入出差时间",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 32
+          },
+          {
+            "label": "返回时间",
+            "type": "D",
+            "id": "Returntime",
+            "category": "CustomField",
+            "name": "Returntime",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入返回时间",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 32
+          },
+          {
+            "label": "出差事由",
+            "type": "DT",
+            "id": "Field1",
+            "category": "CustomField",
+            "name": "Field1",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": true,
+            "readonly": false,
+            "helpText": "请输入出差事由",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "报销日期",
+            "type": "D",
+            "id": "Billingtime",
+            "category": "CustomField",
+            "name": "Billingtime",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入报销日期",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 32
+          },
+          {
+            "label": "出差地点",
+            "type": "S",
+            "id": "Businesstrip",
+            "category": "CustomField",
+            "name": "Businesstrip",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入出差地点",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "出差客户",
+            "type": "S",
+            "id": "Businesspeople",
+            "category": "CustomField",
+            "name": "Businesspeople",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入出差客户",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "联系电话",
+            "type": "S",
+            "id": "Contactnumber",
+            "category": "CustomField",
+            "name": "Contactnumber",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入联系电话",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "备注内容",
+            "type": "X",
+            "id": "Notecontent",
+            "category": "CustomField",
+            "name": "Notecontent",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入备注内容",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "报销项目明细",
+            "type": "RelatedList",
+            "id": "RL__FN_OutBuissnessBaoxiao_detail1",
+            "category": "StandardRelatedList",
+            "name": "RL__FN_OutBuissnessBaoxiao_detail1",
+            "displayCategory": "RelatedList",
+            "fields": [
+              {
+                "label": "名称",
+                "type": "S",
+                "id": "Name",
+                "category": "CustomField",
+                "name": "Name",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": true,
+                "readonly": false,
+                "helpText": "请输入名称",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "报销项目",
+                "type": "DT",
+                "id": "Forproject",
+                "category": "CustomField",
+                "name": "Forproject",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": true,
+                "readonly": false,
+                "helpText": "请输入报销项目",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "报销标准",
+                "type": "DT",
+                "id": "Reimbursementstandard",
+                "category": "CustomField",
+                "name": "Reimbursementstandard",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入报销标准",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "单价",
+                "type": "N",
+                "id": "UnitPrice",
+                "category": "CustomField",
+                "name": "UnitPrice",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入单价",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "数量",
+                "type": "N",
+                "id": "Quantity",
+                "category": "CustomField",
+                "name": "Quantity",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入数量",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "金额",
+                "type": "N",
+                "id": "ReimbursableAmount",
+                "category": "CustomField",
+                "name": "ReimbursableAmount",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入金额",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "省份",
+                "type": "DT",
+                "id": "Province",
+                "category": "CustomField",
+                "name": "Province",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入省份",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "城市",
+                "type": "DT",
+                "id": "City",
+                "category": "CustomField",
+                "name": "City",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入城市",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "开始日期",
+                "type": "D",
+                "id": "Startdate",
+                "category": "CustomField",
+                "name": "Startdate",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入开始日期",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "结束日期",
+                "type": "D",
+                "id": "Overdate",
+                "category": "CustomField",
+                "name": "Overdate",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入结束日期",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "单据张数",
+                "type": "N",
+                "id": "Receiptsnum",
+                "category": "CustomField",
+                "name": "Receiptsnum",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": true,
+                "readonly": false,
+                "helpText": "请输入单据张数",
+                "sObjectType": 0,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+                "privilegeDepth": 8
+              }
+            ],
+            "required": false,
+            "readonly": false,
+            "helpText": null,
+            "sObjectType": 20395,
+            "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "出差人员",
+            "type": "RelatedList",
+            "id": "RL__FN_OutBuissnessBaoxiao_detail2",
+            "category": "StandardRelatedList",
+            "name": "RL__FN_OutBuissnessBaoxiao_detail2",
+            "displayCategory": "RelatedList",
+            "fields": [
+              {
+                "label": "姓名",
+                "type": "U",
+                "id": "EmplogeeID",
+                "category": "CustomField",
+                "name": "EmplogeeID",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入姓名",
+                "sObjectType": 8,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail2",
+                "privilegeDepth": 8
+              },
+              {
+                "label": "部门",
+                "type": "O",
+                "id": "EeptID",
+                "category": "CustomField",
+                "name": "EeptID",
+                "displayCategory": "Field",
+                "fields": null,
+                "required": false,
+                "readonly": false,
+                "helpText": "请输入部门",
+                "sObjectType": 10,
+                "entityApiName": "FN_OutBuissnessBaoxiao_detail2",
+                "privilegeDepth": 8
+              }
+            ],
+            "required": false,
+            "readonly": false,
+            "helpText": null,
+            "sObjectType": 20396,
+            "entityApiName": "FN_OutBuissnessBaoxiao_detail2",
+            "privilegeDepth": 8
+          },
+          {
+            "label": "票据审核",
+            "type": "UC",
+            "id": "ApproveOfOffice",
+            "category": "CustomField",
+            "name": "ApproveOfOffice",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入票据审核",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 4
+          },
+          {
+            "label": "部门领导审批",
+            "type": "UCS",
+            "id": "departmenthead",
+            "category": "CustomField",
+            "name": "departmenthead",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入部门领导审批",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 4
+          },
+          {
+            "label": "分管经理",
+            "type": "UCS",
+            "id": "ApproveOfInchargeTop",
+            "category": "CustomField",
+            "name": "ApproveOfInchargeTop",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入分管经理",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 4
+          },
+          {
+            "label": "总经理审批",
+            "type": "UCS",
+            "id": "Generalmanager",
+            "category": "CustomField",
+            "name": "Generalmanager",
+            "displayCategory": "Field",
+            "fields": null,
+            "required": false,
+            "readonly": false,
+            "helpText": "请输入总经理审批",
+            "sObjectType": 0,
+            "entityApiName": "FN_OutBuissnessBaoxiao",
+            "privilegeDepth": 4
+          }
+        ],
+        "masterRecord": {
+          "entityLabel": "出差报销",
+          "keyPrefix": "",
+          "entityApiName": "FN_OutBuissnessBaoxiao",
+          "recordNameField": null,
+          "objectTypeCode": 20394,
+          "record": {
+            "ValueId": "26c3350a-db8e-48a6-abec-06b4065b4788",
+            "Name": "02 差旅费报销审批单",
+            "OwningUser": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "测试",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": "测试"
+            },
+            "CreatedBy": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": ""
+            },
+            "CreatedOn": "2024-03-07 16:35:23",
+            "ModifiedBy": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": ""
+            },
+            "ModifiedOn": "2024-03-07 16:35:23",
+            "Date": null,
+            "Department": {
+              "Icon": null,
+              "Id": "c5a8565d-92fb-4137-8a37-ea95162ad6e1",
+              "Name": "小程序测试",
+              "objectTypeCode": 10,
+              "sobjectType": "10",
+              "value": "c5a8565d-92fb-4137-8a37-ea95162ad6e1",
+              "displayValue": "小程序测试"
+            },
+            "Travellingpeople": "",
+            "EmployeeId": {
+              "Icon": null,
+              "Id": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "Name": "测试",
+              "objectTypeCode": 8,
+              "sobjectType": "8",
+              "value": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+              "displayValue": "测试"
+            },
+            "Field1": {
+              "label": "",
+              "value": ""
+            },
+            "Contactnumber": "",
+            "Evectiontime": null,
+            "Returntime": null,
+            "Billingtime": null,
+            "Businesstrip": "",
+            "Businesspeople": "",
+            "Notecontent": "",
+            "Amount": "",
+            "Reciepts": "",
+            "CheckAmount": "",
+            "ApproveOfOffice": {
+              "comments": []
+            },
+            "departmenthead": {
+              "comments": []
+            },
+            "ApproveOfInchargeTop": {
+              "comments": []
+            },
+            "Generalmanager": {
+              "comments": []
+            }
+          },
+          "picklistValuesMap": null,
+          "defaultFieldValues": {}
+        },
+        "relatedListRecords": {
+          "FN_OutBuissnessBaoxiao_detail1": {
+            "entityLabel": "报销项目明细",
+            "keyPrefix": null,
+            "entityApiName": "FN_OutBuissnessBaoxiao_detail1",
+            "recordNameField": null,
+            "objectTypeCode": 20395,
+            "entities": []
+          },
+          "FN_OutBuissnessBaoxiao_detail2": {
+            "entityLabel": "出差人员",
+            "keyPrefix": null,
+            "entityApiName": "FN_OutBuissnessBaoxiao_detail2",
+            "recordNameField": null,
+            "objectTypeCode": 20396,
+            "entities": []
+          }
+        },
+        "layoutPicklists": {
+          "FN_OutBuissnessBaoxiao_detail1": {
+            "objectTypeCode": 20395,
+            "picklistFieldValues": {
+              "Forproject": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "火车票",
+                    "validFor": null,
+                    "value": "火车票"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "汽车票",
+                    "validFor": null,
+                    "value": "汽车票"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "飞机票",
+                    "validFor": null,
+                    "value": "飞机票"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "住宿费",
+                    "validFor": null,
+                    "value": "住宿费"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "出租/滴滴/优步",
+                    "validFor": null,
+                    "value": "出租/滴滴/优步"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "公交地铁",
+                    "validFor": null,
+                    "value": "公交地铁"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "其他费用",
+                    "validFor": null,
+                    "value": "其他费用"
+                  }
+                ]
+              },
+              "Reimbursementstandard": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "公务舱",
+                    "validFor": null,
+                    "value": "公务舱"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "经济舱",
+                    "validFor": null,
+                    "value": "经济舱"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "硬座",
+                    "validFor": null,
+                    "value": "硬座"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "硬卧",
+                    "validFor": null,
+                    "value": "硬卧"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "软座",
+                    "validFor": null,
+                    "value": "软座"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "高铁/动车",
+                    "validFor": null,
+                    "value": "高铁/动车"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "100",
+                    "validFor": null,
+                    "value": "100"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "120",
+                    "validFor": null,
+                    "value": "120"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "150",
+                    "validFor": null,
+                    "value": "150"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "200",
+                    "validFor": null,
+                    "value": "200"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "其他",
+                    "validFor": null,
+                    "value": "其他"
+                  }
+                ]
+              },
+              "Province": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "安徽",
+                    "validFor": null,
+                    "value": "安徽"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "北京",
+                    "validFor": null,
+                    "value": "北京"
+                  }
+                ]
+              },
+              "City": {
+                "controllerValues": {
+                  "安徽": 0,
+                  "北京": 1
+                },
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "东城区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "东城区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "西城区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "西城区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "朝阳区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "朝阳区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "海淀区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "海淀区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "通州区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "通州区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "丰台区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "丰台区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "昌平区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "昌平区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "顺义区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "顺义区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "怀柔区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "怀柔区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "平谷区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "平谷区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "密云区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "密云区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "石景山区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "石景山区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "房山区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "房山区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "门头沟区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "门头沟区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "延庆区",
+                    "validFor": [
+                      1
+                    ],
+                    "value": "延庆区"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "合肥市",
+                    "validFor": [
+                      0
+                    ],
+                    "value": "合肥市"
+                  }
+                ]
+              }
+            },
+            "picklistFieldMap": [
+              {
+                "ObjectTypeCode": 0,
+                "Id": "fe0f5547-32f5-46d6-98bb-0926264b7a0d",
+                "ControlAttributeId": "59863846-0ba1-4fa4-9afc-965eed43ee3f",
+                "DependentAttributeId": "59863846-0ba1-4fa4-9afc-965eed43ee3f",
+                "Controller": "省份",
+                "Dependent": "城市",
+                "ControllerName": "Province",
+                "DependentName": "City",
+                "ModifiedByName": null,
+                "ModifiedOn": null
+              }
+            ]
+          },
+          "FN_OutBuissnessBaoxiao_detail2": {
+            "objectTypeCode": 20396,
+            "picklistFieldValues": {},
+            "picklistFieldMap": []
+          },
+          "FN_OutBuissnessBaoxiao": {
+            "objectTypeCode": 20394,
+            "picklistFieldValues": {
+              "Field1": {
+                "controllerValues": {},
+                "defaultValue": null,
+                "url": null,
+                "eTag": null,
+                "values": [
+                  {
+                    "attributes": null,
+                    "label": "联系工作",
+                    "validFor": null,
+                    "value": "联系工作"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "指令会议",
+                    "validFor": null,
+                    "value": "指令会议"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "学术交流",
+                    "validFor": null,
+                    "value": "学术交流"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "进修培训",
+                    "validFor": null,
+                    "value": "进修培训"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "专业委员会",
+                    "validFor": null,
+                    "value": "专业委员会"
+                  },
+                  {
+                    "attributes": null,
+                    "label": "其他",
+                    "validFor": null,
+                    "value": "其他"
+                  }
+                ]
+              }
+            },
+            "picklistFieldMap": []
+          }
+        }
+      },
+      "error": []
+    }
+  ],
+  "context": {
+    "globalValueProviders": null,
+    "picklistValuesMap": {},
+    "appContextUser": {
+      "userId": "207a11c0-12e3-4f7e-8033-f61b6883ffd8",
+      "name": "110",
+      "isAdmin": false,
+      "token": null
+    },
+    "enableAccessChecks": false
+  }
+}

@@ -1,0 +1,360 @@
+<template>
+    <div class="cardItem widgetItem" :class="themeType">
+        <div class="card-header" v-if="themeType=='modern'">
+            <div class="header-title">{{item.name}}</div>
+        </div>
+        <template v-if="themeType=='default'">
+            <div class="item-default-header">
+                <span class="item-default-header-title">
+                    <span class="title-font">{{item.name}}</span>
+                </span>
+                <span class="toolbar">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);" name="refreshbtn" title="刷新">
+                                <img src="@/assets/img/refresh_wev8.png" border="0" alt="">
+                            </a>
+                        </li>
+                        <li style="width: 34px;">
+                            <a href="javascript:void(0);">
+                                <img class="imgMore" src="@/assets/img/more_wev8.png" border="0" alt="" title="更多">
+                            </a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </template>
+        <template v-if="themeType=='light'">
+            <div class="dashGridItem">
+                <h2 class="defaultHeading">
+                    <div class="gridHeader truncation" :title="item.name">{{item.name}}</div>
+                    <div class="gridTitle truncation"></div>
+                </h2>
+                <div class="table-container" style="height: calc(100% - 90px);">
+                    <div class="calendar-wrapper">
+                        <a-calendar :locale="locale" v-model:value="date" :fullscreen="false" @panelChange="onPanelChange" />
+        
+                        <div class="planDataEvent">
+                            <div class="dataEvent" v-for="item in listData">
+                                <div class="dataEvent1"></div>
+                                <div class="cus_dataEvent2">
+                                    <div class="dataEvent2_1">{{moment(item.ScheduledStart).format("hh:mm")}}</div>
+                                </div>
+                                <div class="dataEvent3">{{item.Subject}}</div>
+                            </div>
+                        </div>
+                        <div class="addDataEvent">
+                            <PlusCircleOutlined />
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <span>
+                        <svg aria-hidden="true" class="btn_icon" viewBox="0 0 52 52"><path d="M48.8 2H33.3c-1 0-1.3.9-.5 1.7l4.9 4.9-9 9c-.5.5-.5 1.3 0 1.9l3.7 3.7c.5.5 1.3.5 1.9 0l9.1-9.1 4.9 4.9c.8.8 1.7.5 1.7-.5V3.1c0-.6-.6-1.1-1.2-1.1zM3.5 50h15.4c1 0 1.3-1.1.5-1.9l-4.9-5 9-9.1c.5-.5.5-1.4 0-1.9l-3.7-3.7c-.5-.5-1.3-.5-1.9 0l-9 9-5-4.9C3 31.7 2 32 2 33v15.4c0 .7.8 1.6 1.5 1.6zM50 48.8V33.3c0-1-.9-1.3-1.7-.5l-4.9 4.9-9-9c-.5-.5-1.3-.5-1.9 0l-3.7 3.7c-.5.5-.5 1.3 0 1.9l9.1 9.1-4.9 4.9c-.8.8-.5 1.7.5 1.7h15.4c.6 0 1.1-.6 1.1-1.2zM2 3.5v15.4c0 1 1.1 1.3 1.9.5l5-4.9 9.1 9c.5.5 1.4.5 1.9 0l3.7-3.7c.5-.5.5-1.3 0-1.9l-9-9 4.9-5C20.3 3 20 2 19 2H3.6C2.9 2 2 2.8 2 3.5z"></path></svg>
+                    </span>
+                </div>
+            </div>
+        </template>
+        <template v-else>
+            <div class="card-body">
+                <div class="calendar-wrapper">
+                    <div class="calendarWraper-header">
+                        <a-radio-group :value="calendarType" @change="e => onTypeChange(e.target.value)">
+                            <a-radio-button value="week">周</a-radio-button>
+                            <a-radio-button value="twoWeeks">双周</a-radio-button>
+                            <a-radio-button value="month">月</a-radio-button>
+                        </a-radio-group>
+                    </div>
+                    <a-calendar v-if="calendarType=='month'" v-model:value="date" :fullscreen="false" @panelChange="onPanelChange" >
+                        <template #headerRender>
+                            <div class="calendarHeader">
+                            </div>
+                        </template>
+                    </a-calendar>
+                    <Week v-else-if="calendarType=='week'||calendarType=='twoWeeks'" :type="calendarType" />
+                    
+                    <!-- <div class="tabList-wrapper"  v-if="themeType=='modern'">
+                        <div class="tabContainer flex">
+                            <div class="tabList">
+                                <div class="tab" :class="{
+                                  active: current == tabIdx,
+                                }" v-for="(tab, tabIdx) in tabs" @click="handleItemTab(item, tabIdx)">
+                                    <div class="tabHover">
+                                        <span class="tabText">
+                                            {{ tab.displayName }}
+                                            <span class="tabnum">{{
+                                                tab.listComponent.dataList.length
+                                                }}</span>
+                                            <span style="font-weight: normal" @click.stop="
+                                        deleteTabListTag(item, tab, tabIdx)
+                                      ">
+                                                <i class="iconfont icon-yishanchu"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightAdd">
+                            </div>
+                        </div>
+                        <Table :themeType="themeType" />
+                    </div> -->
+    
+                    <div class="planDataEvent">
+                        <div class="dataEvent" v-for="item in listData">
+                            <div class="dataEvent1"></div>
+                            <div class="cus_dataEvent2">
+                                <div class="dataEvent2_1">{{moment(item.ScheduledStart).format("hh:mm")}}</div>
+                            </div>
+                            <div class="dataEvent3">{{item.Subject}}</div>
+                        </div>
+                    </div>
+                    <div class="addDataEvent">
+                        <PlusCircleOutlined />
+                    </div>
+                </div>
+            </div>
+            <div class="card-foot"></div>
+        </template>
+    </div>
+</template>
+<script setup>
+    import { ref, reactive, toRefs, defineProps, getCurrentInstance, watch } from "vue";
+    import { PlusCircleOutlined } from '@ant-design/icons-vue';
+    import Table from "./Table.vue";
+    import Toast from "@/utils/toast.js";
+    import dayjs from "dayjs";
+    import "dayjs/locale/zh-cn";
+    import locale from "ant-design-vue/es/date-picker/locale/zh_CN";
+    dayjs.locale("zh-cn");
+    import calendar from "dayjs/plugin/calendar";
+    import weekday from "dayjs/plugin/weekday";
+    import localeData from "dayjs/plugin/localeData";
+
+    dayjs.extend(calendar);
+    dayjs.extend(weekday);
+    dayjs.extend(localeData);
+    import moment from "moment";
+    import Week from "@/components/calendar/Week.vue";
+    import Interface from "@/utils/Interface.js";
+    import { useStore } from "@/store/portal";
+    import { storeToRefs } from 'pinia';
+    const store = useStore();
+    const { isRefresh, currentData } = storeToRefs(store);
+    const props = defineProps({
+        item: {
+            type: Object,
+            default: {}
+        },
+        themeType: String,
+        dashboardId: String
+    });
+
+    const data = reactive({
+        date: "",
+        tabs: [
+            {
+                displayName: "日程",
+                listComponent: {
+                    dataList: []
+                }
+            },
+            {
+                displayName: "会议",
+                listComponent: {
+                    dataList: []
+                }
+            },
+            {
+                displayName: "活动",
+                listComponent: {
+                    dataList: []
+                }
+            }
+        ],
+        current: 0,
+        listData: [],
+        calendarType: "week"
+    });
+    const { date, tabs, current, listData, calendarType } = toRefs(data);
+
+    const onPanelChange = () => {
+
+    };
+    const handleItemTab = (item, index) => {
+        data.current = index;
+    };
+
+    const onTypeChange = (e) => {
+        // console.log("e", e);
+        data.calendarType = e;
+    }
+
+    const getQuery = async (id='') => {
+        if(props.item.id || id){
+            let res = await store.getLoadComponents(props.item.id || id);
+            let { componentData, dashboardComponentMetadata } = res.actions[0].returnValue;
+            let { rows, rowCount } = componentData;
+            data.listData = rows;
+        }
+    };
+    getQuery();
+
+    watch(()=> store.isRefresh,(newVal, oldVal)=>{
+        if(store.isRefresh && store.currentData.type=='calendar'){
+            Toast('保存成功');
+            if(props.item.id == store.currentData.id){
+                getQuery();
+            }else if(props.item.id == ''){
+                getQuery(store.currentData.id);
+            }
+        }
+    })
+
+</script>
+<style lang="less" scoped>
+    @import url(@/style/protal/widget.less);
+    .tabContainer.flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tabContainer {
+        border-bottom: 1px solid #e5e6eb;
+
+        .tabList {
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+
+            .tab {
+                font-size: 14px;
+                color: #4e5969;
+                padding: 0 8px;
+                float: left;
+                width: auto !important;
+
+                &:hover {
+                    .tabHover {
+                        background: #f2f3f5;
+                    }
+                }
+
+                .tabHover {
+                    border-radius: 2px;
+                    padding: 0 8px !important;
+                    box-sizing: border-box;
+                    background: transparent;
+                    display: inline-block;
+                    height: 29px;
+                    line-height: 29px;
+
+                    .bottom {
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background: var(--textColor);
+                        top: 33px;
+                        left: 1px;
+                    }
+
+                    .tabText {
+                        position: relative;
+
+                        .num.active {
+                            color: #f53f3f;
+                        }
+                    }
+                }
+            }
+
+            .tab.active {
+                .tabHover {
+                    .tabText {
+                        color: var(--textColor);
+                        font-weight: 700;
+                    }
+
+                    .tabText::before {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background: var(--textColor);
+                        top: 29px;
+                        left: 0;
+                        transition: all 0.5s;
+                    }
+                }
+
+                &:hover {
+                    .tabHover {
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabContainer.notBorder {
+        border: none;
+    }
+
+
+    /* 默认 */
+
+    .planDataEvent{
+        height: 120px;
+        overflow-y: auto;
+        .dataEvent{
+            border: 0 solid #f3f2f2;
+            line-height: 36px;
+            border-width: 0;
+            border-bottom: 0;
+            float: left;
+            height: 36px;
+            width: 100%;
+            margin-bottom: 4px;
+            .dataEvent1{
+                line-height: 36px;
+                float: left;
+                height: 36px;
+                width: 4px;
+                background: #119800 !important;
+            }
+            .cus_dataEvent2{
+                margin-left: 0;
+                line-height: 36px;
+                float: left;
+                height: 36px;
+                background: #f5f5f5;
+                .dataEvent2_1{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    float: left;
+                }
+            }
+            .dataEvent3{
+                margin-left: 5px;
+                padding-left: 12px;
+                height: 36px;
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    .addDataEvent{
+        font-size: 23px;
+        text-align: center;
+        cursor: pointer;
+        color: #0d96f6;
+    }
+    .calendarWraper-header{
+        padding: 5px 10px;
+    }
+</style>

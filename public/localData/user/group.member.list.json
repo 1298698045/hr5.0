@@ -1,0 +1,52 @@
+{
+  "rows": [
+    {
+      "GroupId": "45dc0bfa-1d41-4fba-894a-658b5ff1f658",
+      "RegardingObjectTypeCode": 8,
+      "RegardingObjectId": "ac8e166e-ceb5-4fe2-8b9f-97f6e1dc2945",
+      "RegardingObjectIdName": "oa管理员",
+      "GroupMembershipId": "d1bd673c-6993-4810-8750-00d60365ad54",
+      "BusinessUnitIdName": "信息中心",
+      "UserName": "oa",
+      "EmployeeNo": "",
+      "DisplayOrder": -1
+    },
+    {
+      "GroupId": "45dc0bfa-1d41-4fba-894a-658b5ff1f658",
+      "RegardingObjectTypeCode": 8,
+      "RegardingObjectId": "670d2a93-8df9-40e0-be05-2e942dca0127",
+      "RegardingObjectIdName": "崔彦强",
+      "GroupMembershipId": "5002ae4d-a82c-4254-b88d-b05adc4283c8",
+      "BusinessUnitIdName": "信息中心",
+      "UserName": "cyq1049",
+      "EmployeeNo": "1049",
+      "DisplayOrder": -1
+    },
+    {
+      "GroupId": "45dc0bfa-1d41-4fba-894a-658b5ff1f658",
+      "RegardingObjectTypeCode": 8,
+      "RegardingObjectId": "714c2d95-dfe5-43ba-9bab-f7845a382456",
+      "RegardingObjectIdName": "1232",
+      "GroupMembershipId": "52cf82c0-fb7d-43d2-a105-c50e8b330ae0",
+      "BusinessUnitIdName": "职能部门",
+      "UserName": "test23333",
+      "EmployeeNo": "1",
+      "DisplayOrder": -1
+    }
+  ],
+  "total": 3,
+  "page": 0,
+  "context": {
+    "globalValueProviders": null,
+    "picklistValuesMap": {},
+    "appContextUser": {
+      "userId": null,
+      "name": null,
+      "isAdmin": false,
+      "token": null
+    },
+    "enableAccessChecks": false
+  },
+  "status": 0,
+  "msg": null
+}

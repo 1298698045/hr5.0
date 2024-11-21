@@ -1,0 +1,141 @@
+{
+  "actions": [
+    {
+      "id": "10;a",
+      "state": "SUCCESS",
+      "returnValue": {
+        "attributes": {
+          "dashboardId": "01Z0o000000MmQEEA0",
+          "dashboardName": "商业机会",
+          "describeUrl": "/services/data/v61.0/analytics/dashboards/01Z0o000000MmQEEA0/describe",
+          "statusUrl": "/services/data/v61.0/analytics/dashboards/01Z0o000000MmQEEA0/status",
+          "type": "Dashboard"
+        },
+        "dashboardMetadata": {
+          "canChangeRunningUser": false,
+          "canUseStickyFilter": true,
+          "chartTheme": "light",
+          "colorPalette": "unity",
+          "components": [
+            {
+              "chartTheme": null,
+              "componentData": 0,
+              "footer": null,
+              "header": "最新通知",
+              "title": null,
+              "id": "01aGB000005MCULYA4",
+              "lastModifiedDate": "2024-08-05T03:08:33Z",
+              "properties": {
+                "aggregates": [],
+                "autoSelectColumns": false,
+                "drillUrl": null,
+                "filterColumns": [
+                  {
+                    "column": "CREATED_ALIAS",
+                    "filterType": "fieldValue",
+                    "isRunPageEditable": false,
+                    "operator": "equals",
+                    "value": "11"
+                  }
+                ],
+                "groupings": [],
+                "maxRows": 10,
+                "reportFormat": "TABULAR",
+                "sort": {
+                  "column": "DUE_DATE",
+                  "sortOrder": "Asc",
+                  "type": "label"
+                },
+                "useReportChart": false,
+                "detailUrl": "detailUrl",
+                "moreUrl": "moreUrl",
+                "showTableHeader": true,
+                "tableColumns": [
+                    {
+                      "label": "label1",
+                      "column": "DUE_DATE",
+                      "showSubTotal": false,
+                      "showTotal": false,
+                      "type": "detail"
+                    },
+                    {
+                      "label": "label2",
+                      "column": "USERS.NAME",
+                      "showSubTotal": false,
+                      "showTotal": false,
+                      "type": "detail"
+                    },
+                    {
+                      "label": "label3",
+                      "column": "ACCOUNT.NAME",
+                      "showSubTotal": false,
+                      "showTotal": false,
+                      "type": "detail"
+                    },
+                    {
+                      "label": "label4",
+                      "column": "ADDRESS1_STATE",
+                      "showSubTotal": false,
+                      "showTotal": false,
+                      "type": "detail"
+                    },
+                    {
+                      "label": "label5",
+                      "column": "RATING",
+                      "showSubTotal": false,
+                      "showTotal": false,
+                      "type": "detail"
+                    }
+                  ],
+                "visualizationProperties": {
+                  "breakPoints": [],
+                  "decimalPrecision": -1,
+                  "displayUnits": "auto",
+                  "flexTableType": "tabular",
+                  "showChatterPhotos": false
+                },
+                "visualizationType": "FlexTable",
+                "entity": {
+                  "entityName": "Content",
+                  "objectTypeCode": "100201"
+                }
+              },
+              "reportId": "00O0o000009Dp2CEAS",
+              "type": "list",
+              "layout": {
+                "row": 1,
+                "col": 3,
+                "height": 200,
+                "width": 30
+              }
+            }
+          ],
+          "dashboardType": "SpecifiedUser",
+          "description": null,
+          "developerName": "eCCPKkHogEAnSfEIVWxuxqkxvmcxpG",
+          "flexTableImplementation": "REPORT_INSTANCE",
+          "folderId": "0059000000390WhAAI",
+          "folderName": "我的个人仪表板",
+          "id": "01Z0o000000MmQEEA0",
+          "layout": {
+            "gridLayout": true,
+            "numColumns": 9,
+            "rowHeight": 80
+          },
+          "maxFilterOptions": 50,
+          "name": "商业机会",
+          "owner": {
+            "displayName": "liu jack",
+            "id": "0059000000390WhAAI"
+          },
+          "runningUser": {
+            "displayName": "liu jack",
+            "id": "0059000000390WhAAI"
+          }
+        },
+        "picklistColors": {}
+      },
+      "error": []
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "actions": [
+    {
+      "id": "",
+      "state": "SUCCESS",
+      "returnValue": {
+        "componentDef": {
+          "entityLabel": "列表视图布局",
+          "entityApiName": "EntityListviewLayout",
+          "layoutId": null,
+          "name": null,
+          "objectTypeCode": 100050,
+          "recordNameField": null,
+          "keyPrefix": "0Ll",
+          "isInlineEditable": true,
+          "isUserLayout": false,
+          "headerActions": [
+            {
+              "executionComponent": {
+                "descriptor": null,
+                "isEvent": true,
+                "isClientSideCreatable": true,
+                "componentName": null
+              },
+              "devNameOrId": "SaveEdit",
+              "requiresSelectionForUsage": false,
+              "isSelected": true,
+              "label": "保存",
+              "title": "保存",
+              "isRenderEntityIcon": false,
+              "isVisible": false,
+              "assertive": false,
+              "section": "Page",
+              "icon": "/img/icon/t4v35/action/new_custom19_120.png",
+              "url": null,
+              "isMassAction": false,
+              "actionTypeEnum": "StandardButton"
+            },
+            {
+              "executionComponent": {
+                "descriptor": null,
+                "isEvent": true,
+                "isClientSideCreatable": true,
+                "componentName": null
+              },
+              "devNameOrId": "SaveAndNew",
+              "requiresSelectionForUsage": false,
+              "isSelected": false,
+              "label": "保存并新建",
+              "title": "保存并新建",
+              "isRenderEntityIcon": false,
+              "isVisible": false,
+              "assertive": false,
+              "section": "Page",
+              "icon": "/img/icon/t4v35/action/new_custom19_120.png",
+              "url": null,
+              "isMassAction": false,
+              "actionTypeEnum": "StandardButton"
+            },
+            {
+              "executionComponent": {
+                "descriptor": null,
+                "isEvent": true,
+                "isClientSideCreatable": true,
+                "componentName": null
+              },
+              "devNameOrId": "CancelEdit",
+              "requiresSelectionForUsage": false,
+              "isSelected": false,
+              "label": "取消",
+              "title": "取消",
+              "isRenderEntityIcon": false,
+              "isVisible": false,
+              "assertive": false,
+              "section": "Page",
+              "icon": "/img/icon/t4v35/action/new_custom19_120.png",
+              "url": null,
+              "isMassAction": false,
+              "actionTypeEnum": "StandardButton"
+            }
+          ],
+          "inlineEditActions": [],
+          "sections": [
+            {
+              "sectionId": "c8d20885-bfb8-4960-ba5d-1d9213723418",
+              "labelKey": "Basic",
+              "title": "基本信息",
+              "showHeader": true,
+              "isCollapsed": false,
+              "isCollapsible": true,
+              "rows": []
+            }
+          ],
+          "localizedTitle": "列表视图布局",
+          "lookupAttributes": []
+        },
+        "record": {
+          "ValueId": "2ce7b0d4-dd8a-4dab-a0a2-a982746fd0d3",
+          "Name": "12",
+          "OwningUser": {
+            "Icon": null,
+            "Id": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+            "Name": "刘优",
+            "objectTypeCode": 8,
+            "sobjectType": "8",
+            "value": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+            "displayValue": "刘优"
+          },
+          "CreatedBy": {
+            "Icon": null,
+            "Id": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+            "Name": "刘优",
+            "objectTypeCode": 8,
+            "sobjectType": "8",
+            "value": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+            "displayValue": "刘优"
+          },
+          "CreatedOn": "2024-04-07 15:01:40",
+          "ModifiedBy": {
+            "Icon": null,
+            "Id": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+            "Name": "刘优",
+            "objectTypeCode": 8,
+            "sobjectType": "8",
+            "value": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+            "displayValue": "刘优"
+          },
+          "StatusCode": "",
+          "ModifiedOn": "2024-04-07 15:01:40",
+          "AutoNumber": "",
+          "EntityId": {
+            "Icon": null,
+            "Id": "59c9b48d-5578-41f2-9ca2-689e1dac0905",
+            "Name": "活动",
+            "objectTypeCode": 100000,
+            "sobjectType": "100000",
+            "value": "59c9b48d-5578-41f2-9ca2-689e1dac0905",
+            "displayValue": "活动"
+          },
+          "Description": "",
+          "DeveloperName": "23",
+          "Layout": "{\"tabs\":[{\"name\":\"tab1\",\"title\":\"tab1\",\"filter\":{\"filterId\":\"8ebce151-8451-490d-a8db-59fff97949e8\",\"name\":\"\"},\"searchField\":[\"TypeCode\"]},{\"name\":\"tab2\",\"title\":\"tab2\",\"filter\":{\"filterId\":\"4ae3ea64-d41f-4faf-baa3-51217aba0bd9\",\"name\":\"\"},\"searchField\":[\"TypeCode\"]}]}",
+          "ObjectTypeCode": "4400"
+        },
+        "defaultFieldValues": {}
+      },
+      "error": []
+    }
+  ],
+  "context": {
+    "globalValueProviders": null,
+    "picklistValuesMap": {},
+    "appContextUser": {
+      "userId": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+      "name": "刘优",
+      "isAdmin": false,
+      "token": null
+    },
+    "enableAccessChecks": false
+  }
+}

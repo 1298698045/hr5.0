@@ -1,0 +1,174 @@
+{
+  "actions": [
+    {
+      "id": "",
+      "state": "SUCCESS",
+      "returnValue": {
+        "ProfileId": "72287e47-d60e-42ec-aa24-15237da538f9",
+        "ProfileIdName": null,
+        "TemplateId": "4c3a4861-49ae-4e1d-a2e9-abf1ea0a3325",
+        "TabDepth": 0,
+        "ReadDepth": 0,
+        "CreateDepth": 0,
+        "UpdateDepth": 0,
+        "DeleteDepth": 0,
+        "ViewAllRecords": 0,
+        "ModifyAllRecords": 0,
+        "Name": "AcademicEvent",
+        "Label": "外出学术活动审批表",
+        "FieldPrivileges": [
+          {
+            "FieldId": "",
+            "Label": "名称",
+            "Name": "Name",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "申请人",
+            "Name": "EmployeeId",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "职称",
+            "Name": "ProfessionTitle",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "科室",
+            "Name": "DeptId",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "日期",
+            "Name": "ApplyOn",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "开始日期",
+            "Name": "StartTime",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "结束日期",
+            "Name": "EndTime",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "活动内容",
+            "Name": "EventCalendar",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "主办单位",
+            "Name": "HostOrganizer",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "地点类型",
+            "Name": "LocationTypeCode",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "主办地点",
+            "Name": "Location",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "学术论文题目",
+            "Name": "SubjectName",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "学习类别",
+            "Name": "Category",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "费用情况",
+            "Name": "FeeSource",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "重点学科",
+            "Name": "IsCoreSubject",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "备注",
+            "Name": "Description",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "科室意见",
+            "Name": "ApproveOfDeptMgr",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "主管部门",
+            "Name": "ApproveOfSuperior",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "科教科意见",
+            "Name": "ApproveOfInChargeDept",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "人力资源",
+            "Name": "ApproveOfHRHead",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "分管院长",
+            "Name": "ApproveOfInCharge",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "院长审批",
+            "Name": "ApproveOfTop",
+            "PrivilegeDepth": 0
+          },
+          {
+            "FieldId": "",
+            "Label": "1",
+            "Name": "X11",
+            "PrivilegeDepth": 0
+          }
+        ]
+      },
+      "error": []
+    }
+  ],
+  "context": {
+    "globalValueProviders": null,
+    "picklistValuesMap": {},
+    "appContextUser": {
+      "userId": null,
+      "name": null,
+      "isAdmin": false,
+      "token": null
+    },
+    "enableAccessChecks": false
+  }
+}

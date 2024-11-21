@@ -1,0 +1,37 @@
+{
+  "status": 1,
+  "total": 22,
+  "msg": null,
+  "rows": [
+    {
+      "BgColor": "#71d897",
+      "AppCode": "02p90000001A100",
+      "AppId": "00000000-0000-0000-0000-100000000100",
+      "Description": null,
+      "DeveloperName": "setting",
+      "ImageUrl": "/img/apps/icon/ContentPage.png",
+      "Label": "对象管理器",
+      "LinkUrl": "/home/Home.aspx?t=home &dboardName =workspace &tsid =02p90000001A100 &pageName =setting",
+      "SortOrder": 1
+    }
+  ],
+  "listData": [
+    {
+      "BgColor": "#71d897",
+      "AppCode": "02p90000001A100",
+      "AppId": "00000000-0000-0000-0000-100000000100",
+      "Description": null,
+      "DeveloperName": "setting",
+      "ImageUrl": "/img/apps/icon/ContentPage.png",
+      "Label": "对象管理器",
+      "LinkUrl": "/home/Home.aspx?t=home &dboardName =workspace &tsid =02p90000001A100 &pageName =setting",
+      "SortOrder": 1
+    }
+  ],
+  "user": {
+    "userId": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+    "name": "jackliu3",
+    "isAdmin": true,
+    "token": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": 1,
+  "rows": [
+    {
+      "EntityFormId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "Title": "员工档案",
+      "EntityId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "FolderId": "90ccb2a7-50aa-4dde-b6f1-2ba95f789412",
+      "ObjectTypeCode": "30020",
+      "EntityCode": "a0V",
+      "Name": "HREmployee",
+      "IsCustomEntity": "True",
+      "DisplayName": "人员档案"
+    },
+    {
+      "EntityFormId": "2f981010-6a4c-42d6-bab8-95b5e053d227",
+      "Title": "个人资料修改",
+      "EntityId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "FolderId": "",
+      "ObjectTypeCode": "30020",
+      "EntityCode": "a0V",
+      "Name": "HREmployee",
+      "IsCustomEntity": "True",
+      "DisplayName": "人员档案"
+    },
+    {
+      "EntityFormId": "ee26d62c-bdac-4288-a8c3-bf03e07acd36",
+      "Title": "党员资料",
+      "EntityId": "1479f8e2-6bf5-4e15-b612-8d4e5ff40c9a",
+      "FolderId": "",
+      "ObjectTypeCode": "30020",
+      "EntityCode": "a0V",
+      "Name": "HREmployee",
+      "IsCustomEntity": "True",
+      "DisplayName": "人员档案"
+    }
+  ]
+}

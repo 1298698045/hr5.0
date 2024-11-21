@@ -1,0 +1,45 @@
+{
+  "entityType": "701",
+  "listData": [
+    {
+      "FilterId": "e0ae0e28-bae2-41e8-bc76-adc046eb6987",
+      "Name": "已启动的活动",
+      "IsDefault": "False",
+      "ReturnedTypeCode": "4400",
+      "Visibility": "",
+      "IsPinned": "",
+      "IsGlobal": "",
+      "ModifiedOn": "2021-07-04 22:05:31"
+    },
+    {
+      "FilterId": "4ae3ea64-d41f-4faf-baa3-51217aba0bd9",
+      "Name": "活动模板",
+      "IsDefault": "False",
+      "ReturnedTypeCode": "4400",
+      "Visibility": "",
+      "IsPinned": "",
+      "IsGlobal": "",
+      "ModifiedOn": "2021-07-04 22:05:16"
+    },
+    {
+      "FilterId": "8ebce151-8451-490d-a8db-59fff97949e8",
+      "Name": "所有活动和活动模板",
+      "IsDefault": "False",
+      "ReturnedTypeCode": "4400",
+      "Visibility": "",
+      "IsPinned": "",
+      "IsGlobal": "",
+      "ModifiedOn": "2021-07-04 22:05:03"
+    },
+    {
+      "FilterId": "7f68a34b-26f1-430f-b3ef-7079f2925c69",
+      "Name": "我的活动",
+      "IsDefault": "True",
+      "ReturnedTypeCode": "4400",
+      "Visibility": "",
+      "IsPinned": "",
+      "IsGlobal": "",
+      "ModifiedOn": "2021-07-04 22:04:47"
+    }
+  ]
+}

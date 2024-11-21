@@ -1,0 +1,216 @@
+{
+  "status": 1,
+  "msg": "",
+  "listData": [
+    {
+      "ValueID": "9752b16a-f0ef-4d7a-beea-3872eb4d7d25",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-08T09:02:56"
+    },
+    {
+      "ValueID": "a013f747-b7bd-4109-854a-3674895a8b5b",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-08T09:01:17"
+    },
+    {
+      "ValueID": "fb3629ae-185e-4c7f-a821-9faef8aa5f8b",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-19T09:39:54"
+    },
+    {
+      "ValueID": "30890fd3-2142-48ca-94d9-d5fcb5752f5b",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-13T10:07:57"
+    },
+    {
+      "ValueID": "e4ced9d8-9fcb-492b-ab01-2984a7599b38",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-19T18:27:52"
+    },
+    {
+      "ValueID": "06f8033a-073c-45c4-bd0d-3fd76cc3e69a",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "应用程序Auth",
+      "Browser": "Chrome119.0",
+      "LoginTime": "2023-11-09T14:39:49"
+    },
+    {
+      "ValueID": "03464cd8-e223-445a-a8ec-0e43a3e6c360",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "应用程序Auth",
+      "Browser": "Chrome119.0",
+      "LoginTime": "2023-11-09T14:50:47"
+    },
+    {
+      "ValueID": "3d055b88-60c8-4f46-9cc1-938344010829",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-12T16:37:47"
+    },
+    {
+      "ValueID": "1159aff3-1044-47db-b6d6-de35fc73f531",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "应用程序Auth",
+      "Browser": "Chrome119.0",
+      "LoginTime": "2023-11-09T14:30:04"
+    },
+    {
+      "ValueID": "151f560c-7702-47db-9c8e-f241853fe440",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-08T08:59:12"
+    }
+  ],
+  "rows": [
+    {
+      "ValueID": "9752b16a-f0ef-4d7a-beea-3872eb4d7d25",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-08T09:02:56"
+    },
+    {
+      "ValueID": "a013f747-b7bd-4109-854a-3674895a8b5b",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-08T09:01:17"
+    },
+    {
+      "ValueID": "fb3629ae-185e-4c7f-a821-9faef8aa5f8b",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-19T09:39:54"
+    },
+    {
+      "ValueID": "30890fd3-2142-48ca-94d9-d5fcb5752f5b",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-13T10:07:57"
+    },
+    {
+      "ValueID": "e4ced9d8-9fcb-492b-ab01-2984a7599b38",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-19T18:27:52"
+    },
+    {
+      "ValueID": "06f8033a-073c-45c4-bd0d-3fd76cc3e69a",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "应用程序Auth",
+      "Browser": "Chrome119.0",
+      "LoginTime": "2023-11-09T14:39:49"
+    },
+    {
+      "ValueID": "03464cd8-e223-445a-a8ec-0e43a3e6c360",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "应用程序Auth",
+      "Browser": "Chrome119.0",
+      "LoginTime": "2023-11-09T14:50:47"
+    },
+    {
+      "ValueID": "3d055b88-60c8-4f46-9cc1-938344010829",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-12T16:37:47"
+    },
+    {
+      "ValueID": "1159aff3-1044-47db-b6d6-de35fc73f531",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "应用程序Auth",
+      "Browser": "Chrome119.0",
+      "LoginTime": "2023-11-09T14:30:04"
+    },
+    {
+      "ValueID": "151f560c-7702-47db-9c8e-f241853fe440",
+      "Name": "崔彦强",
+      "UserName": "崔彦强",
+      "BusinessUnitName": "部门测试",
+      "IpAddress": "::1",
+      "OsSystem": "WEB",
+      "Browser": "Chrome116.0",
+      "LoginTime": "2023-09-08T08:59:12"
+    }
+  ],
+  "total": 3012,
+  "result": 0,
+  "context": {
+    "userId": null,
+    "name": null,
+    "fullName": null,
+    "businessUnitName": null
+  }
+}

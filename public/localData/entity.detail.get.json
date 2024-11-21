@@ -1,0 +1,60 @@
+{
+  "status": 1,
+  "msg": "",
+  "id": "593b50b5-bd3b-42be-a86a-f68adfd162e1",
+  "entityLabel": "人力资源系统配置",
+  "keyPrefix": "H1s",
+  "entityApiName": "HRSetting",
+  "record": {
+    "Name": "EmployeeBirthdayCare",
+    "OwningUser": {
+      "Id": "",
+      "Name": "",
+      "objectTypeCode": "8",
+      "sobjectType": "SystemUser"
+    },
+    "CreatedBy": {
+      "Id": "",
+      "Name": "",
+      "objectTypeCode": "8",
+      "sobjectType": "SystemUser"
+    },
+    "CreatedOn": "2023-07-10 10:39:35",
+    "ModifiedBy": {
+      "Id": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+      "Name": "jackliu45",
+      "objectTypeCode": "8",
+      "sobjectType": "SystemUser"
+    },
+    "ModifiedOn": "2023-07-10 10:47:35",
+    "StatusCode": "",
+    "AutoNumber": "",
+    "Label": "生日关怀设置",
+    "Configuration": "{\"rules\":[{\"Name\":\"生日关怀\",\"enable\":true,\"messageTemplateId\":\"\",\"actions\":{\"Sms\":true,\"wechat\":true,\"message\":true},\"filterExpression\":\"[{\\\"sort\\\":0,\\\"attribute\\\":\\\"Birthday\\\",\\\"operator\\\":\\\"birthday-this-month\\\",\\\"logical\\\":\\\"本月生日\\\",\\\"picklistValues\\\":[\\\"\\\"],\\\"isEditable\\\":true,\\\"column\\\":\\\"Birthday\\\",\\\"operands\\\":[\\\"\\\"],\\\"id\\\":0},{\\\"sort\\\":1,\\\"attribute\\\":\\\"StateCode\\\",\\\"label\\\":\\\"人员状态\\\",\\\"operator\\\":\\\"eq\\\",\\\"logical\\\":\\\"等于\\\",\\\"picklistValues\\\":[\\\"在岗\\\"],\\\"isEditable\\\":true,\\\"column\\\":\\\"StateCode\\\",\\\"operands\\\":[\\\"0\\\"],\\\"id\\\":1}]\"}]}"
+  },
+  "context": {
+    "picklistValuesMap": {},
+    "globalValueProviders": [
+      {
+        "type": "$Record",
+        "values": {
+          "objectMetadata": {
+            "HRSetting": {
+              "_nameField": "Name",
+              "_entityLabel": "人力资源系统配置",
+              "_keyPrefix": "H1s"
+            }
+          }
+        }
+      }
+    ],
+    "appContextUser": {
+      "userId": "2ec00cf2-a484-4136-8fef-e2a2719c5ed6",
+      "name": "jackliu45"
+    }
+  },
+  "entity": {
+    "ObjectTypeCode": 34001,
+    "EntityType": "H1s"
+  }
+}
