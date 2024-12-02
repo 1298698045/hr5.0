@@ -19,7 +19,7 @@
                                 <div class="operatorAndOperand">
                                     <span class="test-operatorWrapper">{{item.operatorText}}</span>
                                     &nbsp;
-                                    <span class="val rowEllipsis" v-if="item.dType=='BusinessUnit' || item.dType=='User' || item.dType == 'Lookup' || item.dType=='Picklist'||item.dType=='L'||item.dType=='LT'||item.dType=='DT'">{{item.showValText}}</span>
+                                    <span class="val rowEllipsis" v-if="item.dType=='BusinessUnit' || item.dType=='User' || item.dType == 'Lookup' || item.dType=='Picklist'||item.dType=='L'||item.dType=='LT'||item.dType=='DT'">{{ item.showValText }}</span>
                                     <span class="val rowEllipsis" v-else>{{item.val}}</span>
                                 </div>
                             </div>
@@ -103,6 +103,7 @@
     import RadioDept from "@/components/commonModal/RadioDept.vue";
     import RadioUser from "@/components/commonModal/RadioUser.vue";
     import LookupFilter from "@/components/commonModal/LookupFilter.vue";
+    import Toast from "@/utils/toast.js";
     import Interface from "@/utils/Interface.js";
     const { proxy } = getCurrentInstance();
     const labelCol = ref({ style: { width: '60px' } });
@@ -209,10 +210,13 @@
             let item = {};
             FilterExpresssionList.forEach(v=>{
                 var operatorList = getOperator(v.attribute, item);
+                let operatorText = operatorList.find(row=>row.operator==v.operator)?.label;
+                console.log("operatorText", operatorText);
                 var dType = getDType(v.attribute, item);
                 var operatorType = getOperatorType(v.operator, operatorList, item);
                 var Lktp = getLktp(v.attribute, item);
                 var options = [];
+                let showValText = '';
                 if (Lktp == '' && dType == 'BusinessUnit') {
                     Lktp = 10;
                 }
@@ -220,10 +224,26 @@
                     var response = getEntityLookup(Lktp, '', v)
                     if (response) {
                         options = response.listData;
-                    }
+                    };
+                    let temp = [];
+                    v.operands.forEach((row,index)=>{
+                        temp.push({
+                            ID: row,
+                            Name: v.picklistValues[index]
+                        })
+                    });
+                    options = temp;
+                    showValText = v.picklistValues.join(',');
+                    
                 }
                 if (dType == 'Picklist' || dType == 'L') {
-                    options = getFilterValues(v.attribute, item)
+                    options = getFilterValues(v.attribute, item);
+                    let temp = options.filter(row=>{
+                        return v.operands.find(f=>{
+                            return f == row.value;
+                        })
+                    });
+                    showValText = temp.map(row=>row.label).join(',');
                 }
                 if (dType == 'Picklist' || dType == 'L' || dType == 'BusinessUnit' || dType == 'User' || dType == 'MasterDetail') {
 
@@ -237,6 +257,7 @@
                 }
                 data.filterList.push({
                     operator: v.operator,
+                    operatorText: operatorText,
                     field: v.attribute,
                     logical: v.logical,
                     operatorList: operatorList,
@@ -247,14 +268,21 @@
                     Lktp: Lktp,
                     options: options,
                     deptText: '',
-                    picklistValues: v.picklistValues
+                    picklistValues: v.picklistValues,
+                    showValText: showValText
                 });
             });
             console.log("data.filterList", data.filterList);
         }
     }
     
-    
+    const getFilterValues = (field, item) => {
+        var row = data.attributes.find(function (v) {
+            return v.fieldName == field;
+        });
+        return row && row.filterValues || [];
+    }
+
     const filterOption = (input, option) => {
       return option.label.toLowerCase().includes(input.toLowerCase());
     };
@@ -286,7 +314,11 @@
         });
         // console.log("current",data.current);
         data.current++;
-        var index = data.current;
+        let index = data.current;
+        if(data.filterList.length){
+            index = data.filterList.length-1;
+            data.current = index;
+        }
         setFormStyle(index);
         // nextTick(()=>{
         //     resetForm();
@@ -304,7 +336,7 @@
     }
     const getField = () => {
         proxy.$get(Interface.objFieldData, {
-            entityApiName: 'HREmployee'
+            entityApiName: props.sObjectName
         }).then(res=>{
             data.attributes = res.attributes;
             getFilterQuery();
@@ -363,6 +395,8 @@
         formState.options = item.options;
         formState.val = item.val;
         formState.label = item.label;
+        formState.operatorText = item.operatorText;
+        formState.showValText = item.showValText;
         data.current = index;
         if(item.operatorList){
             data.operatorList = getOperator(item.field, {});
@@ -408,7 +442,7 @@
             console.log("itemRefs",itemRefs)
         }
     }
-   const emit = defineEmits(['close']);
+   const emit = defineEmits(['close','success']);
     // 关闭弹窗
     const handleCloseModal = () =>{
         emit("close",false);
@@ -434,7 +468,7 @@
                 descriptor: "",
                 callingDescriptor: "UNKNOWN",
                 params: {
-                    objectApiName: "HREmployee",
+                    objectApiName: props.sObjectName,
                     fieldApiName: formState.field,
                     pageParam: 1,
                     pageSize: 25,
@@ -443,7 +477,7 @@
                     targetApiName: data.lookEntityApiName,
                     body: {
                         sourceRecord: {
-                            apiName: "HREmployee",
+                            apiName: props.sObjectName,
                             fields: {
                                 id: null,
                                 RecordTypeId: ""
@@ -472,13 +506,16 @@
                 console.log("resresres", list);
                 let arr = [];
                 list.forEach(item=>{
-                    arr.push({
-                        ID: item.fields.Id.value,
-                        Name: item.fields.Name.value
-                    })
+                    let isBook = data.options.some(row=>row.ID==item.fields.Id.value);
+                    if(!isBook){
+                        arr.push({
+                            ID: item.fields.Id.value,
+                            Name: item.fields.Name.value
+                        })
+                    }
                 });
-                data.options = arr;
-                formState.options = arr;
+                data.options = data.options.concat(arr);
+                formState.options = formState.options.concat(arr);
             }
         })
     }
@@ -529,7 +566,7 @@
                 picklistValues: v.picklistValues
             });
         });
-        let filterExpression = JSON.stringify(result);
+        let filterExpression = result;
         // console.log("result", result);
         
         let obj = {
@@ -558,7 +595,9 @@
             message: JSON.stringify(obj)
         }
         proxy.$post(Interface.listView.saveFilter, d).then(res=>{
-            
+            Toast("保存成功！");
+            emit('success', true);
+            emit("close",false);
         })
     }
 </script>

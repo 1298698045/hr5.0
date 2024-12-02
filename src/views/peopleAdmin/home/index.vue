@@ -123,10 +123,22 @@
             v-if="!isCollapsed"
           >
             <div class="wea-left-tree">
+              <div class="deptTree-config">
+                <span class="label">部门</span>
+                <div class="tree-switch">
+                  <span class="treeIcon" :class="{'active':checkable}" @click="handleSetCheckable(true)">
+                    <!-- <CheckCircleOutlined /> -->
+                    <CheckSquareOutlined />
+                  </span>
+                  <span class="treeIcon" :class="{'active':!checkable}" @click="handleSetCheckable(false)">
+                    <CaretLeftOutlined />
+                  </span>
+                </div>
+              </div>
               <div class="wea-left-tree-search">
                 <a-input-search
                   v-model:value="searchVal"
-                  placeholder="输入查询流程分类"
+                  placeholder="请输入名称"
                   @change="onSearch"
                 />
               </div>
@@ -135,11 +147,15 @@
                   :style="{height: tableHeight+'px'}"
                   :expanded-keys="expandedKeys"
                   :auto-expand-parent="autoExpandParent"
+                  v-model:checkedKeys="checkedKeys"
                   :tree-data="gData"
+                  :checkable="checkable"
                   block-node
+                  :checkStrictly="true"
                   :fieldNames="fieldNames"
                   @select="onSelect"
                   @expand="onExpand"
+                  @check="handleTreeCheck"
                 >
                   <template #switcherIcon="{ switcherCls }">
                     <CaretDownOutlined
@@ -163,11 +179,11 @@
             <div style="height: 100%" ref="contentRef">
               <div class="wea-tabContent" :style="{height:tableHeight-40+'px'}" ref="tabContent">
                 <template v-if="viewType=='card' && currentFilter.id">
-                  <PeopleCard :filterId="currentFilter.id" @edit="handleEdit" ref="peopleCardRef" />
+                  <PeopleCard :filterId="currentFilter.id" :filterQuery="queryParams.filterQuery" @edit="handleEdit" ref="peopleCardRef" />
                 </template>
                 <Dtable v-else ref="gridRef" :columns="columns" :gridUrl="gridUrl" :tableHeight="tableHeight-40" :isCollapsed="isCollapsed"></Dtable>
                 <div class="filterModalWrap" v-if="isFilterModal">
-                  <Filter @close="closeFilterModal" />
+                  <Filter @close="closeFilterModal" :filterId="currentFilter.id" :sObjectName="sObjectName" @success="initLoad" />
                 </div>
               </div>
             </div>
@@ -258,8 +274,10 @@
     CheckOutlined,
     SettingOutlined,
     RedoOutlined,
-    SearchOutlined
-
+    SearchOutlined,
+    CheckCircleOutlined,
+    CaretLeftOutlined,
+    CheckSquareOutlined
   } from "@ant-design/icons-vue";
   import { ref, watch, reactive, toRefs, onMounted, getCurrentInstance, onUpdated, h, nextTick } from "vue";
   import { message } from "ant-design-vue";
@@ -304,7 +322,8 @@
 
   const expandedKeys = ref([]);
   const autoExpandParent = ref(true);
-
+  const checkable = ref(true);
+  const checkedKeys = ref([]);
   const gData = ref([]);
   const gDataAll = ref([]);
   //左侧树获取数据
@@ -318,13 +337,41 @@
   getTreeData();
   //树选择
   const onSelect = (keys) => {
-    gridRef.value.loadGrid(data.queryParams);
+    let filterQuery = "\nDeptId\teq\t" + keys.join(",");
+    data.queryParams.filterQuery = filterQuery;
+    if(keys.length==0){
+      data.queryParams.filterQuery = "";
+    }
+    if(data.viewType=='list'){
+      gridRef.value.loadGrid(data.queryParams);
+    }else {
+      nextTick(()=>{
+        peopleCardRef.value.getQuery();
+      })
+    }
   };
   //树展开
   const onExpand = (keys) => {
     expandedKeys.value = keys;
     autoExpandParent.value = false;
   };
+
+  const handleTreeCheck = (e) => {
+    let checkeds = e.checked;
+    // console.log("checkeds", checkeds);
+    let filterQuery = "\nDeptId\teq\t" + checkeds.join(",");
+    data.queryParams.filterQuery = filterQuery;
+    if(checkeds.length==0){
+      data.queryParams.filterQuery = "";
+    }
+    if(data.viewType=='list'){
+      gridRef.value.loadGrid(data.queryParams);
+    }else {
+      nextTick(()=>{
+        peopleCardRef.value.getQuery();
+      })
+    }
+  }
   
   //数据绑定
   let data = reactive({
@@ -352,7 +399,8 @@
     queryParams: {
       entityType: 'a0V',
       search: "",
-      filterId: ""
+      filterId: "",
+      filterQuery: ""
     },
     isCirculation: false,
     searchVal: "",
@@ -421,7 +469,7 @@
         value: "delete"
       }
     ],
-    viewType: "card"
+    viewType: "list"
   });
 
   const { isCollapsed, tableHeight, fieldNames, searchTree, tabs, isFilterPicker,
@@ -430,7 +478,7 @@
     isDeleteModal, isFilterModal, searchFilterVal, filterListFixed, entityType,objectTypeCode,
      initialData, actionList, title, searchVal,sObjectName,
      isCategory, treeId, id,isCommonDelete,listId,listIds,isCalculate,isChangeBusinessUnitParent,isMergeBusinessUnit,isBatchUpdate,
-     menuStyle, isDefauleMneuActions, clickRecordData, listBtnActions, viewType } = toRefs(data);
+     menuStyle, isDefauleMneuActions, clickRecordData, listBtnActions, viewType, queryParams } = toRefs(data);
 
      
   const handleBtnActions = (item) => {
@@ -681,24 +729,44 @@ window.data = data;
     })
     return response;
   }
-  getMetadataInitialLoad().then(res=>{
-    if(res&&res.actions&&res.actions[0]&&res.actions[0].returnValue){
-      data.initialData = res.actions[0].returnValue;
-      data.currentFilter = {
-        id: data.initialData.listViewId,
-        name: data.initialData.listViewLabel||'全部'
+  const initLoad = () => {
+    columns.value = [{
+          field: 'ids',
+          checkbox: true
+        },
+        {
+          field: "Action",
+          title: "操作",
+          formatter: function formatter(value, row, index) {
+            var id = row.LIST_RECORD_ID;
+            var str = `
+                <a href="javascript:;" class="btnMenu" id="btnMenu_${index}" onclick="handleClickActions(event,'${index}','${id}')">
+                    <svg focusable="false" aria-hidden="true" viewBox="0 0 520 520" part="icon" lwc-6qul4k2dv7m="" data-key="down" class="fh-icon fh-icon_xx-small"><g lwc-6qul4k2dv7m=""><path d="M83 140h354c10 0 17 13 9 22L273 374c-6 8-19 8-25 0L73 162c-7-9-1-22 10-22z" lwc-6qul4k2dv7m=""></path></g></svg>
+                </a>
+              `
+            return str;
+          }
+    }];
+    getMetadataInitialLoad().then(res=>{
+      if(res&&res.actions&&res.actions[0]&&res.actions[0].returnValue){
+        data.initialData = res.actions[0].returnValue;
+        data.currentFilter = {
+          id: data.initialData.listViewId,
+          name: data.initialData.listViewLabel||'全部'
+        }
+        data.title = data.initialData&&data.initialData.breadCrumbList&&data.initialData.breadCrumbList.length?data.initialData.breadCrumbList[0].label:'';
+        data.queryParams.filterId = data.currentFilter.id;
+        data.initialData.entityListViewPermissions.canCreateListView=true;
       }
-      data.title = data.initialData&&data.initialData.breadCrumbList&&data.initialData.breadCrumbList.length?data.initialData.breadCrumbList[0].label:'';
-      data.queryParams.filterId = data.currentFilter.id;
-      data.initialData.entityListViewPermissions.canCreateListView=true;
-    }
-    getActions();
-    getListConfig();
-    getFilterList();
-  }).catch(error => {
-    // 处理错误
-    console.error(error);
-  });
+      getActions();
+      getListConfig();
+      getFilterList();
+    }).catch(error => {
+      // 处理错误
+      console.error(error);
+    });
+  };
+  initLoad();
 
   //获取操作按钮
   const getActions = () => {
@@ -885,6 +953,10 @@ const BusinessUnitPeopleStat=(e)=>{
     url:''
   }
 }
+
+const handleSetCheckable = (e) => {
+  checkable.value = e;
+}
 </script>
 <style lang="less">
     @import "@/style/flow/treeList.less";
@@ -896,5 +968,31 @@ const BusinessUnitPeopleStat=(e)=>{
   }
   .headerTop{
     padding-bottom: 0px !important;
+  }
+  .wea-left-tree-scroll{
+    height: calc(100% - 96px) !important;
+  }
+  .deptTree-config{
+    height: 40px;
+    border-bottom: 1px solid #e2e3e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    .tree-switch{
+      .treeIcon{
+        cursor: pointer;
+        display: inline-block;
+        font-size: 20px;
+        color: #666;
+        margin-left: 10px;
+        &:hover{
+          color: #3399ff;
+        }
+        &.active{
+          color: #3399ff;
+        }
+      }
+    }
   }
 </style>

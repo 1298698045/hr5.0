@@ -176,12 +176,16 @@ a {
     line-height: 30px;
 }
 .ant-tree-treenode .ant-tree-node-content-wrapper {
-    line-height: 30px;
-    height: 30px;
+    line-height: 30px !important;
+    height: 30px !important;
 }
 .ant-tree-treenode .ant-tree-node-content-wrapper:hover {
     background: transparent !important;
     color: #018efb;
+}
+:where(.css-dev-only-do-not-override-1p3hq3p).ant-tree .ant-tree-checkbox{
+    margin-inline-end: 0;
+    margin-block-start: 0;
 }
 .ant-tree-treenode.ant-tree-treenode-selected .ant-tree-node-content-wrapper {
     background: transparent !important;

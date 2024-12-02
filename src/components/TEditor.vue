@@ -14,6 +14,7 @@ import {
   defineExpose,
   defineEmits,
   toRaw,
+  nextTick
 } from "vue";
 const emit = defineEmits(["input"]);
 
@@ -117,6 +118,7 @@ const initializeEditor = () => {
     height: height.value
   });
 };
+console.log("props", props);
 let init = initializeEditor();
 // let init = reactive({
 //   // 选择器
@@ -143,6 +145,7 @@ let init = initializeEditor();
 //   height: height
 // });
 let content = ref("");
+content.value = props.value;
 watch(
   content,
   (newVal) => {

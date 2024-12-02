@@ -19,6 +19,9 @@
                         </div>
                         <a-button class="ml10" @click="handleBtnActions(item.devNameOrId)" v-else>{{ item.label }}</a-button>
                     </div>
+                    <a-button class="ant-btn-icon ml10">
+                        <SettingOutlined style="color: #0176d3;" />
+                    </a-button>
                 </div>
             </div>
             <TableList ref="tableRef" :columns="columns" :gridUrl="gridUrl" :id="id" :relatedId="relatedId" :relatedEntityName="relatedEntityName" :fieldApiName="fieldApiName" @changeBtn="changeBtn" />
@@ -42,7 +45,8 @@
         DownOutlined,
         CaretDownOutlined,
         DeleteFilled,
-        DeleteOutlined
+        DeleteOutlined,
+        SettingOutlined
     } from "@ant-design/icons-vue";
     import TableList from "@/components/detail/TableList.vue";
     import CommonFormModal from "@/components/listView/CommonFormModal.vue";

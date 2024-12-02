@@ -43,13 +43,8 @@
         </div>
         <div class="rightBtns">
           <div class="btnBox" v-for="(item, index) in actionList" :key="index">
-            <div class="btnGroup ml10" v-if="Array.isArray(item)">
-              <a-button
-                v-for="(row, idx) in item"
-                :key="idx"
-                @click="handleClickBtn(row.devNameOrId)"
-                >{{ row.label }}</a-button
-              >
+            <div class="fh-btn-group ml10" v-if="Array.isArray(item)">
+                <div class="fh-btn" v-for="(row, idx) in item" :key="idx" @click="handleClickBtn(row.devNameOrId)">{{row.label}}</div>
             </div>
             <a-button class="ml10" @click="handleClickBtn(item.devNameOrId)" v-else>{{ item.label }}</a-button>
           </div>
@@ -123,6 +118,12 @@
             v-if="!isCollapsed"
           >
             <div class="wea-left-tree">
+              <div class="deptTree-config">
+                <span class="label">部门</span>
+                <div class="tree-switch">
+                  <a-checkbox v-model:checked="checkable"></a-checkbox>
+                </div>
+              </div>
               <div class="wea-left-tree-search">
                 <a-input-search
                   v-model:value="searchVal"
@@ -131,7 +132,7 @@
                 />
               </div>
               <div class="wea-left-tree-scroll">
-                <a-tree
+                <!-- <a-tree
                   :style="{height: tableHeight+'px'}"
                   :expanded-keys="expandedKeys"
                   :auto-expand-parent="autoExpandParent"
@@ -147,7 +148,8 @@
                       style="color: rgb(163, 163, 163); font-size: 14px"
                     ></CaretDownOutlined>
                   </template>
-                </a-tree>
+                </a-tree> -->
+                <tree-dept :height="tableHeight" :fieldNames="fieldNames" :checkable="checkable" :searchField="searchField" @change="changeTree"></tree-dept>
               </div>
             </div>
           </a-col>
@@ -180,7 +182,7 @@
               <div class="wea-tabContent" :style="{height:tableHeight-40+'px'}" ref="tabContent">
                 <Dtable ref="gridRef" :columns="columns" :gridUrl="gridUrl" :tableHeight="tableHeight-40" :isCollapsed="isCollapsed"></Dtable>
                 <div class="filterModalWrap" v-if="isFilterModal">
-                  <Filter @close="closeFilterModal" />
+                  <Filter @close="closeFilterModal" :filterId="currentFilter.id" :sObjectName="sObjectName" @success="initLoad" />
                 </div>
               </div>
             </div>
@@ -279,6 +281,7 @@
   import Toast from "@/utils/toast.js";
   import Interface from "@/utils/Interface.js";
   import Dtable from "@/components/Dtable.vue";
+  import TreeDept from "@/components/TreeDept.vue";
 
   import { useRouter, useRoute } from "vue-router";
   const router = useRouter();
@@ -304,48 +307,28 @@
   import BatchUpdateModel from "@/components/BusinessUnit/home/BatchUpdateModel.vue";
 
   import BtnActions from "@/components/listView/BtnActions.vue";
-
+  import { getCommonDeptTree } from "@/utils/commonApi.js";
   import moment from "moment";
   import { formTreeData } from "@/utils/common.js";
   const headFilterRef = ref(null);
 
   const defaultMenuRef = ref(null);
 
-
-
-  const x = 3;
-  const y = 2;
-  const z = 1;
   const { proxy } = getCurrentInstance();
 
   const expandedKeys = ref([]);
   const autoExpandParent = ref(true);
-  const res = require("/public/localData/treedata.json");
+
   const gData = ref([]);
-  const gDataAll=ref([]);
+  const gDataAll = ref([]);
   //左侧树获取数据
-  const getTreeData = (keys) => {
-    // proxy.$get(Interface.flow.processTree,{}).then((res)=>{
-    //   console.log("res-processTree",res);
-    //   let listData = res.data;
-    //   let formTree = (list) => {
-    //     list.forEach(item=>{
-    //       if(item.children){
-    //         formTree(item.children);
-    //       }
-    //       item.key = item.id;
-    //       item.value = item.id;
-    //     })
-    //   }
-    //   formTree(listData);
-    //   console.log("formTree",listData)
-    //   gData.value = listData;
-    //   gDataAll.value = listData;
-    // })
-    proxy.$get('/localData/treedata_dept.json', {}).then((res) => {
-      gData.value = formTreeData(res.rows, 'id', 'pid');
-      gDataAll.value = formTreeData(res.rows, 'id', 'pid');
-    });
+  const getTreeData = async (keys) => {
+    let list = await getCommonDeptTree();
+    // console.log("res-tree", list);
+    // gData.value = list;
+    // gDataAll.value = JSON.parse(JSON.stringify(list));
+    gData.value = formTreeData(list, 'id', 'parentId');
+    gDataAll.value = formTreeData(list, 'id', 'parentId');
   }
   getTreeData();
   //树选择
@@ -363,7 +346,7 @@
     isCollapsed: false,
     tableHeight: '',
     fieldNames: {
-      children: 'children', title: 'text', key: 'id'
+      children: 'children', title: 'name', key: 'id'
     },
     searchTree: "",
     tabs:[
@@ -385,7 +368,8 @@
       entityType: route.params.entityType||'004',
       //objectTypeCode: '10',
       search: "",
-      filterId: ""
+      filterId: "",
+      filterQuery: ""
     },
     isCirculation: false,
     searchVal: "",
@@ -453,7 +437,9 @@
         name: "删除",
         value: "delete"
       }
-    ]
+    ],
+    checkable: true,
+    searchField: "BusinessUnitId"
   });
 
 
@@ -477,11 +463,16 @@
     isDeleteModal, isFilterModal, searchFilterVal, filterListFixed, entityType,objectTypeCode,
      initialData, actionList, title, searchVal,sObjectName,
      isCategory, treeId, id,isCommonDelete,listId,listIds,isCalculate,isChangeBusinessUnitParent,isMergeBusinessUnit,isBatchUpdate,
-     menuStyle, isDefauleMneuActions, clickRecordData, listBtnActions } = toRefs(data);
+     menuStyle, isDefauleMneuActions, clickRecordData, listBtnActions, checkable, searchField } = toRefs(data);
   const tabContent = ref(null);
   const contentRef = ref(null);
   let formSearchHeight = ref(null);
   const gridRef = ref(null);
+
+  const changeTree = (e) => {
+    data.queryParams.filterQuery = e;
+    gridRef.value.loadGrid(data.queryParams);
+  }
   
   //左侧树搜索
   const onSearch = (e) => {
@@ -674,8 +665,8 @@ window.data = data;
       //gridRef.value.loadGrid(data.queryParams);
     }
     //列表新建
-    const handleNew = (e) => {
-      data.listId='';
+    const New = () => {
+      data.listId = '';
       data.isCommon = true;
     }
     //列表编辑
@@ -715,25 +706,45 @@ window.data = data;
     })
     return response;
   }
-  getMetadataInitialLoad().then(res=>{
-    console.log("resAsync", res);
-    if(res&&res.actions&&res.actions[0]&&res.actions[0].returnValue){
-      data.initialData = res.actions[0].returnValue;
-      data.currentFilter = {
-        id: data.initialData.listViewId,
-        name: data.initialData.listViewLabel||'全部'
+  const initLoad = () => {
+    columns.value = [{
+          field: 'ids',
+          checkbox: true
+        },
+        {
+          field: "Action",
+          title: "操作",
+          formatter: function formatter(value, row, index) {
+            var id = row.LIST_RECORD_ID;
+            var str = `
+                <a href="javascript:;" class="btnMenu" id="btnMenu_${index}" onclick="handleClickActions(event,'${index}','${id}')">
+                    <svg focusable="false" aria-hidden="true" viewBox="0 0 520 520" part="icon" lwc-6qul4k2dv7m="" data-key="down" class="fh-icon fh-icon_xx-small"><g lwc-6qul4k2dv7m=""><path d="M83 140h354c10 0 17 13 9 22L273 374c-6 8-19 8-25 0L73 162c-7-9-1-22 10-22z" lwc-6qul4k2dv7m=""></path></g></svg>
+                </a>
+              `
+            return str;
+          }
+    }];
+    getMetadataInitialLoad().then(res=>{
+      console.log("resAsync", res);
+      if(res&&res.actions&&res.actions[0]&&res.actions[0].returnValue){
+        data.initialData = res.actions[0].returnValue;
+        data.currentFilter = {
+          id: data.initialData.listViewId,
+          name: data.initialData.listViewLabel||'全部'
+        }
+        data.title = data.initialData&&data.initialData.breadCrumbList&&data.initialData.breadCrumbList.length?data.initialData.breadCrumbList[0].label:'';
+        data.queryParams.filterId = data.currentFilter.id;
+        data.initialData.entityListViewPermissions.canCreateListView=true;
       }
-      data.title = data.initialData&&data.initialData.breadCrumbList&&data.initialData.breadCrumbList.length?data.initialData.breadCrumbList[0].label:'';
-      data.queryParams.filterId = data.currentFilter.id;
-      data.initialData.entityListViewPermissions.canCreateListView=true;
-    }
-    getActions();
-    getListConfig();
-    getFilterList();
-  }).catch(error => {
-    // 处理错误
-    console.error(error);
-  });
+      getActions();
+      getListConfig();
+      getFilterList();
+    }).catch(error => {
+      // 处理错误
+      console.error(error);
+    });
+  };
+  initLoad();
 
   //获取操作按钮
   const getActions = () => {
@@ -772,7 +783,24 @@ window.data = data;
       if(res&&res.actions&&res.actions[0]&&res.actions[0].returnValue){
          actions = res.actions[0].returnValue;
       }
-      data.actionList = actions;
+      let actionList = res.actions[0].returnValue;
+      let temp = [];
+      for (let i = 0; i < actionList.length; i++) {
+          let item = actionList[i];
+          if (item.isSeparator) {
+              temp.push([item]);
+          } else {
+              if (Array.isArray(temp[temp.length - 1])) {
+                  temp[temp.length - 1].push(item);
+              } else {
+                if(temp.length == 0){
+                  (temp[0] ||= []).push(item);
+                }
+              }
+          }
+      };
+      console.log("isSeparator", temp);
+      data.actionList = temp;
     })
   }
 
@@ -985,5 +1013,31 @@ const BusinessUnitPeopleStat=(e)=>{
   }
   .headerTop{
     padding-bottom: 0px !important;
+  }
+  .deptTree-config{
+    height: 40px;
+    border-bottom: 1px solid #e2e3e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    .tree-switch{
+      .treeIcon{
+        cursor: pointer;
+        display: inline-block;
+        font-size: 20px;
+        color: #666;
+        margin-left: 10px;
+        &:hover{
+          color: #3399ff;
+        }
+        &.active{
+          color: #3399ff;
+        }
+      }
+    }
+  }
+  .wea-left-tree-scroll{
+    height: calc(100% - 96px) !important;
   }
 </style>

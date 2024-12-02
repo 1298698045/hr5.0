@@ -49,7 +49,8 @@
     import { getCommonNodesQuery } from "@/utils/commonApi.js";
     const emit = defineEmits(['edit']);
     const props = defineProps({
-        filterId: String
+        filterId: String,
+        filterQuery: String
     })
     const data = reactive({
         listData: [],
@@ -66,7 +67,8 @@
             displayColumns: "id,FullName,DeptId,JobTitle,StateCode",
             page: data.pageNumber,
             rows: data.pageSize,
-            filterId: props.filterId
+            filterId: props.filterId,
+            filterQuery: props.filterQuery
         }
         let res = await getCommonNodesQuery("HREmployee", 30020, params);
         data.listData = res.nodes;

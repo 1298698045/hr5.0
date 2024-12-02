@@ -194,6 +194,19 @@
                   </a-form-item>
                   <a-form-item
                     :name="attribute.targetValue"
+                    v-else-if="attribute.attributes.type == 'z'"
+                    :label="attribute.label"
+                    :rules="[
+                      {
+                        required: attribute.attributes.required,
+                        message: '请输入' + attribute.label,
+                      },
+                    ]"
+                  >
+                    <TEditor :placeholder="'请输入' + attribute.label" :value="formState[attribute.targetValue]" @input="(e)=>inputEditor(e, attribute.targetValue)" />
+                  </a-form-item>
+                  <a-form-item
+                    :name="attribute.targetValue"
                     v-else
                     :label="attribute.label"
                     :rules="[
@@ -268,7 +281,7 @@ import MultipleDept from "@/components/commonModal/MultipleDept.vue";
 import RadioUser from "@/components/commonModal/RadioUser.vue";
 import MultipleUser from "@/components/commonModal/MultipleUser.vue";
 import LookupFilter from "@/components/commonModal/LookupFilter.vue";
-
+import dayjs from 'dayjs';
 import { message } from "ant-design-vue";
   import Toast from "@/utils/toast.js";
 
@@ -284,7 +297,7 @@ const labelCol = ref({ style: { width: "100px" } });
 const props = defineProps({
   isShow: Boolean,
   title: String,
-  objectTypeCode: String,
+  objectTypeCode: [Number, String],
   id: String,
   entityId: String,
   entityApiName: String,
@@ -338,6 +351,11 @@ const {
   selectFixed, lookEntityApiName
 } = toRefs(data);
 const formState = reactive({});
+
+const inputEditor = (e, field) => {
+  formState[field] = e;
+}
+
 const handleData = (res) => {
   let { layout, record } = res.actions[0].returnValue;
   data.layoutList = layout.sections;
@@ -377,6 +395,14 @@ const handleData = (res) => {
               ID: props.relatedObjectAttributeValue.value,
               Name: props.relatedObjectAttributeValue.name
             })
+          }
+        }else if(col.attributes.type=='F'){
+          let dateVal = data.list[col.localId].value;
+          let date = dayjs(dateVal).format("YYYY-MM-DD");
+          let time = dayjs(dateVal).format("hh:mm:ss");
+          formState[col.localId+'_obj'] = {
+            date,
+            time
           }
         }
       })

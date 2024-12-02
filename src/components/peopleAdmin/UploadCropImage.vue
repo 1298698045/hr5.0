@@ -165,4 +165,4 @@
         text-align: center;
         display: block;
     }
-</styl
+</style>

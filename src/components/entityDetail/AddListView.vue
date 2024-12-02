@@ -196,8 +196,8 @@
         currentTab: 0,
         attributes: [],
         filterList: [],
-        entityName: "EntityListViewLayout",
-        objectTypeCode: 100050,
+        entityName: "",
+        objectTypeCode: "",
         attributes2: []
     });
     const {
@@ -223,7 +223,7 @@
                 callingDescriptor: "UNKNOWN",
                 params: {
                     recordId: props.id,
-                    apiName: data.entityName
+                    apiName: props.DeveloperName
                 }
             }]
         }
@@ -245,7 +245,7 @@
     }
     const getEntityAttr = () => {
         proxy.$get(Interface.entityFilter, {
-            entityApiName: data.entityName
+            entityApiName: props.DeveloperName
         }).then(res => {
             data.attributes = res.attributes.map(item=>{
                 item.key = item.id;

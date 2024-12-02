@@ -91,7 +91,7 @@
               <svg class="btn_icon btn_icon_small" focusable="false" data-key="down" aria-hidden="true" viewBox="0 0 520 520" part="icon"><g><path d="M83 140h354c10 0 17 13 9 22L273 374c-6 8-19 8-25 0L73 162c-7-9-1-22 10-22z"></path></g></svg>
             </a-button>
             <template #overlay>
-              <a-menu class="fh-menu" style="width: 136px;" @click="handleMenuClick">
+              <a-menu class="fh-menu" style="width: 136px;">
                 <a-menu-item key="1">列表</a-menu-item>
                 <a-menu-item key="2">卡片</a-menu-item>
                 <a-menu-item key="3">分屏视图</a-menu-item>
@@ -180,7 +180,7 @@
               <div class="wea-tabContent" :style="{height:tableHeight-40+'px'}" ref="tabContent">
                 <Dtable ref="gridRef" :columns="columns" :gridUrl="gridUrl" :tableHeight="tableHeight-40" :isCollapsed="isCollapsed"></Dtable>
                 <div class="filterModalWrap" v-if="isFilterModal">
-                  <Filter @close="closeFilterModal" />
+                  <Filter @close="closeFilterModal" :filterId="currentFilter.id" :sObjectName="sObjectName" @success="initLoad" />
                 </div>
               </div>
             </div>
@@ -686,24 +686,45 @@ window.data = data;
     })
     return response;
   }
-  getMetadataInitialLoad().then(res=>{
-    if(res&&res.actions&&res.actions[0]&&res.actions[0].returnValue){
-      data.initialData = res.actions[0].returnValue;
-      data.currentFilter = {
-        id: data.initialData.listViewId,
-        name: data.initialData.listViewLabel||'全部'
+  
+  const initLoad = () => {
+    columns.value = [{
+          field: 'ids',
+          checkbox: true
+        },
+        {
+          field: "Action",
+          title: "操作",
+          formatter: function formatter(value, row, index) {
+            var id = row.LIST_RECORD_ID;
+            var str = `
+                <a href="javascript:;" class="btnMenu" id="btnMenu_${index}" onclick="handleClickActions(event,'${index}','${id}')">
+                    <svg focusable="false" aria-hidden="true" viewBox="0 0 520 520" part="icon" lwc-6qul4k2dv7m="" data-key="down" class="fh-icon fh-icon_xx-small"><g lwc-6qul4k2dv7m=""><path d="M83 140h354c10 0 17 13 9 22L273 374c-6 8-19 8-25 0L73 162c-7-9-1-22 10-22z" lwc-6qul4k2dv7m=""></path></g></svg>
+                </a>
+              `
+            return str;
+          }
+    }];
+    getMetadataInitialLoad().then(res=>{
+      if(res&&res.actions&&res.actions[0]&&res.actions[0].returnValue){
+        data.initialData = res.actions[0].returnValue;
+        data.currentFilter = {
+          id: data.initialData.listViewId,
+          name: data.initialData.listViewLabel||'全部'
+        }
+        data.title = data.initialData&&data.initialData.breadCrumbList&&data.initialData.breadCrumbList.length?data.initialData.breadCrumbList[0].label:'';
+        data.queryParams.filterId = data.currentFilter.id;
+        data.initialData.entityListViewPermissions.canCreateListView=true;
       }
-      data.title = data.initialData&&data.initialData.breadCrumbList&&data.initialData.breadCrumbList.length?data.initialData.breadCrumbList[0].label:'';
-      data.queryParams.filterId = data.currentFilter.id;
-      data.initialData.entityListViewPermissions.canCreateListView=true;
-    }
-    getActions();
-    getListConfig();
-    getFilterList();
-  }).catch(error => {
-    // 处理错误
-    console.error(error);
-  });
+      getActions();
+      getListConfig();
+      getFilterList();
+    }).catch(error => {
+      // 处理错误
+      console.error(error);
+    });
+  };
+  initLoad();
 
   //获取操作按钮
   const getActions = () => {

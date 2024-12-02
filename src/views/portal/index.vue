@@ -76,7 +76,9 @@
     const getDetail = async () => {
         const res = await getCommonDetail(store.dashboardId, 'PageDashboard');
         let fields = res.fields;
-        store.themeType = fields.Theme.value;
+        if(fields.Theme.value!=''){
+            store.themeType = fields.Theme.value;
+        }
     };
     getDetail();
 

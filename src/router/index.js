@@ -600,7 +600,7 @@ const routes = [
         component: () => import("../views/listView/index.vue"),
       },
       {
-        path: "/lightning/o/Dashboard/home",
+        path: "/lightning/dashboard/:sObjectName",
         name: "DashboardHome",
         component: () => import("../views/home/home.vue"),
       }
@@ -619,7 +619,16 @@ const routes = [
           name: "人员管理",
           tabName: "Employee"
         }
-      }
+      },
+      {
+        path: "/lightning/o/HREmployee/detail",
+        component: () => import("../views/peopleAdmin/detail/index.vue"),
+        name: "HREmployeeDetail",
+        meta: {
+          name: "人员管理",
+          tabName: "Employee"
+        }
+      },
     ]
   },
   {
@@ -646,7 +655,7 @@ const routes = [
     path: "/formPreview",
     component: () => import("../views/formPreview/index.vue"),
     name: "FormPreview",
-  },
+  }
 ];
 
 const router = createRouter({
