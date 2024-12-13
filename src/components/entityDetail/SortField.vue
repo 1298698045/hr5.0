@@ -163,7 +163,7 @@ const handleSubmit = () => {
       actions: [
         {
           params: {
-            entityId: "",
+            entityId: props.entityId,
             ids: data.listData.map((item) => item.id),
           },
         },
@@ -173,7 +173,7 @@ const handleSubmit = () => {
   let messages = {
     message: JSON.stringify(obj),
   };
-  proxy.$get(Interface.objeview.sort, messages).then((res) => {
+  proxy.$post(Interface.objeview.sort, messages).then((res) => {
     Toast("保存成功！");
     handleCancel();
   });

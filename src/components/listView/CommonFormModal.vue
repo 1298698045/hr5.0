@@ -110,6 +110,7 @@
                           searchlookup('', attribute);
                         }
                       "
+                      @change="(e)=>selectLookup(e, attribute)"
                       :placeholder="'请选择' + attribute.label"
                     >
                       <template #suffixIcon></template>
@@ -283,8 +284,8 @@ import MultipleUser from "@/components/commonModal/MultipleUser.vue";
 import LookupFilter from "@/components/commonModal/LookupFilter.vue";
 import dayjs from 'dayjs';
 import { message } from "ant-design-vue";
-  import Toast from "@/utils/toast.js";
-
+import Toast from "@/utils/toast.js";
+import { getMapFieldValues } from "@/utils/commonApi.js";
 import TEditor from "@/components/TEditor.vue";
 
 const getContent = (v) => {
@@ -327,7 +328,9 @@ const data = reactive({
   recordObj: {}, // 记录当前点击的数据
   picklistFieldMap: {}, // 依赖字段关联关系
   selectFixed: {}, // select 固定不变的数据
-  lookEntityApiName: ""
+  lookEntityApiName: "",
+  targetApiName: "",
+  targetObjectTypeCode: "",
 });
 if(props.title){
   data.title = props.title;
@@ -348,7 +351,7 @@ const {
   sObjectType,
   recordObj,
   picklistFieldMap,
-  selectFixed, lookEntityApiName
+  selectFixed, lookEntityApiName, targetApiName, targetObjectTypeCode
 } = toRefs(data);
 const formState = reactive({});
 
@@ -660,7 +663,7 @@ const handleDeptParams = (params) => {
       Name: params.Name,
     });
   }
-  formState[data.localId].Id = params.ID;
+  formState[data.localId] = params.ID;
 };
 
 const cancelUserModal = (params) => {
@@ -674,21 +677,66 @@ const handleUserParams = (params) => {
   console.log("userData", params);
   console.log("赋值字段", data.localId);
   data.isRadioUser = false;
-  formState[data.localId].Id = params.id;
+  formState[data.localId] = params.id;
   var isEmpty = data.search[data.localId].some((item) => item.ID == params.id);
   if (!isEmpty) {
     data.search[data.localId].push({
       ID: params.id,
       Name: params.name,
     });
-  }
+  };
+  selectLookup(params.id, {
+    localId: data.localId,
+    attributes: {
+      referencedEntityName: data.targetApiName,
+      referencedEntityObjectTypeCode: data.targetObjectTypeCode
+    }
+  });
 };
+
+const selectLookup = async (value, attribute) => {
+  console.log("value, attribute", value, attribute);
+  let objectFieldName = attribute.localId;
+  let targetApiName = attribute.attributes.referencedEntityName;
+  let targetObjectTypeCode = attribute.attributes.referencedEntityObjectTypeCode;
+  const mapFields = await getMapFieldValues(props.entityApiName, objectFieldName, value, targetApiName, targetObjectTypeCode)
+  console.log("mapFields", mapFields);
+  for(let key in mapFields){
+    let row = "";
+    data.layoutList.forEach(item=>{
+      item.rows.forEach(v=>{
+        v.attributes.forEach(l=>{
+          if(l.localId==key){
+            row = l;
+          }
+        });
+      })
+    });
+    if(row){
+      let type = row.attributes.type;
+      if(type == 'U' || type == 'O' || type == 'Y' || type == 'Y_MD'){
+        const { value, displayValue } = mapFields[key];
+        const isExist = data.search[key].some(v=>v.ID == value);
+        if(!isExist){
+            let obj = {
+                ID: value,
+                Name: displayValue
+            };
+            data.search[key].push(obj);
+        }
+      }
+      formState[key] = mapFields[key].value;
+    }
+  }
+}
 // 多选用户
 const handleMuUserParams = (params) => {};
 // 查找类型打开弹窗
 const handleOpenLook = (attribute) => {
   let localId = attribute.localId;
   data.localId = localId;
+  data.targetApiName = attribute.attributes.referencedEntityName;
+  data.targetObjectTypeCode = attribute.attributes.referencedEntityObjectTypeCode;
   let sObjectType = attribute.attributes.referencedEntityObjectTypeCode;
   if (sObjectType == 30020) {
     data.isRadioUser = true;
@@ -699,7 +747,7 @@ const handleOpenLook = (attribute) => {
     data.recordObj = attribute;
     data.sObjectType = sObjectType;
     data.isLookup = true;
-  }
+  };
 };
 // 选中的数据
 const handleSelectData = (e) => {
@@ -719,6 +767,13 @@ const handleSelectData = (e) => {
   // formState[localId].value = e.LIST_RECORD_ID;
   // formState[localId].Name = e.Name;
   // formState[localId].displayValue = e.Name;
+  selectLookup(params.id, {
+    localId: e.LIST_RECORD_ID,
+    attributes: {
+      referencedEntityName: data.targetApiName,
+      referencedEntityObjectTypeCode: data.targetObjectTypeCode
+    }
+  });
 };
 const handleSubmit = () => {
   formRef.value.validate().then(() => {

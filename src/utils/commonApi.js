@@ -89,3 +89,42 @@ export const getCommonDetail = async (id, apiName) => {
         throw error;
     }
 }
+
+/**
+ * 查找字段 - 获取目标对象映射字段值
+ * @param { string } objectApiName - 当前对象名称
+ * @param { string } objectFieldName - 当前查找字段名称
+ * @param { string } objectFieldValue - 当前查找字段value值
+ * @param { string } targetApiName - 当前字段目标对象名
+ * @param { string } targetObjectTypeCode - 当前字段目标对象code
+ */
+
+export const getMapFieldValues = async (objectApiName, objectFieldName, objectFieldValue, targetApiName, targetObjectTypeCode) => {
+    try{
+        let obj = {
+            actions:[{
+                id: "2919;a",
+                descriptor: "",
+                callingDescriptor: "UNKNOWN",
+                params: {
+                    objectApiName: objectApiName,
+                    objectFieldName: objectFieldName,
+                    objectFieldValue: objectFieldValue,
+                    targetApiName: targetApiName,
+                    targetObjectTypeCode: targetObjectTypeCode,
+                }
+            }]
+        }
+        let d = {
+            message: JSON.stringify(obj)
+        }
+        let result;
+        const res = await request.$post(Interface.getMapFieldValues, d);
+        if(res &&  res.actions && res.actions[0]?.returnValue){
+            result = res.actions[0].returnValue;
+        }
+        return result;
+    }catch (error) {
+        throw error;
+    }
+}

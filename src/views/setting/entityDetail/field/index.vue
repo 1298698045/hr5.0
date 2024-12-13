@@ -73,7 +73,7 @@
     </div>
     <SortField v-if="isSort" :isShow="isSort" @cancel="cancelSort" :entityId="route.query.id" />
     <SetTrackField v-if="isTrackField" :isShow="isTrackField" @cancel="isTrackField=false" :entityId="route.query.id" :detail="detail" />
-    <ChangeFormField v-if="isChangeFormField" :isShow="isChangeFormField" @cancel="isChangeFormField=false" />
+    <ChangeFormField v-if="isChangeFormField" :isShow="isChangeFormField" :objDetail="detail" :attributeId="attributeId" :fieldApiName="fieldApiName" :fieldApiLabel="fieldApiLabel" :targetApiName="referencedEntityApiName" :targetApiCode="referencedEntityObjectTypeCode" @cancel="isChangeFormField=false" />
     <Delete :isShow="isDelete" :desc="''" v-if="isDelete" @cancel="isDelete=false" @ok="confirmDelete">
       <div class="objectManagerCustomFieldDeleteWarning">
         <p data-aura-rendered-by="2462:0">删除自定义字段将会：</p>
@@ -153,7 +153,12 @@ let data = reactive({
   isDelete: false,
   rowId: "",
   editFieldId: "", // 编辑字段id
-  total: 0
+  total: 0,
+  fieldApiName: "",
+  fieldApiLabel: "",
+  referencedEntityApiName: "",
+  referencedEntityObjectTypeCode: "",
+  attributeId: ""
 });
 const handleCollapsed = () => {
   data.isCollapsed = !data.isCollapsed;
@@ -161,7 +166,8 @@ const handleCollapsed = () => {
 
 const { isCollapsed, tableHeight, fieldNames, activeKey, isNewField, isSort,
    isTrackField, isFieldDependent, isChangeFormField, searchVal, queryParams, isFieldDetail,
-    fieldData, isFieldEdit, dataType, detail, isDelete, rowId, editFieldId, total } =
+    fieldData, isFieldEdit, dataType, detail, isDelete, rowId, editFieldId, total,
+    fieldApiName, referencedEntityApiName, referencedEntityObjectTypeCode, fieldApiLabel, attributeId } =
   toRefs(data);
   
 const tabContent = ref(null);
@@ -352,6 +358,11 @@ const changeBtn = (action, item) => {
   data.rowId = item.id;
   if(action.name=='设置查找内容更改表单字段'){
     data.isChangeFormField = true;
+    data.attributeId = item.id;
+    data.fieldApiName = item.apiName;
+    data.fieldApiLabel = item.label;
+    data.referencedEntityApiName = item.referencedEntityApiName;
+    data.referencedEntityObjectTypeCode = item.referencedEntityObjectTypeCode;
   } else if(action.name=='删除'){
     data.isDelete = true;
     // let result = confirm("是否确定删除字段?");

@@ -93,3 +93,36 @@ export const  filterTreeWithParents = (tree, keyword) => {
     }  
     return traverse(tree);  
 }
+
+//  格式化/api/listview/data/getNodes接口的数据 form表单使用 搜索字段输出键值对{value, name} 其余输出name
+export const formNodesValueObj = (key, row) => {
+    let val = '';
+    let typename = row[key] && row[key].__typeName;
+    if(typename == 'StatusField'){
+        val = row[key].name;
+    }else if(typename == 'LookupField'){
+        val = {
+            ID: row[key].lookupValue.value,
+            Name: row[key].lookupValue.displayName
+        };
+        // val = row[key].lookupValue.value
+    } else if(typename == 'DateTimeField'){
+        val = row[key].dateTime;
+    } else if(typename=="UserField"){
+        val = {
+            ID: row[key].userValue.Value,
+            Name: row[key].userValue.DisplayName
+        };
+    } else if(typename=="PicklistField"){
+        val = row[key].name || '';
+    } else if(typename=="DateField"){
+        val = row[key] && row[key].date;
+    } else if (typename == "TextField") {
+        val = row[key] && row[key].textValue;
+    } else if (typename == "CheckboxField") {
+        val = row[key] && row[key].selected;
+    } else {
+        val = row[key] && row[key].value;
+    }
+    return val;
+}

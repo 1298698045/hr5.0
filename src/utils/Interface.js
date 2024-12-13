@@ -5,7 +5,7 @@ const baseUrl = 'api';
 const Interface = {
     // 待办事务
     todoList:{
-        treedata: "/public/localData/treedata.json",
+        treedata: "/localData/treedata.json",
         tabs: "/localData/tabs.json",
         datalist: "/localData/datalist.json"
     },
@@ -55,7 +55,7 @@ const Interface = {
         createListView: baseUrl+'/aura/listViewManager/createListView',//创建视图
         updateListView: baseUrl+'/aura/listViewManager/updateListView',//重命名视图、共享设置、选择要显示字段、保存筛选器
         deleteListView: baseUrl+'/aura/listViewManager/deleteListView',//删除视图
-        copyListView: baseUrl+'/listview/filter/clone',//复制视图
+        copyListView: baseUrl+'/aura/listViewManager/cloneListView',//复制视图
         getListView: baseUrl+'/aura/listViewManager/getAdditionalMetadata',//获取单个视图/筛选器
         pinListView: baseUrl+'/aura/listViewManager/pinListView',//固定视图
         chartData: baseUrl + "/aura/ObjectHomeChart/getMetadata", // 图表 - 获取列表图表元数据
@@ -169,7 +169,7 @@ const Interface = {
         searchLayout: "/localData/setting/objeview/template.searchlayout.getlist.json",
         // objectmanager: "/localData/setting/objeview/objectmanager.field.search.json",
         objectmanager: baseUrl + "/objectmanager/FieldsAndRelationshipsDetailList/queryDetails",
-        sort: "/localData/setting/objeview/template.field.sort.json",
+        // sort: "/localData/setting/objeview/template.field.sort.json",
         addLogic: "/localData/setting/objeview/entity.logicalfield.add.json", // 新建逻辑字段
         approvalRename: "/localData/setting/objeview/entity.form.rename.json", // 审批表单-重命名
         listViewLayout: {
@@ -212,6 +212,8 @@ const Interface = {
             delete: baseUrl + "/aura/RecordUi/delRecord",
             troughData: "/_ui/common/config/layout2/TroughData", // 获取布局糟数据
         },
+        saveMap: baseUrl + "/objectmanager/object/field/lookup/saveMap", // 查找字段 - 保存字段映射
+        sort: baseUrl + "/objectmanager/object/fields/sort", // 字段排序
     },
     save: "/localData/entity.saverecord.json",
     operationLog: "/localData/home/operationLog.json",
@@ -330,6 +332,7 @@ const Interface = {
         saveComponent: baseUrl + "/aura/dashboard/saveComponent",
         loadComponents: baseUrl + "/aura/dashboard/loadComponents", // 加载组件数据
         templateList: baseUrl + "/aura/dashboard/Component/getTemplates", // 获取组件模板列表
-    }
+    },
+    getMapFieldValues: baseUrl + "/aura/Lookup/getMapFieldValues", // 查找字段 - 获取目标对象映射字段值
 }
 export default Interface;

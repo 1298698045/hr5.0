@@ -31,7 +31,7 @@ const routes = [
     },
     children: [
       {
-        path: "/detailCommon",
+        path: "/lightning/r/HREmployee/view",
         name: "DetailCommon",
         component: () => import("../views/detail/detailCommon.vue"),
       },
